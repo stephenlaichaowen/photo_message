@@ -8,7 +8,8 @@
       @click.self="closePhotoModal"
     >
       <div id="image-container" ref="imageContainer">
-        <panZoom :options="{minZoom: 1, maxZoom: 5}">
+        <!-- <panZoom :options="{minZoom: 1, maxZoom: 5}"> -->
+        <v-zoomer>
           <img
             :src="messages[messageIdx].photo"
             ref="bigPhoto"
@@ -16,7 +17,8 @@
             :alt="messageIdx"
             v-hammer:swipe.horizontal="onSwipe"
           />
-        </panZoom>
+        </v-zoomer>
+        <!-- </panZoom> -->
         <div id="zoom-icon">
           <i
             class="fas fa-search fa-lg icon-zoom m-1"
@@ -159,7 +161,8 @@ export default {
 #image-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  /* height: 100%; */
+  /* overflow: hidden; */
 }
 #photoframe {
   position: fixed;

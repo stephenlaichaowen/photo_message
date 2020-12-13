@@ -14,7 +14,6 @@ export default {
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css', integrity: 'sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2', crossorigin: 'anonymous' },
       { rel: 'icon', type: "image/x-icon", href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' }
-      // { rel: 'stylesheet', href: '/fontawesome.css' }
     ],
     script: [
       { src: 'https://unpkg.com/localbase/dist/localbase.dev.js' },
@@ -29,8 +28,7 @@ export default {
   },
 
   css: [
-    '~assets/css/style.css',
-    // '~assets/css/fontawesome.css'
+    '~assets/css/style.css'
   ],
 
   components: true,
@@ -46,6 +44,10 @@ export default {
     },
     {
       src: '~plugins/vue-panzoom',
+      mode: 'client'
+    },
+    {
+      src: '~plugins/vue-zoomer',
       mode: 'client'
     }
   ],
