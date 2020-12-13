@@ -19,7 +19,7 @@
         </panZoom>
         <div id="zoom-icon">
           <i
-            class="fas fa-search-plus fa-lg icon-zoom m-1"
+            class="fas fa-search fa-lg icon-zoom m-1"
             @click="zoomIn"
             id="icon-zoomIn"
           ></i>
