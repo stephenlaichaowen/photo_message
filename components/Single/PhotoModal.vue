@@ -15,7 +15,7 @@
             id="big-photo"
             :alt="messageIdx"
             v-hammer:swipe.horizontal="onSwipe"
-          />123
+          />
         </panZoom>
         <div id="zoom-icon">
           <i

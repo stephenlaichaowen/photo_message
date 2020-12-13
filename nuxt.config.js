@@ -17,10 +17,8 @@ export default {
       // { rel: 'stylesheet', href: '/fontawesome.css' }
     ],
     script: [
-      { src: 'https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.min.js' },
       { src: 'https://unpkg.com/localbase/dist/localbase.dev.js' },
       // { src: 'https://cdn.socket.io/socket.io-3.0.1.min.js' },
-      { src: '/touchScriptController.js' }
     ]
   },
 
@@ -59,8 +57,7 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxt/content'
+    '@nuxtjs/pwa'
   ],
 
   pwa: {
