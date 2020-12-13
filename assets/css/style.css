@@ -1,0 +1,20 @@
+:root {
+    --theme-color: #17a2b8;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', serif;
+    font-weight: 300;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}

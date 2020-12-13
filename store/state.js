@@ -1,0 +1,22 @@
+export const state = {
+  photoModalState: false,
+  stream: null,
+  backCameraStream: null,
+  photo: null,
+  photoSrc: null,
+  cameraIcon: false,
+  messages: [],
+  message: {},
+  bigPhoto: null,
+  cameraModalState: false,
+  cameraMenuState: false,
+  cameraMode: false,
+  mobileState: false,
+  loaderState: true,
+  messageMenuState: false,
+  messageIdx: null,
+  searchboxState: false,
+  searchKeyword: '',
+  cameraModalState: false,
+  searchMenuState: false
+}

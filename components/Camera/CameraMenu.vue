@@ -1,0 +1,154 @@
+<template>
+  <transition name="slideInDown">
+    <ul id="camera-menu" class="bg-dark" v-if="cameraMenuState">
+      <div id="camera-options">
+        <li @click="openFrontCamera">Front Camera</li>
+        <li v-if="mobileState" @click="openBackCamera">Back Camera</li>
+        <!-- <li @click="openBackCamera">Back Camera</li> -->
+      </div>
+      <li id="icon-container">
+        <i id="icon-close" @click="closeCameraMenu" class="fas fa-times"></i>
+      </li>
+    </ul>
+  </transition>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isBackCameraExisted: false,
+      videoStream: null,
+      backCameraStream: null,
+      frontCameraOptions: {
+        video: {
+          width: 600,
+          height: 600,
+          facingMode: 'user',
+        },
+        audio: false,
+      },
+      backCameraOptions: {
+        video: {
+          width: 600,
+          height: 600,
+          facingMode: {
+            exact: 'environment',
+          },
+        },
+        audio: false,
+      },
+    }
+  },
+  computed: {
+    mobileState: {
+      get() {
+        return this.$store.getters.mobileState
+      },
+    },
+    cameraMenuState: {
+      get() {
+        return this.$store.getters.cameraMenuState
+      },
+    },
+  },
+  methods: {
+    closeCameraMenu() {
+      this.$store.commit('setCameraMenuState', false)
+    },
+    async openFrontCamera() {
+      console.log(`front camera on`)
+      this.$store.commit('setCameraMenuState', false)
+
+      if (
+        'mediaDevices' in navigator &&
+        'getUserMedia' in navigator.mediaDevices
+      ) {
+        this.videoStream = await navigator.mediaDevices.getUserMedia(
+          this.frontCameraOptions
+        )
+      }
+      // this.$emit('show-modal', true)
+      this.$emit('show-modal')
+      this.$store.commit('saveStream', this.videoStream)
+      this.$store.commit('setCameraMode', true)
+    },
+    async openBackCamera() {
+      console.log(`back camera on`)
+      this.$store.commit('setCameraMenuState', false)
+
+      if (
+        'mediaDevices' in navigator &&
+        'getUserMedia' in navigator.mediaDevices
+      ) {
+        this.backCameraStream = await navigator.mediaDevices.getUserMedia(
+          this.backCameraOptions
+        )
+      }
+      // this.$emit('show-modal', true)
+      this.$emit('show-modal')
+      this.$store.commit('saveBackCameraStream', this.backCameraStream)
+      this.$store.commit('setCameraMode', false)
+    },
+  },
+  mounted() {},
+}
+</script>
+
+<style scoped>
+ul {
+  background: rgba(0, 0, 0, 0.7);
+}
+li {
+  list-style: none;
+  padding: 0 0.625rem;
+  color: white;
+  font-weight: 400;
+}
+img {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background: #00cc99;
+  color: white;
+}
+#icon-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+#camera-options {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#camera-menu {
+  height: 3.125rem;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: -1rem;
+  z-index: 800;
+}
+.slideInDown-enter-active {
+  animation: slideInDown 0.3s;
+}
+.slideInDown-leave-active {
+  animation: slideInDown 0.3s reverse;
+}
+@keyframes slideInDown {
+  0% {
+    /* -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); */
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+</style>

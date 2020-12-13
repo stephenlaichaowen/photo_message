@@ -1,0 +1,121 @@
+{
+  "blog": [
+    {
+      "id": "blogId-1",
+      "title": "Add Google AdSense verification code inside Nuxt JS",
+      "date": "Jun 9th, 2020",
+      "content": "As we all know, Google AdSence is one of the most popular service to earn Ad revenue. When running a blog using Nuxt JS, it is very important to add in some SEO related code as well as AdSense verification code before closing </head> tag. Nuxt JS already comes with Vue Meta package integrated."
+    },
+    {
+      "id": "blogId-2",
+      "title": "Simple CRUD App using Express & NuxtJS using serverMiddleware – Part 2/2",
+      "date": "Mar 6th, 2020",
+      "content": "Before we continuing part 2 of this mini project, let’s do a small recap. In previous content, we implemented a REST API server using Express. We took advantage of serverMiddleware feature of NuxtJS so that we can run both server & client on single server. We implemented the APIs for contents & Users modules. In"
+    },
+    {
+      "id": "blogId-3",
+      "title": "Simple CRUD App using Express & NuxtJS using serverMiddleware – Part 1/2",
+      "date": "Jan 21st, 2020",
+      "content": "So recently I was trying to implement a mini project with the help of NuxtJS and Express as API server and got to know that NuxtJS comes with an awesome feature called “serverMiddleware“. It allows us to run both backend and frontend from same server. This is very helpful for creating API endpoints. So I "
+    },
+    {
+      "id": "blogId-4",
+      "title": "Some basics of using Vuex with NuxtJS (using Example)",
+      "date": "We all know that Vuex is very powerful state management system when used with VueJS. And when you are using it with NuxtJS, its even more fun to use. But sometime it is little confusing. Mainly in the initial stage of setting up the Store. What I did to save some time on the configuration",
+      "content": ""
+    },
+    {
+      "id": "blogId-5",
+      "title": "Using vuejs-datepicker with Nuxt JS",
+      "date": "Jan 8th, 2020",
+      "content": "Talking about datepickers, if we check on npmjs.com, the most downloaded datepicker componet for Vue JS is vuejs-datepicker. No doubt, the plugin(component) has every essential fatures any datepicker should have. But when it comes to integrate it with Nuxt JS framework, the plugin breaks the whole page because it doesn’t support SSR (server-side rendering via"
+    }
+  ],
+
+  "story": [
+    {
+      "id": "aboutId-1",
+      "title": "2005 - 2006",
+      "paragraph": "As that was a beginning of my career and I was also doing my post graduation study, I began with a part time job and started working on PHP at Active Info Media. I finished few inhouse projects there. I thank Active Info Media to give me an opportunity and time for studying + working on PHP platform."
+    },
+    {
+      "id": "aboutId-2",
+      "title": "2006 - 2008",
+      "paragraph": "As my study period was ended, I applied for a higher opportunity at outer city and got full time web developer job at Khyati infotech. I experienced how a team work is getting done the right way. In the 2 years of my job period, I worked on around 8-10 project. I thank Khyati infotech for believing in me and giving me opportunity to work on such important position."
+    },
+    {
+      "id": "aboutId-3",
+      "title": "2008 - 2009",
+      "paragraph": "In these 2 years, I worked on a random Jobs which includes few months of outsourcing for a USA based company, partnership with a Friend on full time freelance and Full time freelancing alone from home for few months. This was a period in which I did less development and more research tasks like configuring linux server, working with django framework, working with codeigniter framework etc. I thanks this period for improving my skills on research based jobs."
+    },
+    {
+      "id": "aboutId-4",
+      "title": "2009 - 2014",
+      "paragraph": "These years were the best years of my career. I got opportunity to work in a UK based company Mesh Media where I was doing freelance work in the beginning for few months. But later I was offered to work for full time as a Senior developer. I am still working for Mesh Media for limited hours every week. It is a very small Team with a very high capacity. I developed a Custom PHP CMS over there which I believe as a huge achievement of my career. Other then that, I also build various web applications and lots of websites which I am unable to count. I thank Mesh Media to believe in me and giving me opportunity of such higher position. At Mesh Media, I got chance to interact directly with clients and it helped me alot to move ahead to the career of successful fulltime freelancer."
+    },
+    {
+      "id": "aboutId-5",
+      "title": "2015 - Present day...",
+      "paragraph": "Nowadays I work as a fulltime freelancer from my own workstation. This is the year I will always be remembering as I achieved the highest milestone of my career by establishing my own office. I thank all my clients for believing in me and giving me jobs and most importantly I thank my parents and my wife to have faith in me."
+    }
+  ],
+
+  "skills": [
+    {
+      "skillId-1": "1",
+      "number": "1",
+      "title": "VueJS / NuxtJS",
+      "percent": "95%",
+      "color": "#6fe6b0"
+    },
+    {
+      "skillId-2": "2",
+      "number": "2",
+      "title": "ReactJS / NuxtJS",
+      "percent": "90%",
+      "color": "#42b883"
+    },
+    {
+      "skillId-3": "3",
+      "number": "3",
+      "title": "SvelteJS / SapperJS",
+      "percent": "85%",
+      "color": "#f55247"
+    },
+    {
+      "skillId-4": "4",
+      "number": "4",
+      "title": "NodeJS / ExpressJS",
+      "percent": "80%",
+      "color": "#3c90b7"
+    }
+  ],
+
+  "work": [
+    {
+      "myworkId-1": "1",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ROC_flag_map.png",
+      "title": "title-1"
+    },
+    {
+      "myworkId-2": "2",
+      "thumb": "https://miro.medium.com/max/2400/1*YubdQxXufyVs0fRsNeXWIw.jpeg",
+      "title": "title-2"
+    },
+    {
+      "myworkId-3": "3",
+      "thumb": "https://i.pinimg.com/originals/58/0e/15/580e15e37d6025979881de5e49403bb4.jpg",
+      "title": "title-3"
+    },
+    {
+      "myworkId-4": "4",
+      "thumb": "https://cdn2.ettoday.net/images/2841/d2841231.jpg",
+      "title": "title-4"
+    },
+    {
+      "myworkId-5": "5",
+      "thumb": "https://images.chinatimes.com/newsphoto/2019-01-02/900/B13A00_P_03_01.jpg",
+      "title": "title-5"
+    }
+  ]
+}
