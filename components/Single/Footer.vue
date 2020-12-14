@@ -1,6 +1,6 @@
 <template>
   <div v-if="!loaderState" id="footer" class="container-fluid">
-    <div id="container" class="toolbar row bg-light">
+    <div id="container" class="toolbar row bg-dark">
       <div class="col py-2 d-flex">
         <!-- <button
           id="camera"
@@ -136,19 +136,13 @@ export default {
   background-position: center;
 }
 #camera {
-  /* border: 1px solid red; */
   outline: none;
   border-radius: 0.25rem;
   border: none;
-  /* background: url('https://www.searchpng.com/wp-content/uploads/2019/02/Camera-Icon-PNG.png'); */
-  /* background: url('https://maxcdn.icons8.com/Share/icon/p1em/Photo_Video/camera1600.png'); */
-  /* background: url('https://coralbuttons.files.wordpress.com/2014/11/camera-icon.png'); */
   background: url('https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/device-camera-icon.png');
-  /* background: url('https://tse4.mm.bing.net/th?id=OIP.CoPC39YbCv0XRT2ByNYVgwHaHa&pid=Api&P=0&w=300&h=300'); */
   background-position: center;
   background-size: cover;
   width: 2.75rem;
-  /* width: 2.125rem; */
   height: 2.125rem;
 }
 #caption::placeholder {
