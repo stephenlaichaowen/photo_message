@@ -35,11 +35,11 @@
 #icon-search {
   width: 30px;
   height: 30px;
-  /* position: absolute;
+  position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  color: var(--search-icon); */
+  /* color: var(--search-icon); */
 }
 #serach-input {
   /* background: red; */
