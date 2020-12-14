@@ -45,8 +45,8 @@ export default {
   top: 50%;
   right: 1rem;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 /* #searchbox-input {
   width: 7.5rem;
