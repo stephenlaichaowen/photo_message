@@ -10,6 +10,14 @@
           class="fas fa-camera fa-2x ml-0 px-1 mr-2 text-dark bg-light"
         >
         </button> -->
+        <button
+          id="camera"
+          @click="showCameraModal"
+          :class="{ withphoto: cameraIcon }"
+          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
+          class="bi bi-camera-fill fa-2x ml-0 px-1 mr-2 text-dark bg-light"
+        >
+        </button>
         <i class="bi bi-camera-fill"></i>
         <input
           id="caption"         
