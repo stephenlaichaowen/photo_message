@@ -6,6 +6,7 @@
       class="bg-dark"
       v-if="photoModalState"
       @click.self="closePhotoModal"
+      v-hammer:swipe.horizontal="onSwipe"
     >
       <div id="image-container" ref="imageContainer">
         <!-- <panZoom :options="{minZoom: 1, maxZoom: 5}"> -->
@@ -15,7 +16,6 @@
             ref="bigPhoto"
             id="big-photo"
             :alt="messageIdx"
-            v-hammer:swipe.horizontal="onSwipe"
           />
         </v-zoomer>
         <!-- </panZoom> -->

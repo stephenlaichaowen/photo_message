@@ -10,12 +10,14 @@
           class="fas fa-camera fa-2x ml-0 px-1 mr-2 text-dark bg-light"
         >
         </button> -->
-        <
+
+        <!-- <font-awesome-icon icon="camera" -->
+        <font-awesome-icon :icon="['fas', 'camera']"
           id="camera"
           @click="showCameraModal"
           :class="{ withphoto: cameraIcon }"
           :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
-          class="fas fa-camera fa-2x ml-0 px-1 mr-2 text-dark bg-light"
+          class="fa-2x ml-0 px-1 mr-2 text-dark bg-light"
         />        
         <input
           id="caption"         

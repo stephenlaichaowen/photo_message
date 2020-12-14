@@ -77,7 +77,8 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: ['faCamera']
+      solid: ['faCamera'],
+      regular: ['faCamera']
     }
   }
 }
