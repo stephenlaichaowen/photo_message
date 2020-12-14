@@ -6,13 +6,14 @@
 </template>
 
 <style scoped>
-/* #message-list {
+#message-list {
   height: calc(100vh - 6.25rem);
-  position: fixed;
+  /* position: fixed; */
+  position: relative;
   top: 3.125rem;
   bottom: 3.125rem;
   left: 0;  
   z-index: 100;
   overflow-y: scroll;    
-} */
+}
 </style>
