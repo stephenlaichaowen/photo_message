@@ -13,6 +13,7 @@
           id="camera"
           @click="showCameraModal"
           :class="{ withphoto: cameraIcon }"
+          class="ml-0 px-1 mr-2 text-dark bg-light"
           :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
         ></button>
         <input
