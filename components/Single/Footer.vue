@@ -25,11 +25,17 @@
           placeholder="Image Caption..."
           class="flex-grow-1 w-100 align-middle pr-5"
         >
-        <a
+        <img 
+          src="https://cdn.onlinewebfonts.com/svg/img_513.png" alt="paper plane"
+          id="send"
+          @click.prevent="sendMessage"
+          class="position-absolute"          
+        >
+        <!-- <a
           id="send"
           @click.prevent="sendMessage"
           class="fas fa-paper-plane text-dark position-absolute"
-        ></a>
+        ></a> -->
       </div>
     </div>
   </div>
@@ -112,6 +118,8 @@ export default {
   right: 1.875rem;
   top: 1.125rem;
   text-decoration: none;
+  width: 25px;
+  height: 25px;
 }
 #footer {
   position: fixed;
