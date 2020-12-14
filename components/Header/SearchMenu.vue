@@ -1,6 +1,6 @@
 <template>
   <transition name="slideInUp">
-    <div id="search-container" @click.self="closeSearchMenu" v-if="searchMenuState" class="bg-dark">
+    <div id="search-container" @click.self="closeSearchMenu" v-if="searchMenuState" class="bg-dark row">
       <input type="text" v-model="keyword" id="search-input" class="rounded">
       <i id="icon-close" @click="setSearchKeyword" class="fas fa-times text-light"></i>
     </div>
@@ -36,7 +36,9 @@ export default {
 
 <style scoped>
 #serach-input {
-  width: 80%;
+  /* width: 80%; */
+  outline: none;
+  border: 1px solid var(--theme-color);
   /* border-radius: 0.625rem; */
 }
 #search-container {

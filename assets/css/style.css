@@ -1,5 +1,6 @@
 :root {
-    --theme-color: #17a2b8;
+    --theme-color: #17a2b8;    
+    --icon-color: #00FEDE;
 }
 *, *::before, *::after {
     margin: 0;
