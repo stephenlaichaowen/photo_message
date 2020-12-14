@@ -5,7 +5,7 @@
       ref="photoframe"
       class="bg-dark"
       v-if="photoModalState"
-      v-hammer:swipe.horizontal.self="onSwipe"
+      @click="closePhotoModal"
     >
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
@@ -14,9 +14,10 @@
             ref="bigPhoto"
             id="big-photo"
             :alt="messageIdx"
+            v-hammer:swipe.horizontal="onSwipe"
           />
         </v-zoomer>
-        <i
+        <!-- <i
           @click="closePhotoModal"
           id="icon-close-right"
           class="fas fa-chevron-right fa-2x icon-arrow"
@@ -26,7 +27,7 @@
           id="icon-close-left"
           class="fas fa-chevron-left fa-2x icon-arrow"
         ></i>
-        <!-- <i
+        <i
           @click="moveLeft"
           id="arrow-left"
           class="fas fa-chevron-left fa-2x icon-arrow"
