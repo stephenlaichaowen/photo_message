@@ -13,11 +13,11 @@
       @click="setSearchKeyword"
       class="fas fa-search text-info"
     ></i> -->
-    <img 
-      src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/512/search-icon.png" alt="search"
+    <div 
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png" alt="search"
       id="icon-search"
       @click="setSearchKeyword"
-    >
+    ></div>
   </div>
 </template>
 
@@ -47,6 +47,10 @@ export default {
   transform: translateY(-50%);
   width: 1.25rem;
   height: 1.25rem;
+  color: var(--theme-color);
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png');
+  background-position: center;
+  background-size: cover;
 }
 /* #searchbox-input {
   width: 7.5rem;
