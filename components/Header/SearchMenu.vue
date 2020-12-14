@@ -5,12 +5,19 @@
       v-if="searchMenuState"
       class="bg-dark py-1 px-3"
     >
-      <input
+      <!-- <input
         type="text"
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
         class="flex-grow-1 w-50 align-middle"
+      /> -->
+      <input
+        type="text"
+        v-model="keyword"
+        id="search-input"
+        placeholder="Search..."
+        class="w-50 align-middle"
       />
       <img
         src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
@@ -49,7 +56,7 @@
   padding: 0.3125rem 25px;
   border-radius: 2.5rem;
   border: none;
-  width: 50%;
+  /* width: 50%; */
 }
 #search-container {
   height: 3.125rem;
