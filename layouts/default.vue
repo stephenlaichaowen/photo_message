@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-info">
+  <div>
     <Nuxt />
   </div>
 </template>
@@ -19,4 +19,3 @@ export default {
   }
 }
 </script>
-
