@@ -56,10 +56,6 @@ export default {
     mode: 'out-in'
   },
 
-  // router: {
-  //   base: '/photo_message/'
-  // },
-
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
