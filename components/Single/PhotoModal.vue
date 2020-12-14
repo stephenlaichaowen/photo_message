@@ -16,7 +16,6 @@
       v-hammer:swipe.horizontal="onSwipe"
     >
       <div id="image-container" ref="imageContainer">
-        <!-- <panZoom :options="{minZoom: 1, maxZoom: 5}"> -->
         <v-zoomer>
           <img
             :src="messages[messageIdx].photo"
