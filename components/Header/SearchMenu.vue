@@ -11,7 +11,7 @@
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
-        class="flex-grow-1 w-100 align-middle pr-5 pl-1"
+        class="flex-grow-1 w-100 align-middle pr-5 pl-2"
       />
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png"
@@ -28,7 +28,7 @@
   height: 32px;
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 35px;
   transform: translateY(-50%);
   /* color: var(--search-icon); */
 }
@@ -36,7 +36,7 @@
   resize: none;
   outline: none;
   padding: 0.3125rem;
-  border-radius: 2rem;
+  border-radius: 2.5rem;
   border: none;
 }
 #search-container {
