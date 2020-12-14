@@ -49,6 +49,7 @@
   padding: 0.3125rem 25px;
   border-radius: 2.5rem;
   border: none;
+  width: 50%;
 }
 #search-container {
   height: 3.125rem;
