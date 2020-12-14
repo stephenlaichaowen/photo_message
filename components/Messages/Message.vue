@@ -50,8 +50,8 @@
 
         <div id="menu-item" class="col-1">
           <!-- <i id="menu-burger" class="fas fa-ellipsis-h"></i> -->
-          <i id="menu-burger" class="fas fa-expand"></i>
-          <span class="delete" @click="removeMessage(item.id)"></span>
+          <!-- <i id="menu-burger" class="fas fa-expand"></i>
+          <span class="delete" @click="removeMessage(item.id)"></span> -->
         </div>
       </div>
     </transition-group>
