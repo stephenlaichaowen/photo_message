@@ -73,12 +73,6 @@ export default {
 
       console.log(`camera menu opened`)
       this.$store.commit('setCameraMenuState', true)
-      
-      this.socket = io('http://localhost:5000')
-      this.socket.emit('to-server', 'hi, server')
-      this.socket.on('from-server', data => {
-        console.log(data)
-      })
     },
     sendMessage() {
       if (!this.photo || !this.caption) {

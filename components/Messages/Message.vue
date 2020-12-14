@@ -107,8 +107,8 @@ export default {
 #image-container {
   padding: 0;
 }
-.active {
-  border: 0.125rem solid var(--theme-color);
+.active {  
+  box-shadow: 0 0 0.0625rem #fff, 0 0 0.125rem #fff, 0 0 0.125rem #fff, 0 0 0px #0ff, 0 0 0.0625rem #0ff, 0 0 0px #0ff, 0 0 0.25rem #0ff, 0 0 0.125rem #0ff;
 }
 #photo {
   border-radius: 50%;
