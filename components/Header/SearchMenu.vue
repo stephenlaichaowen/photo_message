@@ -32,7 +32,7 @@
   transform: translateY(-50%);
   /* color: var(--search-icon); */
 }
-#serach-input {
+#search-input {
   resize: none;
   outline: none;
   padding: 0.3125rem;
