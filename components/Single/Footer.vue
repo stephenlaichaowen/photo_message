@@ -133,6 +133,7 @@ export default {
   background-position: center;
 }
 #camera {
+  border: 1px solid red;
   outline: none;
   border-radius: 0.25rem;
   border: none; 
