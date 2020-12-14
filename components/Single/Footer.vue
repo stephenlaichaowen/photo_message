@@ -26,10 +26,9 @@
           class="flex-grow-1 w-100 align-middle pr-5"
         >
         <img 
-          src="https://cdn.onlinewebfonts.com/svg/img_513.png" alt="paper plane"
+          src="https://cdn.onlinewebfonts.com/svg/img_494.png" alt="paper plane"
           id="send"
-          @click.prevent="sendMessage"
-          class="position-absolute"          
+          @click.prevent="sendMessage"    
         >
         <!-- <a
           id="send"
@@ -115,8 +114,9 @@ export default {
 
 <style scoped>
 #send {
+  position: absolute;
   right: 1.875rem;
-  top: 1.125rem;
+  top: 0.9375rem;
   text-decoration: none;
   width: 20px;
   height: 20px;
