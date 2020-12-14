@@ -4,67 +4,30 @@
       id="search-container"
       @click.self="closeSearchMenu"
       v-if="searchMenuState"
-      class="bg-dark row"
+      class="bg-dark"
     >
-      <div id="search-content">
-        <input
-          type="text"
-          v-model="keyword"
-          id="search-input"
-          class="rounded"
-        />
-        <img id="icon-search" @click="setSearchKeyword" />
-      </div>
+      <input type="text" v-model="keyword" id="search-input" class="flex-grow-1 w-100 align-middle pr-5" />
+      <img id="icon-search" @click="setSearchKeyword" />
     </div>
   </transition>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      keyword: '',
-    }
-  },
-  computed: {
-    searchMenuState: {
-      get() {
-        return this.$store.getters.searchMenuState
-      },
-    },
-  },
-  methods: {
-    setSearchKeyword() {
-      // this.$store.commit('setSearchMenuState', true)
-      this.$store.commit('setSearchKeyword', this.keyword)
-      this.keyword = ''
-    },
-    closeSearchMenu() {
-      this.$store.commit('setSearchMenuState', false)
-    },
-  },
-}
-</script>
-
 <style scoped>
-#search-content {
-  position: relative;
-  width: 100%;
-  height: 100px;
-}
 #icon-search {
   width: 25px;
   height: 25px;
   position: absolute;
   top: 50%;
   right: 8px;
-  transform: translateY(-50%);  
+  transform: translateY(-50%);
 }
 #serach-input {
-  /* width: 80%; */
+  resize: none;
   outline: none;
+  padding: 0.3125rem;
+  border-radius: 0.25rem;
+  /* border: none; */
   border: 1px solid var(--theme-color);
-  /* border-radius: 0.625rem; */
 }
 #search-container {
   height: 3.125rem;
@@ -97,3 +60,31 @@ export default {
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      keyword: '',
+    }
+  },
+  computed: {
+    searchMenuState: {
+      get() {
+        return this.$store.getters.searchMenuState
+      },
+    },
+  },
+  methods: {
+    setSearchKeyword() {
+      // this.$store.commit('setSearchMenuState', true)
+      this.$store.commit('setSearchKeyword', this.keyword)
+      this.keyword = ''
+    },
+    closeSearchMenu() {
+      this.$store.commit('setSearchMenuState', false)
+    },
+  },
+}
+</script>
+
