@@ -19,11 +19,11 @@
           placeholder="Image Caption..."
           class="flex-grow-1 w-100 align-middle pr-5"
         >
-        <a
+        <!-- <a
           id="send"
           @click.prevent="sendMessage"
           class="fas fa-paper-plane text-dark position-absolute"
-        ></a>
+        ></a> -->
       </div>
     </div>
   </div>
