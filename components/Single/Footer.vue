@@ -21,7 +21,7 @@
           v-model="caption"
           @keyup.enter="sendMessage"
           type="text"
-          maxlength="100"
+          maxlength="70"
           placeholder="Image Caption..."
           class="flex-grow-1 w-100 align-middle pr-5"
         >
