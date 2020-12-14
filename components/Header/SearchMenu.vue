@@ -28,16 +28,16 @@
 
 <style scoped>
 #icon-close {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 50%;
   left: 25px;
   transform: translateY(-50%);
 }
 #icon-search {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 50%;
   right: 25px;
