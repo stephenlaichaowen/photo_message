@@ -32,7 +32,7 @@
   height: 22px;
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 20px;
   transform: translateY(-50%);
 }
 #icon-search {
@@ -46,7 +46,7 @@
 #search-input {
   resize: none;
   outline: none;
-  padding: 0.3125rem 15px;
+  padding: 0.3125rem 25px;
   border-radius: 2.5rem;
   border: none;
 }
