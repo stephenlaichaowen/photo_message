@@ -1,6 +1,6 @@
 <template>
   <transition name="slideInUp">
-    <div id="search-container" @click="closeSearchMenu" v-if="searchMenuState" class="bg-dark">
+    <div id="search-container" @click.self="closeSearchMenu" v-if="searchMenuState" class="bg-dark">
       <input type="text" id="search-input" class="rounded">
       <!-- <i id="icon-close" @click="closeSearchMenu" class="fas fa-times text-light"></i> -->
     </div>
