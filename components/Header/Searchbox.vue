@@ -1,13 +1,13 @@
 <template>
   <div id="searchbox">
-    <!-- <input
+    <input
       id="searchbox-input"
       v-model="keyword"
       @keyup.enter="setSearchKeyword"
       type="text"
       placeholder="Search..."
       class="flex-grow-1 align-middle pr-5 rounded pl-1"
-    /> -->
+    />
     <!-- <i
       id="icon-search"
       @click="setSearchKeyword"
