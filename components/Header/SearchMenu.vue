@@ -1,25 +1,37 @@
 <template>
   <transition name="slideInUp">
-    <div id="search-container" @click.self="closeSearchMenu" v-if="searchMenuState" class="bg-dark row">
-      <input type="text" v-model="keyword" id="search-input" class="rounded">
-      <i id="icon-close" @click="setSearchKeyword" class="fas fa-times text-light"></i>
+    <div
+      id="search-container"
+      @click.self="closeSearchMenu"
+      v-if="searchMenuState"
+      class="bg-dark row"
+    >
+      <div id="search-content">
+        <input
+          type="text"
+          v-model="keyword"
+          id="search-input"
+          class="rounded"
+        />
+        <img id="icon-search" @click="setSearchKeyword" />
+      </div>
     </div>
   </transition>
 </template>
 
 <script>
 export default {
-   data() {
+  data() {
     return {
-      keyword: ''
+      keyword: '',
     }
   },
   computed: {
     searchMenuState: {
       get() {
         return this.$store.getters.searchMenuState
-      }
-    }
+      },
+    },
   },
   methods: {
     setSearchKeyword() {
@@ -29,12 +41,25 @@ export default {
     },
     closeSearchMenu() {
       this.$store.commit('setSearchMenuState', false)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style scoped>
+#search-content {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+#icon-search {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);  
+}
 #serach-input {
   /* width: 80%; */
   outline: none;
