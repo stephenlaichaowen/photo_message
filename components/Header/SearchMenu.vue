@@ -15,8 +15,8 @@
 
 <style scoped>
 #icon-search {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 50%;
   right: 20px;
