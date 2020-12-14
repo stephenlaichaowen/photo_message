@@ -1,13 +1,13 @@
 <template>
   <transition name="slideInDown">
-    <ul id="camera-menu" class="bg-dark" v-if="cameraMenuState">
-      <div id="camera-options">
+    <ul id="camera-menu" @click.self="closeCameraMenu" class="bg-dark" v-if="cameraMenuState">
+      <!-- <div id="camera-options"> -->
         <li @click="openFrontCamera">Front Camera</li>
         <li v-if="mobileState" @click="openBackCamera">Back Camera</li>
-      </div>
-      <li id="icon-container">
+      <!-- </div> -->
+      <!-- <li id="icon-container">
         <i id="icon-close" @click="closeCameraMenu" class="fas fa-times"></i>
-      </li>
+      </li> -->
     </ul>
   </transition>
 </template>
@@ -125,6 +125,7 @@ img {
   padding: 0.5rem;
   width: 100%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   left: 0;

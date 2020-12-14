@@ -8,11 +8,16 @@
       placeholder="Search..."
       class="flex-grow-1 align-middle pr-5 rounded pl-1"
     /> -->
-    <i
+    <!-- <i
       id="icon-search"
       @click="setSearchKeyword"
       class="fas fa-search text-info"
-    ></i>
+    ></i> -->
+    <img 
+      src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/512/search-icon.png" alt="search"
+      id="icon-search"
+      @click="setSearchKeyword"
+    >
   </div>
 </template>
 
@@ -40,6 +45,8 @@ export default {
   top: 50%;
   right: 1rem;
   transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
 }
 /* #searchbox-input {
   width: 7.5rem;
