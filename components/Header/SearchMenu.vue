@@ -18,7 +18,7 @@
         @click="closeSearchMenu"
       />
       <img
-        src="https://f0.pngfuel.com/png/9/504/blue-arrow-icon-png-clip-art.png"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/768px-Arrow_icon.svg.png"
         id="icon-search"
         @click="setSearchKeyword"
       />
