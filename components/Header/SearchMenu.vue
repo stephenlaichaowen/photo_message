@@ -36,7 +36,7 @@
   resize: none;
   outline: none;
   padding: 0.3125rem;
-  border-radius: 0.25rem;
+  border-radius: 50%;
   border: none;
 
   /* height: 100%;
@@ -46,7 +46,7 @@
 }
 #search-container {
   height: 3.125rem;
-  /* padding: 1rem 2rem; */
+  padding: 0 2rem;
   width: 100%;
   display: flex;
   align-items: center;
