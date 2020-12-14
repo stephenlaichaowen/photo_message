@@ -41,7 +41,8 @@
   top: 0;
   z-index: 800;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  /* justify-content: space-around; */
 }
 .slideInUp-enter-active {
   animation: slideInUp 0.3s;
