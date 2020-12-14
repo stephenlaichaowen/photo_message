@@ -43,7 +43,7 @@ export default {
   computed: {
     mobileState: {
       get() {
-        return this.$store.getters.mobileState
+        return this.$store.state.mobileState
       },
     },
     cameraMenuState: {

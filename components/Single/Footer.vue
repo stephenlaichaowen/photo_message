@@ -66,10 +66,7 @@ export default {
     },
   },
   methods: {
-    async showCameraModal() {
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)      
-      if (isMobile) this.$store.commit('setMobileState', true)
-      if (!isMobile) this.$store.commit('setMobileState', false)
+    showCameraModal() {   
 
       console.log(`camera menu opened`)
       this.$store.commit('setCameraMenuState', true)

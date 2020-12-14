@@ -16,6 +16,17 @@ export default {
       const deviceWidth = root.clientWidth
       root.style.fontSize = (deviceWidth / 360) * 16 + 'px'
     })
-  }
+
+    navigator.mediaDevices
+    .enumerateDevices()
+    .then(devices => {
+      const nOfVideoDevices = devices.filter(device => device.kind === 'videoinput').length
+      console.log(`You have ${nOfVideoDevices} videoinput device`)                 
+      this.$store.commit('setMobileState', false)
+    })
+    .catch(function (err) {
+      console.log(err.name + ': ' + err.message)
+    })
+  },
 }
 </script>
