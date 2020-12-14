@@ -18,13 +18,13 @@
   height: 25px;
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 20px;
   transform: translateY(-50%);
   color: var(--search-icon);
 }
 #serach-input {
   resize: none;
-  /* outline: none; */
+  outline: none;
   padding: 0.3125rem;
   border-radius: 2rem;
   /* border: none; */
