@@ -44,8 +44,8 @@ export default {
   top: 50%;
   right: 1rem;
   transform: translateY(-50%);
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.375rem;
+  height: 1.375rem;
   color: var(--theme-color);
   /* background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png'); */
   background: url('https://www.pinclipart.com/picdir/big/142-1425726_mouse-scroll-icon-search-circle-icon-png-clipart.png');
