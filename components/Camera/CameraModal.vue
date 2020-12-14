@@ -91,8 +91,12 @@ export default {
 
 <style scoped>
 #capture {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url('https://cdn.pixabay.com/photo/2015/07/18/08/02/button-850101_640.png');
+  background-position: center;
+  background-size: cover;
 }
 #icon-group {
   display: flex;
