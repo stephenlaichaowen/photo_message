@@ -131,7 +131,7 @@ export default {
   background: url('https://www.searchpng.com/wp-content/uploads/2019/02/Camera-Icon-PNG.png');
   background-position: center;
   background-size: cover;
-  width: 1.875rem;
+  width: 2.5rem;
   height: 2.1875rem;
 }
 #caption::placeholder {
