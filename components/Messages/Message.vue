@@ -1,20 +1,39 @@
 <template>
   <div>
     <transition-group name="backInRight" tag="div">
-      <div
+      <!-- <div
         id="message"
         ref="message"
         class="row pt-3 px-2 mr-0"
         v-for="(item, idx) in filteredMessages"
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
+      > -->
+      <div
+        id="message"
+        ref="message"
+        class="row m-2"
+        v-for="(item, idx) in filteredMessages"
+        :key="item.caption"
+        v-hammer:swipe.right="() => removeMessage(item.id)"
       >
-        <div id="image-container" class="col-2" key="key1">
+        <!-- <div id="image-container" class="col-2" key="key1">
           <img
             :src="item.photo"
             key="key2"
             id="photo"
             class="w-100 ml-3"
+            alt="thumb"
+            :class="{ active: idx == messageIdx }"
+            @click="showPhotoModal(idx)"
+          />
+        </div> -->
+        <div id="image-container" class="col-2 p-1" key="key1">
+          <img
+            :src="item.photo"
+            key="key2"
+            id="photo"
+            class="w-100"
             alt="thumb"
             :class="{ active: idx == messageIdx }"
             @click="showPhotoModal(idx)"

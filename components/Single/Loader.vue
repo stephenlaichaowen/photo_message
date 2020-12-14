@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loaderState" id="loader">
+  <!-- <div v-if="loaderState" id="loader">
     <div class="scene" ref="scene">
       <div class="rocket">
         <img src="/rocket.png" alt="rocket">
@@ -11,8 +11,9 @@
         :style="{ left: `${x}px`, width: `1px`, height: `${h}px`, animationDuration: `${duration}s` }"
       ></i>      
     </div>
-  </div>
-  <!-- <div v-if="loaderState" id="loader" class="text-center text-light">
+  </div> -->
+
+  <div v-if="loaderState" id="loader" class="text-center text-light">
     <div class="spinner-grow text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
@@ -31,7 +32,7 @@
     <div class="spinner-grow text-dark" role="status">
       <span class="sr-only">Loading...</span>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script>
@@ -77,7 +78,6 @@ export default {
     this.x = Math.floor(Math.random() * window.innerWidth)
     this.h = Math.random() * 100
     this.duration = Math.random() * 1
-
   }
 }
 </script>
@@ -89,31 +89,35 @@ export default {
   background: rgba(255, 255, 255, 0.5);
   animation: animateStars linear infinite;
 }
-@keyframes animateStars {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(200vh);
-  }
-}
 #loader {
-  /* height: calc(100vh - 3.125rem); */
-  height: 100vh;
+  height: calc(100vh - 3.125rem);
+  /* height: 100vh; */
   font-size: 1.2rem;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   background: #000;
 }
 .scene {
   position: relative;
   width: 100%;
-  height: calc(100vh - 6.25rem);
+  /* height: calc(100vh - 6.25rem); */
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.rocket::before {
+  content: '';
+  position: absolute;
+  bottom: -12.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.625rem;
+  height: 12.5rem;
+  background: linear-gradient(#00d0ff, transparent);
+  filter: blur(1.25rem);
 }
 .rocket {
   position: relative;
@@ -127,15 +131,13 @@ export default {
     transform: translateY(0.125rem);
   }
 }
-.rocket::before {
-  content: '';
-  position: absolute;
-  bottom: -12.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0.625rem;
-  height: 12.5rem;
-  background: linear-gradient(#00d0ff, transparent);
-  filter: blur(1.25rem);
+
+@keyframes animateStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
 }
 </style>
