@@ -11,10 +11,10 @@
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
-        class="flex-grow-1 w-100 align-middle pr-5 pl-2"
+        class="flex-grow-1 w-100 align-middle px-5"
       />
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png"
+        src="https://tse1.mm.bing.net/th?id=OIP.SBAxs8f9B_9oKxbz7uiSeAAAAA&pid=Api&P=0&w=300&h=300"
         id="icon-search"
         @click="setSearchKeyword"
       />
@@ -24,11 +24,11 @@
 
 <style scoped>
 #icon-search {
-  width: 30px;
+  width: 32px;
   height: 32px;
   position: absolute;
   top: 50%;
-  right: 35px;
+  right: 25px;
   transform: translateY(-50%);
   /* color: var(--search-icon); */
 }
