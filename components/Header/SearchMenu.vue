@@ -23,16 +23,9 @@
 </template>
 
 <style scoped>
-/* #box {
-  width: 80%;
-  height: 40px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-} */
 #icon-search {
   width: 30px;
-  height: 30px;
+  height: 32px;
   position: absolute;
   top: 50%;
   right: 20px;
