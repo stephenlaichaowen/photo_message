@@ -1,6 +1,6 @@
 <template>
   <!-- <div id="message-list" class="fixed-top pb-3"> -->
-  <div id="message-list" class="pb-3">
+  <div id="message-list">
     <Message />   
   </div>
 </template>
