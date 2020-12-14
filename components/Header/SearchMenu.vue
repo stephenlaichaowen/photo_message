@@ -41,7 +41,7 @@
 }
 #search-container {
   height: 3.125rem;
-  padding: 0 2rem;
+  padding: 0 2rem 0 0;
   width: 100%;
   display: flex;
   align-items: center;
