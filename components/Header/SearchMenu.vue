@@ -1,7 +1,7 @@
 <template>
   <transition name="slideInUp">
     <div id="search-container" @click.self="closeSearchMenu" v-if="searchMenuState" class="bg-dark">
-      <input type="text" id="search-input" class="rounded">
+      <input type="text" v-model="keyword" id="search-input" class="rounded">
       <i id="icon-close" @click="setSearchKeyword" class="fas fa-times text-light"></i>
     </div>
   </transition>
@@ -9,8 +9,10 @@
 
 <script>
 export default {
-  data() {
-    return {}
+   data() {
+    return {
+      keyword: ''
+    }
   },
   computed: {
     searchMenuState: {
@@ -21,8 +23,8 @@ export default {
   },
   methods: {
     setSearchKeyword() {
-      this.$store.commit('setSearchMenuState', true)
-      // this.$store.commit('setSearchKeyword', this.keyword)
+      // this.$store.commit('setSearchMenuState', true)
+      this.$store.commit('setSearchKeyword', this.keyword)
       this.keyword = ''
     },
     closeSearchMenu() {
