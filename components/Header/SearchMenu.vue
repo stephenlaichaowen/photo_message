@@ -6,7 +6,7 @@
       v-if="searchMenuState"
       class="bg-dark"
     >
-      <div id="box" class="bg-dark">
+      <!-- <div id="box" class="bg-dark"> -->
         <input
           type="text"
           v-model="keyword"
@@ -20,18 +20,18 @@
           @click="setSearchKeyword"
         />
       </div>
-    </div>
+    <!-- </div> -->
   </transition>
 </template>
 
 <style scoped>
-#box {
+/* #box {
   width: 80%;
   height: 40px;
   border-radius: 30px;
   display: flex;
   align-items: center;
-}
+} */
 #icon-search {
   width: 30px;
   height: 30px;
