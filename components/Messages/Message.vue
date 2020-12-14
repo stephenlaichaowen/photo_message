@@ -179,10 +179,10 @@ export default {
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  /* border-top: 1px solid rgba(255, 255, 255, .2);
-  border-left: 1px solid rgba(255, 255, 255, .2); */
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
   box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
-  backdrop-filter: blur(0.3125rem);
+  backdrop-filter: blur(0.3125rem);  
   /* -o-backdrop-filter: blur(0.9375rem);
   -ms-backdrop-filter: blur(0.9375rem);
   -moz-backdrop-filter: blur(0.9375rem);
