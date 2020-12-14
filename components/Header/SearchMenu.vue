@@ -24,11 +24,11 @@
 }
 #serach-input {
   resize: none;
-  outline: none;
+  /* outline: none; */
   padding: 0.3125rem;
   border-radius: 2rem;
   /* border: none; */
-  border: 1px solid var(--theme-color);
+  border: 1px solid var(--search-icon);
 }
 #search-container {
   height: 3.125rem;
