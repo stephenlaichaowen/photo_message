@@ -48,8 +48,6 @@ export default {
 #title {
   font-weight: 400;
   font-family: 'Pacifico', cursive;
-  /* border: 1px solid magenta; */
-  /* font-size: 1.25rem; */
   text-transform: uppercase;
 }
 #icon-search {
@@ -59,9 +57,7 @@ export default {
   transform: translateY(-50%);
 }
 #logo {
-  /* border: 1px solid red; */
   display: flex;
-  /* align-items: baseline; */
   align-items: center;
 }
 #header {

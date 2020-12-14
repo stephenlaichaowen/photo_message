@@ -111,12 +111,12 @@ export default {
   top: 1.125rem;
   text-decoration: none;
 }
-#footer {
-  /* position: fixed;
+/* #footer {
+  position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 300; */
-}
+  z-index: 300;
+} */
 .withphoto {
   color: transparent !important;
   background-size: cover;
