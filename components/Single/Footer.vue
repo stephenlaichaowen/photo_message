@@ -141,7 +141,8 @@ export default {
   border-radius: 0.25rem;
   border: none;
   /* background: url('https://www.searchpng.com/wp-content/uploads/2019/02/Camera-Icon-PNG.png'); */
-  background: url('https://maxcdn.icons8.com/Share/icon/p1em/Photo_Video/camera1600.png');
+  /* background: url('https://maxcdn.icons8.com/Share/icon/p1em/Photo_Video/camera1600.png'); */
+  background: url('https://coralbuttons.files.wordpress.com/2014/11/camera-icon.png');
   background-position: center;
   background-size: cover;
   width: 2.75rem;
