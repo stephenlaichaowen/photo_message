@@ -182,11 +182,11 @@ export default {
   /* border-top: 1px solid rgba(255, 255, 255, .2);
   border-left: 1px solid rgba(255, 255, 255, .2); */
   box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
-  backdrop-filter: blur(0.9375rem);
-  -o-backdrop-filter: blur(0.9375rem);
+  backdrop-filter: blur(0.3125rem);
+  /* -o-backdrop-filter: blur(0.9375rem);
   -ms-backdrop-filter: blur(0.9375rem);
   -moz-backdrop-filter: blur(0.9375rem);
-  -webkit-backdrop-filter: blur(0.9375rem);
+  -webkit-backdrop-filter: blur(0.9375rem); */
 }
 #message-caption {
   display: flex;
