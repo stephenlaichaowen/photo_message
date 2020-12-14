@@ -10,7 +10,7 @@
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
-        class="flex-grow-1 w-100 align-middle px-3"
+        class="flex-grow-1 w-100 align-middle px-5"
       />
       <img
         src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
@@ -28,8 +28,8 @@
 
 <style scoped>
 #icon-close {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   position: absolute;
   top: 50%;
   left: 20px;
