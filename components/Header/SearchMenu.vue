@@ -32,7 +32,7 @@
   height: 22px;
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 30px;
   transform: translateY(-50%);
 }
 #icon-search {
@@ -52,7 +52,6 @@
 }
 #search-container {
   height: 3.125rem;
-  /* padding: 0 2rem 0 0; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -60,7 +59,6 @@
   left: 0;
   top: 0;
   z-index: 800;
-  /* justify-content: space-around; */
 }
 .slideInUp-enter-active {
   animation: slideInUp 0.3s;
