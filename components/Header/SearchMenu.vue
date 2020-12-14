@@ -7,7 +7,7 @@
       class="bg-dark"
     >
       <input type="text" v-model="keyword" id="search-input" class="flex-grow-1 w-100 align-middle pr-5" />
-      <img id="icon-search" @click="setSearchKeyword" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png" id="icon-search" @click="setSearchKeyword" />
     </div>
   </transition>
 </template>
@@ -20,12 +20,13 @@
   top: 50%;
   right: 8px;
   transform: translateY(-50%);
+  color: var(--search-icon);
 }
 #serach-input {
   resize: none;
   outline: none;
   padding: 0.3125rem;
-  border-radius: 0.25rem;
+  border-radius: 2rem;
   /* border: none; */
   border: 1px solid var(--theme-color);
 }
