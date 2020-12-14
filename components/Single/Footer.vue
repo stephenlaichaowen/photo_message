@@ -132,7 +132,7 @@ export default {
   background-position: center;
   background-size: cover;
   width: 2.5rem;
-  height: 2.1875rem;
+  height: 2.125rem;
 }
 #caption::placeholder {
   font-size: 0.25rem;
