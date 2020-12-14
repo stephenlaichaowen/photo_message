@@ -43,7 +43,8 @@ export default {
 #icon-search {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  /* right: 1rem; */
+  right: 0;
   transform: translateY(-50%);
   width: 1.25rem;
   height: 1.25rem;
