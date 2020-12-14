@@ -122,6 +122,9 @@ export default {
   outline: none;
   border-radius: 0.25rem;
   border: none; 
+  background: url('https://www.searchpng.com/wp-content/uploads/2019/02/Camera-Icon-PNG.png');
+  background-position: center;
+  background-size: cover;
 }
 #caption::placeholder {
   font-size: 0.25rem;
