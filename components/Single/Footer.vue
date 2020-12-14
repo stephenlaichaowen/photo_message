@@ -28,7 +28,7 @@
           class="flex-grow-1 w-100 align-middle pr-5"
         />
         <img
-          src="https://tse4.mm.bing.net/th?id=OIP.6U0p5YSqVZC2IyvkPRfyTwD6D6&pid=Api&P=0&w=300&h=300"
+          src="https://image.flaticon.com/icons/svg/941/941565.svg"
           alt="paper plane"
           id="send"
           @click.prevent="sendMessage"
@@ -121,8 +121,8 @@ export default {
   right: 1.875rem;
   top: 0.9375rem;
   text-decoration: none;
-  width: 20px;
-  height: 20px;
+  width: 1.375rem;
+  height: 1.375rem;
 }
 #footer {
   position: fixed;
