@@ -6,21 +6,19 @@
       v-if="searchMenuState"
       class="bg-dark"
     >
-      <!-- <div id="box" class="bg-dark"> -->
-        <input
-          type="text"
-          v-model="keyword"
-          id="search-input"
-          placeholder="Search..."
-          class="flex-grow-1 w-100 align-middle pr-5"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png"
-          id="icon-search"
-          @click="setSearchKeyword"
-        />
-      </div>
-    <!-- </div> -->
+      <input
+        type="text"
+        v-model="keyword"
+        id="search-input"
+        placeholder="Search..."
+        class="flex-grow-1 w-100 align-middle pr-5"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png"
+        id="icon-search"
+        @click="setSearchKeyword"
+      />
+    </div>
   </transition>
 </template>
 
