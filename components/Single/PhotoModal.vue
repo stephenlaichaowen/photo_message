@@ -5,7 +5,7 @@
       ref="photoframe"
       class="bg-dark"
       v-if="photoModalState"
-      @click.self="closePhotoModal"
+      v-hammer:swipe.horizontal="onSwipe"
     >
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
@@ -14,15 +14,19 @@
             ref="bigPhoto"
             id="big-photo"
             :alt="messageIdx"
-            v-hammer:swipe.horizontal="onSwipe"
           />
         </v-zoomer>
-        <!-- <i
+        <i
           @click="closePhotoModal"
-          id="icon-close"
-          class="fas fa-chevron-left fa-2x icon-arrow"
+          id="icon-close-right"
+          class="fas fa-chevron-right fa-2x icon-arrow"
         ></i>
         <i
+          @click="closePhotoModal"
+          id="icon-close-left"
+          class="fas fa-chevron-left fa-2x icon-arrow"
+        ></i>
+        <!-- <i
           @click="moveLeft"
           id="arrow-left"
           class="fas fa-chevron-left fa-2x icon-arrow"
@@ -113,6 +117,14 @@ export default {
 </script>
 
 <style scoped>
+#icon-close-right {
+  top: 1rem;
+  right: 1rem;
+}
+#icon-close-left {
+  top: 1rem;
+  left: 1rem;
+}
 #arrow-left {
   left: 0.9375rem;
 }
@@ -121,8 +133,8 @@ export default {
 }
 .icon-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%;
+  transform: translateY(-50%); */
   color: rgba(255, 255, 255, 0.5);
 }
 .icon-zoom {
