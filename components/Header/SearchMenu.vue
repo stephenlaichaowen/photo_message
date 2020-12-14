@@ -7,12 +7,12 @@
       class="bg-dark"
     >
       <div id="box" class="bg-dark">
-        <!-- <input type="text" v-model="keyword" id="search-input" placeholder="Search..." class="flex-grow-1 w-100 align-middle" /> -->
         <input
           type="text"
           v-model="keyword"
           id="search-input"
           placeholder="Search..."
+          class="flex-grow-1 w-100 align-middle pr-5"
         />
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png"
@@ -42,15 +42,16 @@
   /* color: var(--search-icon); */
 }
 #serach-input {
-  /* background: red; */
-  /* appearance: none; */
-  height: 100%;
   resize: none;
   outline: none;
   padding: 0.3125rem;
-  /* border-radius: 2rem; */
-  /* border: none; */
-  border: 1px solid var(--search-icon);
+  border-radius: 0.25rem;
+  border: none;
+
+  /* height: 100%;
+  resize: none;
+  outline: none;
+  padding: 0.3125rem; */
 }
 #search-container {
   height: 3.125rem;
