@@ -12,7 +12,7 @@
       <div
         id="message"
         ref="message"
-        class="row mx-3 my-2"
+        class="row m-2"
         v-for="(item, idx) in filteredMessages"
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
