@@ -74,6 +74,7 @@ main::before {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 50;
   width: 100%;
   height: 100%;
   background: linear-gradient(#f00, #f0f);
@@ -84,6 +85,7 @@ main:after {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 50;
   width: 100%;
   height: 100%;
   background: linear-gradient(#2196f3, #e91e63);
