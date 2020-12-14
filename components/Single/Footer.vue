@@ -112,10 +112,10 @@ export default {
   text-decoration: none;
 }
 #footer {
-  position: fixed;
+  /* position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 300;
+  z-index: 300; */
 }
 .withphoto {
   color: transparent !important;

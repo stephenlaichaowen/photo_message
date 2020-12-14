@@ -67,11 +67,11 @@ export default {
 #header {
   padding: 0.5rem 0.9375rem;
   height: 3.125rem;
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 300;
+  z-index: 300; */
   display: flex;
   align-items: center;
 }
