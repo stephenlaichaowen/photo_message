@@ -36,7 +36,7 @@
   resize: none;
   outline: none;
   padding: 0.3125rem;
-  border-radius: 0.25rem;
+  border-radius: 2rem;
   border: none;
 }
 #search-container {
