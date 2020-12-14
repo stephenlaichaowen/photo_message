@@ -179,8 +179,8 @@ export default {
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, .2);
-  border-left: 1px solid rgba(255, 255, 255, .2);
+  /* border-top: 1px solid rgba(255, 255, 255, .2);
+  border-left: 1px solid rgba(255, 255, 255, .2); */
   box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
   backdrop-filter: blur(0.9375rem);
   -o-backdrop-filter: blur(0.9375rem);
