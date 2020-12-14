@@ -35,14 +35,9 @@
 #serach-input {
   resize: none;
   outline: none;
-  /* padding: 5px; */
-  border-radius: 8px;
+  padding: 0.3125rem;
+  border-radius: 0.25rem;
   border: none;
-
-  /* height: 100%;
-  resize: none;
-  outline: none;
-  padding: 0.3125rem; */
 }
 #search-container {
   height: 3.125rem;
