@@ -33,7 +33,7 @@
             :src="item.photo"
             key="key2"
             id="photo"
-            class="w-100"
+            class="w-100 rounded"
             alt="thumb"
             :class="{ active: idx == messageIdx }"
             @click="showPhotoModal(idx)"
