@@ -4,10 +4,15 @@
       <div id="modal-container">
           <video id="player" ref="camera" autoplay class="w-100"></video>
         <div id="icon-group">
-          <button
+          <!-- <button
             id="capture"
             @click="takePhoto"
             class="fas fa-circle fa-2x rounded-circle bg-white text-danger my-3"
+          ></button> -->
+          <button
+            id="capture"
+            @click="takePhoto"
+            class="my-3"
           ></button>
           <i
             id="icon-close"
@@ -85,6 +90,10 @@ export default {
 </script>
 
 <style scoped>
+#capture {
+  width: 25px;
+  height: 25px;
+}
 #icon-group {
   display: flex;
   justify-content: center;

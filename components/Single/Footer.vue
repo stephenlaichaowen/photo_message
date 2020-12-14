@@ -9,27 +9,30 @@
           :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
           class="fas fa-camera fa-2x ml-0 px-1 mr-2 text-dark bg-light"
         ></button> -->
-        <button
-          id="camera"
-          @click="showCameraModal"
-          :class="{ withphoto: cameraIcon }"
-          class="ml-0 px-1 mr-2 text-dark bg-light"
-          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
-        ></button>
+        <!-- <div id="camera-container"> -->
+          <button
+            id="camera"
+            @click="showCameraModal"
+            :class="{ withphoto: cameraIcon }"
+            class="ml-0 px-1 mr-2 text-dark bg-light"
+            :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
+          ></button>
+        <!-- </div> -->
         <input
-          id="caption"         
+          id="caption"
           v-model="caption"
           @keyup.enter="sendMessage"
           type="text"
           maxlength="70"
           placeholder="Image Caption..."
           class="flex-grow-1 w-100 align-middle pr-5"
-        >
-        <img 
-          src="https://image.flaticon.com/icons/png/512/467/467569.png" alt="paper plane"
+        />
+        <img
+          src="https://image.flaticon.com/icons/png/512/467/467569.png"
+          alt="paper plane"
           id="send"
-          @click.prevent="sendMessage"    
-        >
+          @click.prevent="sendMessage"
+        />
         <!-- <a
           id="send"
           @click.prevent="sendMessage"
@@ -77,7 +80,7 @@ export default {
     },
   },
   methods: {
-    showCameraModal() {   
+    showCameraModal() {
       console.log(`camera menu opened`)
       this.$store.commit('setCameraMenuState', true)
     },
@@ -107,8 +110,8 @@ export default {
 
       this.caption = ''
       this.$store.commit('clearCameraIcon', false)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -136,7 +139,7 @@ export default {
   /* border: 1px solid red; */
   outline: none;
   border-radius: 0.25rem;
-  border: none; 
+  border: none;
   /* background: url('https://www.searchpng.com/wp-content/uploads/2019/02/Camera-Icon-PNG.png'); */
   background: url('https://maxcdn.icons8.com/Share/icon/p1em/Photo_Video/camera1600.png');
   background-position: center;
