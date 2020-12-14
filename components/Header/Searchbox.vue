@@ -30,9 +30,8 @@ export default {
   },
   methods: {
     setSearchKeyword() {
-      this.$store.commit('setSearchMenuState', true)
-      // this.$store.commit('setCameraMenuState', true)
-      // this.$store.commit('setSearchKeyword', this.keyword)
+      // this.$store.commit('setSearchMenuState', true)
+      this.$store.commit('setSearchKeyword', this.keyword)
       this.keyword = ''
     }
   },
