@@ -2,14 +2,19 @@
   <div v-if="!loaderState" id="footer" class="container-fluid">
     <div id="container" class="toolbar row bg-light">
       <div class="col py-2 d-flex">
-        <button
+        <!-- <button
           id="camera"
           @click="showCameraModal"
           :class="{ withphoto: cameraIcon }"
           :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
           class="fas fa-camera fa-2x ml-0 px-1 mr-2 text-dark bg-light"
-        >
-        </button>
+        ></button> -->
+        <button
+          id="camera"
+          @click="showCameraModal"
+          :class="{ withphoto: cameraIcon }"
+          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
+        ></button>
         <input
           id="caption"         
           v-model="caption"
