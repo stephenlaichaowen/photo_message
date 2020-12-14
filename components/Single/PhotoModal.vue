@@ -1,11 +1,18 @@
 <template>
   <transition name="zoomIn">
-    <div
+    <!-- <div
       id="photoframe"
       ref="photoframe"
       class="bg-dark"
       v-if="photoModalState"
       @click.self="closePhotoModal"
+      v-hammer:swipe.horizontal="onSwipe"
+    > -->
+    <div
+      id="photoframe"
+      ref="photoframe"
+      class="bg-dark"
+      v-if="photoModalState"
       v-hammer:swipe.horizontal="onSwipe"
     >
       <div id="image-container" ref="imageContainer">
