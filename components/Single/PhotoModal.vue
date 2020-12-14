@@ -5,7 +5,7 @@
       ref="photoframe"
       class="bg-dark"
       v-if="photoModalState"
-      v-hammer:swipe.horizontal="onSwipe"
+      v-hammer:swipe.horizontal.self="onSwipe"
     >
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
