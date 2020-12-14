@@ -2,7 +2,6 @@
   <transition name="slideInUp">
     <div
       id="search-container"
-      @click.self="closeSearchMenu"
       v-if="searchMenuState"
       class="bg-dark py-1 px-3"
     >
@@ -14,7 +13,12 @@
         class="flex-grow-1 w-100 align-middle px-5"
       />
       <img
-        src="https://tse1.mm.bing.net/th?id=OIP.SBAxs8f9B_9oKxbz7uiSeAAAAA&pid=Api&P=0&w=300&h=300"
+        src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
+        id="icon-close"
+        @click="closeSearchMenu"
+      />
+      <img
+        src="https://f0.pngfuel.com/png/9/504/blue-arrow-icon-png-clip-art.png"
         id="icon-search"
         @click="setSearchKeyword"
       />
@@ -23,6 +27,14 @@
 </template>
 
 <style scoped>
+#icon-close {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+}
 #icon-search {
   width: 32px;
   height: 32px;
@@ -30,7 +42,6 @@
   top: 50%;
   right: 25px;
   transform: translateY(-50%);
-  /* color: var(--search-icon); */
 }
 #search-input {
   resize: none;
