@@ -1,19 +1,11 @@
 <template>
   <transition name="zoomIn">
-    <!-- <div
-      id="photoframe"
-      ref="photoframe"
-      class="bg-dark"
-      v-if="photoModalState"
-      @click.self="closePhotoModal"
-      v-hammer:swipe.horizontal="onSwipe"
-    > -->
     <div
       id="photoframe"
       ref="photoframe"
       class="bg-dark"
       v-if="photoModalState"
-      v-hammer:swipe.horizontal="onSwipe"
+      @click.self="closePhotoModal"
     >
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
@@ -22,33 +14,24 @@
             ref="bigPhoto"
             id="big-photo"
             :alt="messageIdx"
+            v-hammer:swipe.horizontal="onSwipe"
           />
         </v-zoomer>
-        <!-- </panZoom> -->
-        <div id="zoom-icon">
-          <i
-            class="fas fa-search fa-lg icon-zoom m-1"
-            @click="zoomIn"
-            id="icon-zoomIn"
-          ></i>
-          <i
-            class="fas fa-search-minus fa-lg icon-zoom m-1"
-            @click="zoomOut"
-            id="icon-zoomOut"
-          ></i>
-        </div>
+        <!-- <i
+          @click="closePhotoModal"
+          id="icon-close"
+          class="fas fa-chevron-left fa-2x icon-arrow"
+        ></i>
         <i
           @click="moveLeft"
           id="arrow-left"
           class="fas fa-chevron-left fa-2x icon-arrow"
-        >
-        </i>
+        ></i>
         <i
           @click="moveRight"
           id="arrow-right"
           class="fas fa-chevron-right fa-2x icon-arrow"
-        >
-        </i>
+        ></i> -->
       </div>
     </div>
   </transition>
@@ -146,12 +129,12 @@ export default {
   padding: 0.2rem 0.5rem;
   color: rgba(255, 255, 255, 0.5);
 }
-#zoom-icon {
+/* #zoom-icon {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   display: flex;
-}
+} */
 #icon-close {
   position: absolute;
   top: 1rem;

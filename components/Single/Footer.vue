@@ -2,23 +2,14 @@
   <div v-if="!loaderState" id="footer" class="container-fluid">
     <div id="container" class="toolbar row bg-light">
       <div class="col py-2 d-flex">
-        <!-- <button
+        <button
           id="camera"
           @click="showCameraModal"
           :class="{ withphoto: cameraIcon }"
           :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
           class="fas fa-camera fa-2x ml-0 px-1 mr-2 text-dark bg-light"
         >
-        </button> -->
-
-        <!-- <font-awesome-icon icon="camera" -->
-        <font-awesome-icon :icon="['fas', 'camera']"
-          id="camera"
-          @click="showCameraModal"
-          :class="{ withphoto: cameraIcon }"
-          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
-          class="fa-2x ml-0 px-1 mr-2 text-dark bg-light"
-        />        
+        </button>
         <input
           id="caption"         
           v-model="caption"
@@ -39,8 +30,6 @@
 </template>
 
 <script>
-import io from 'socket.io-client'
-
 export default {
   data() {
     return {

@@ -12,8 +12,6 @@
 </template>
 
 <script>
-// import io from 'socket.io-client'
-
 export default {
   head() {
     return {
@@ -58,15 +56,8 @@ export default {
         style: { width: '100%' },
       })
     }
-    // this.socket.emit('to-server', 'hi, server')
-    // this.socket.on('from-server', data => {
-    //   console.log(data)
-    // })
   },
   created() {
-    // this.socket = io('http://localhost:5000')
-    // this.socket = io('https://photo-message-socketio-final.glitch.me/')
-    // this.socket = io('https://photo-message-socketio.herokuapp.com')
     console.log(`connect to server successfully !`)
   },
 }

@@ -13,11 +13,10 @@ export default {
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@300;400&display=swap" },      
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css', integrity: 'sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2', crossorigin: 'anonymous' },
       { rel: 'icon', type: "image/x-icon", href: '/favicon.ico' },
-      // { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' }
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' }
     ],
     script: [
-      { src: 'https://unpkg.com/localbase/dist/localbase.dev.js' },
-      // { src: 'https://cdn.socket.io/socket.io-3.0.1.min.js' },
+      { src: 'https://unpkg.com/localbase/dist/localbase.dev.js' }
     ]
   },
 
@@ -57,6 +56,10 @@ export default {
     mode: 'out-in'
   },
 
+  // router: {
+  //   base: '/photo_message/'
+  // },
+
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
@@ -68,17 +71,6 @@ export default {
       short_name: 'Photo Message',
       display: 'fullscreen',
       orientation: 'portrait'
-    }
-  },
-
-  buildModules: [
-    '@nuxtjs/fontawesome',
-  ],
-
-  fontawesome: {
-    icons: {
-      solid: ['faCamera'],
-      regular: ['faCamera']
     }
   }
 }
