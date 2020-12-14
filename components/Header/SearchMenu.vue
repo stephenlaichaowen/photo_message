@@ -4,7 +4,7 @@
       id="search-container"
       @click.self="closeSearchMenu"
       v-if="searchMenuState"
-      class="bg-dark py-1"
+      class="bg-dark py-1 px-3"
     >
       <input
         type="text"
