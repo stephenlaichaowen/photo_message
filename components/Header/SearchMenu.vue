@@ -10,7 +10,7 @@
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
-        class="flex-grow-1 w-100 align-middle px-5"
+        class="flex-grow-1 w-100 align-middle px-3"
       />
       <img
         src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
@@ -32,7 +32,7 @@
   height: 25px;
   position: absolute;
   top: 50%;
-  left: 25px;
+  left: 20px;
   transform: translateY(-50%);
 }
 #icon-search {
@@ -40,7 +40,7 @@
   height: 25px;
   position: absolute;
   top: 50%;
-  right: 25px;
+  right: 20px;
   transform: translateY(-50%);
 }
 #search-input {
