@@ -32,7 +32,7 @@
 }
 #search-container {
   height: 3.125rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: 100%;
   display: flex;
   align-items: center;
