@@ -26,7 +26,7 @@
           class="flex-grow-1 w-100 align-middle pr-5"
         >
         <img 
-          src="https://cdn.onlinewebfonts.com/svg/img_494.png" alt="paper plane"
+          src="https://www.pngkey.com/png/detail/188-1882350_paper-plane-send-comments-font-awesome-paper-plane.png" alt="paper plane"
           id="send"
           @click.prevent="sendMessage"    
         >
