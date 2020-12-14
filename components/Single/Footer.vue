@@ -28,7 +28,7 @@
           class="flex-grow-1 w-100 align-middle pr-5"
         />
         <img
-          src="https://image.flaticon.com/icons/png/512/467/467569.png"
+          src="https://tse4.mm.bing.net/th?id=OIP.6U0p5YSqVZC2IyvkPRfyTwD6D6&pid=Api&P=0&w=300&h=300"
           alt="paper plane"
           id="send"
           @click.prevent="sendMessage"
