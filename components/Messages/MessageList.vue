@@ -8,8 +8,8 @@
 <style scoped>
 #message-list {
   height: calc(100vh - 6.25rem);
-  /* position: fixed; */
-  position: relative;
+  position: fixed;
+  /* position: relative; */
   top: 3.125rem;
   bottom: 3.125rem;
   left: 0;  
