@@ -118,8 +118,8 @@ export default {
   right: 1.875rem;
   top: 1.125rem;
   text-decoration: none;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 #footer {
   position: fixed;
