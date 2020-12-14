@@ -67,7 +67,6 @@ export default {
   },
   methods: {
     showCameraModal() {   
-
       console.log(`camera menu opened`)
       this.$store.commit('setCameraMenuState', true)
     },

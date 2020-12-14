@@ -21,8 +21,12 @@ export default {
     .enumerateDevices()
     .then(devices => {
       const nOfVideoDevices = devices.filter(device => device.kind === 'videoinput').length
-      console.log(`You have ${nOfVideoDevices} videoinput device`)                 
-      this.$store.commit('setMobileState', false)
+      console.log(`You have ${nOfVideoDevices} videoinput device`)  
+      if (nOfVideoDevices >= 2) { 
+        this.$store.commit('setMobileState', true)
+      } else {
+        this.$store.commit('setMobileState', false)
+      }
     })
     .catch(function (err) {
       console.log(err.name + ': ' + err.message)
