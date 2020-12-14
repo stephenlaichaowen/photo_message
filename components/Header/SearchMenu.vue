@@ -35,8 +35,8 @@
 #serach-input {
   resize: none;
   outline: none;
-  padding: 0.3125rem;
-  border-radius: 50%;
+  /* padding: 5px; */
+  /* border-radius: 50%; */
   border: none;
 
   /* height: 100%;
