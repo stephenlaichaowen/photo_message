@@ -1,7 +1,7 @@
 <template>
   <transition name="fadeInUp">
-    <div id="mymodal" class="bg-dark">
-      <div id="modal-container" @click.self="closeCameraModal">
+    <div id="mymodal" class="bg-dark" @click.self="closeCameraModal">
+      <div id="modal-container">
           <video id="player" ref="camera" autoplay class="w-100"></video>
         <div id="icon-group">
           <!-- <button
