@@ -24,6 +24,8 @@
   color: var(--search-icon);
 }
 #serach-input {
+  background: red;
+  appearance: none;
   resize: none;
   outline: none;
   padding: 0.3125rem;
