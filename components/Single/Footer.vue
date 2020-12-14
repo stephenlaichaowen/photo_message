@@ -26,7 +26,7 @@
           class="flex-grow-1 w-100 align-middle pr-5"
         >
         <img 
-          src="https://www.pngkey.com/png/detail/188-1882350_paper-plane-send-comments-font-awesome-paper-plane.png" alt="paper plane"
+          src="https://image.flaticon.com/icons/png/512/467/467569.png" alt="paper plane"
           id="send"
           @click.prevent="sendMessage"    
         >
@@ -133,7 +133,7 @@ export default {
   background-position: center;
 }
 #camera {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   outline: none;
   border-radius: 0.25rem;
   border: none; 
