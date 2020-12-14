@@ -91,8 +91,8 @@ export default {
 
 <style scoped>
 #capture {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: url('https://cdn.pixabay.com/photo/2015/07/18/08/02/button-850101_640.png');
   background-position: center;
