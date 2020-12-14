@@ -12,7 +12,7 @@
       <div
         id="message"
         ref="message"
-        class="row m-2"
+        class="row rounded m-2"
         v-for="(item, idx) in filteredMessages"
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
@@ -179,8 +179,8 @@ export default {
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  /* border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem; */
   box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
   backdrop-filter: blur(0.3125rem);  
   /* -o-backdrop-filter: blur(0.9375rem);
