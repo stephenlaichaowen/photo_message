@@ -46,7 +46,7 @@
 #search-input {
   resize: none;
   outline: none;
-  padding: 0 15px;
+  padding: 0.3125rem 15px;
   border-radius: 2.5rem;
   border: none;
 }
