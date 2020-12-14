@@ -6,30 +6,49 @@
       v-if="searchMenuState"
       class="bg-dark"
     >
-      <!-- <input type="text" v-model="keyword" id="search-input" class="flex-grow-1 w-100 align-middle pr-5" /> -->
-      <input type="text" v-model="keyword" id="search-input" placeholder="Search..." />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png" id="icon-search" @click="setSearchKeyword" />
+      <div id="box" class="bg-dark">
+        <!-- <input type="text" v-model="keyword" id="search-input" placeholder="Search..." class="flex-grow-1 w-100 align-middle" /> -->
+        <input
+          type="text"
+          v-model="keyword"
+          id="search-input"
+          placeholder="Search..."
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/1200px-Arrow_icon.svg.png"
+          id="icon-search"
+          @click="setSearchKeyword"
+        />
+      </div>
     </div>
   </transition>
 </template>
 
 <style scoped>
+#box {
+  width: 80%;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
 #icon-search {
   width: 30px;
   height: 30px;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  color: var(--search-icon);
+  color: var(--search-icon); */
 }
 #serach-input {
-  background: red;
-  appearance: none;
+  /* background: red; */
+  /* appearance: none; */
+  height: 100%;
   resize: none;
   outline: none;
   padding: 0.3125rem;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   /* border: none; */
   border: 1px solid var(--search-icon);
 }
@@ -43,8 +62,6 @@
   left: 0;
   top: 0;
   z-index: 800;
-  display: flex;
-  align-items: center;
   /* justify-content: space-around; */
 }
 .slideInUp-enter-active {
