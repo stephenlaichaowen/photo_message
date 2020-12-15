@@ -1,6 +1,35 @@
 <template>
   <div>
     <transition-group name="backInRight" tag="div">
+      <!-- <div
+        v-if="filteredMessageState"
+        id="message"
+        ref="message"
+        class="row rounded mx-2 my-3"
+        v-for="(item, idx) in filteredMessages"
+        :key="item.caption"
+        v-hammer:swipe.right="() => removeMessage(item.id)"
+      >
+        <div id="image-container" class="col-2 p-1" key="key1">
+          <img
+            :src="item.photo"
+            key="key2"
+            id="photo"
+            class="w-100 rounded"
+            alt="thumb"
+            :class="{ active: idx == messageIdx }"
+            @click="showPhotoModal(idx)"
+          />
+        </div>
+        <div id="message-caption" class="col-10" key="key3">
+          <div id="caption-content" class="rounded text-light">
+            {{ item.caption }}
+          </div>
+          <div id="date">
+            {{ item.id.toLocaleString() }}
+          </div>
+        </div>
+      </div> -->
       <div
         id="message"
         ref="message"
@@ -53,6 +82,11 @@ export default {
         return this.$store.state.searchKeyword
       },
     },
+    messages: {
+      get() {
+        return this.$store.getters.messages
+      },
+    },
     filteredMessages: {
       get() {
         return this.$store.getters.messages.filter((item) =>
@@ -79,14 +113,14 @@ export default {
   mounted() {
     this.$store.commit('getPhotoMessage')
 
-    if (!this.filteredMessages) return
+    // if (!this.filteredMessages) return
   },
 }
 </script>
 
 <style scoped>
 #date {
-  padding: 0 0.5rem;
+  padding: 0 0.25rem;
   color: #ddd;
   font-size: 0.8125rem;
 }
@@ -144,29 +178,21 @@ export default {
   transition: all ease-in 0.25s;
 }
 #caption-content {
-  padding: 0 0.5rem;
+  padding: 0 0.25rem;
   font-weight: 400;
   word-wrap: break-word;
   color: white;
-  /* border: 1px solid white; */
 }
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  /* border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem; */
-  box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, .2);
   backdrop-filter: blur(0.3125rem);  
-  /* -o-backdrop-filter: blur(0.9375rem);
-  -ms-backdrop-filter: blur(0.9375rem);
-  -moz-backdrop-filter: blur(0.9375rem);
-  -webkit-backdrop-filter: blur(0.9375rem); */
 }
 #message-caption {
   display: flex;
   flex-direction: column;
   padding: 0;
-  /* border: 1px solid red; */
 }
 #menu-edit {
   margin-left: 0.625rem;
