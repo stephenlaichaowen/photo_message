@@ -7,13 +7,6 @@
       @click.self="closeSearchMenu"
     >
       <div id="search-content">
-        <!-- <input
-        type="text"
-        v-model="keyword"
-        id="search-input"
-        placeholder="Search..."
-        class="flex-grow-1 w-50 align-middle"
-      /> -->
         <input
           type="text"
           v-model="keyword"
@@ -21,11 +14,6 @@
           placeholder="Search..."
           class="align-middle"
         />
-        <!-- <img
-        src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
-        id="icon-close"
-        @click="closeSearchMenu"
-      /> -->
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/768px-Arrow_icon.svg.png"
           id="icon-search"
@@ -37,17 +25,8 @@
 </template>
 
 <style scoped>
-/* #icon-close {
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-} */
 #search-content {
   position: relative;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
