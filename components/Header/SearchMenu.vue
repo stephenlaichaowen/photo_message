@@ -48,6 +48,8 @@
 #search-content {
   position: relative;
   border: 1px solid red;
+  display: flex;
+  justify-content: center;
 }
 #icon-search {
   width: 25px;
@@ -63,7 +65,7 @@
   padding: 0.25rem 0.625rem 0.25rem 2.1875rem;
   border-radius: 2.5rem;
   border: none;
-  width: 60%;
+  width: 100%;
 }
 #search-container {
   height: 3.125rem;
