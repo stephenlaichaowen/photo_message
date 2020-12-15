@@ -6,30 +6,32 @@
       class="bg-dark py-1 px-3"
       @click.self="closeSearchMenu"
     >
-      <!-- <input
+      <div id="search-content">
+        <!-- <input
         type="text"
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
         class="flex-grow-1 w-50 align-middle"
       /> -->
-      <input
-        type="text"
-        v-model="keyword"
-        id="search-input"
-        placeholder="Search..."
-        class="align-middle"
-      />
-      <!-- <img
+        <input
+          type="text"
+          v-model="keyword"
+          id="search-input"
+          placeholder="Search..."
+          class="align-middle"
+        />
+        <!-- <img
         src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
         id="icon-close"
         @click="closeSearchMenu"
       /> -->
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/768px-Arrow_icon.svg.png"
-        id="icon-search"
-        @click="setSearchKeyword"
-      />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/768px-Arrow_icon.svg.png"
+          id="icon-search"
+          @click="setSearchKeyword"
+        />
+      </div>
     </div>
   </transition>
 </template>
@@ -43,6 +45,9 @@
   left: 20px;
   transform: translateY(-50%);
 } */
+#search-content {
+  position: relative;
+}
 #icon-search {
   width: 25px;
   height: 25px;
