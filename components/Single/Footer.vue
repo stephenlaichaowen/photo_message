@@ -104,7 +104,7 @@ export default {
 <style scoped>
 #send {
   position: absolute;
-  right: 1.875rem;
+  right: 1.5625rem;
   top: 0.9375rem;
   text-decoration: none;
   width: 1.375rem;
