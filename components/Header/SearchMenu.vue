@@ -47,6 +47,7 @@
 } */
 #search-content {
   position: relative;
+  border: 1px solid red;
 }
 #icon-search {
   width: 25px;
