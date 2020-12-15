@@ -4,7 +4,7 @@
       <div
         id="message"
         ref="message"
-        class="row rounded ml-2 mr-5 my-2"
+        class="row rounded mx-2 my-3"
         v-for="(item, idx) in filteredMessages"
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
@@ -20,13 +20,19 @@
             @click="showPhotoModal(idx)"
           />
         </div>
-        <div id="message-caption" class="col-10 px-2" key="key3">
+        <div id="message-caption" class="col-9 pl-1" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
           <div id="date">
             {{ item.id.toLocaleString() }}
           </div>
+        </div>
+
+        <div id="menu-item" class="col-1">
+          <!-- <i id="menu-burger" class="fas fa-ellipsis-h"></i> -->
+          <!-- <i id="menu-burger" class="fas fa-expand"></i>
+          <span class="delete" @click="removeMessage(item.id)"></span> -->
         </div>
       </div>
     </transition-group>
@@ -83,6 +89,11 @@ export default {
 </script>
 
 <style scoped>
+#date {
+  padding: 0 0.5rem;
+  color: #ddd;
+  font-size: 0.8125rem;
+}
 #menu-icon {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -97,6 +108,7 @@ export default {
   padding: 0;
 }
 .active {  
+  /* box-shadow: 0 0 0.0625rem #fff, 0 0 0.125rem #fff, 0 0 0.125rem #fff, 0 0 0px #0ff, 0 0 0.0625rem #0ff, 0 0 0px #0ff, 0 0 0.25rem #0ff, 0 0 0.125rem #0ff; */
   box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 0px #0ff, 0 0 2px #0ff, 0 0 0px #0ff, 0 0 0.5rem #0ff, 0 0 0.25rem #0ff;
 }
 #photo {
@@ -139,27 +151,30 @@ export default {
   color: #fff;
   transition: all ease-in 0.25s;
 }
-#date {
-  padding: 0 0.5rem;
-  color: #ddd;
-  font-size: 0.8125rem;
-}
 #caption-content {
   padding: 0 0.5rem;
   font-weight: 400;
   word-wrap: break-word;
   color: white;
+  /* border: 1px solid white; */
 }
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
+  /* border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem; */
   box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
   backdrop-filter: blur(0.3125rem);  
+  /* -o-backdrop-filter: blur(0.9375rem);
+  -ms-backdrop-filter: blur(0.9375rem);
+  -moz-backdrop-filter: blur(0.9375rem);
+  -webkit-backdrop-filter: blur(0.9375rem); */
 }
 #message-caption {
   display: flex;
   flex-direction: column;
   padding: 0;
+  /* border: 1px solid red; */
 }
 #menu-edit {
   margin-left: 0.625rem;

@@ -24,11 +24,6 @@
           id="send"
           @click.prevent="sendMessage"
         />
-        <!-- <a
-          id="send"
-          @click.prevent="sendMessage"
-          class="fas fa-paper-plane text-dark position-absolute"
-        ></a> -->
       </div>
     </div>
   </div>
