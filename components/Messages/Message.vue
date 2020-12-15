@@ -20,7 +20,7 @@
             @click="showPhotoModal(idx)"
           />
         </div>
-        <div id="message-caption" class="col-10" key="key3">
+        <div id="message-caption" class="col-10 pl-1" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
@@ -89,11 +89,6 @@ export default {
 </script>
 
 <style scoped>
-#date {
-  padding: 0 0.5rem;
-  color: #ddd;
-  font-size: 0.8125rem;
-}
 #menu-icon {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -151,8 +146,13 @@ export default {
   color: #fff;
   transition: all ease-in 0.25s;
 }
+#date {
+  /* padding: 0 0.5rem; */
+  color: #ddd;
+  font-size: 0.8125rem;
+}
 #caption-content {
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   font-weight: 400;
   word-wrap: break-word;
   color: white;
