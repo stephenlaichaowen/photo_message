@@ -20,7 +20,7 @@
             @click="showPhotoModal(idx)"
           />
         </div>
-        <div id="message-caption" class="col-10 pl-1" key="key3">
+        <div id="message-caption" class="col-10" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
