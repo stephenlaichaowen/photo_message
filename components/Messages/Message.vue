@@ -4,7 +4,7 @@
       <div
         id="message"
         ref="message"
-        class="row rounded mx-3 my-3"
+        class="row rounded ml-2 mr-5 my-2"
         v-for="(item, idx) in filteredMessages"
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
@@ -20,7 +20,7 @@
             @click="showPhotoModal(idx)"
           />
         </div>
-        <div id="message-caption" class="col-10 pl-2" key="key3">
+        <div id="message-caption" class="col-10 px-2" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
