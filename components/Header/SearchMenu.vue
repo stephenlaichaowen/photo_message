@@ -56,7 +56,7 @@
   height: 25px;
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 5px;
   transform: translateY(-50%);
 }
 #search-input {
