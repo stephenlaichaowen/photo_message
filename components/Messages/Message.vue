@@ -20,19 +20,13 @@
             @click="showPhotoModal(idx)"
           />
         </div>
-        <div id="message-caption" class="col-9 pl-1" key="key3">
+        <div id="message-caption" class="col-10 pl-1" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
           <div id="date">
             {{ item.id.toLocaleString() }}
           </div>
-        </div>
-
-        <div id="menu-item" class="col-1">
-          <!-- <i id="menu-burger" class="fas fa-ellipsis-h"></i> -->
-          <!-- <i id="menu-burger" class="fas fa-expand"></i>
-          <span class="delete" @click="removeMessage(item.id)"></span> -->
         </div>
       </div>
     </transition-group>
