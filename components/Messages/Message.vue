@@ -28,12 +28,6 @@
             {{ item.id.toLocaleString() }}
           </div>
         </div>
-
-        <!-- <div id="menu-item" class="col-1"> -->
-          <!-- <i id="menu-burger" class="fas fa-ellipsis-h"></i> -->
-          <!-- <i id="menu-burger" class="fas fa-expand"></i>
-          <span class="delete" @click="removeMessage(item.id)"></span> -->
-        <!-- </div> -->
       </div>
     </transition-group>
   </div>
@@ -103,7 +97,6 @@ export default {
   padding: 0;
 }
 .active {  
-  /* box-shadow: 0 0 0.0625rem #fff, 0 0 0.125rem #fff, 0 0 0.125rem #fff, 0 0 0px #0ff, 0 0 0.0625rem #0ff, 0 0 0px #0ff, 0 0 0.25rem #0ff, 0 0 0.125rem #0ff; */
   box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 0px #0ff, 0 0 2px #0ff, 0 0 0px #0ff, 0 0 0.5rem #0ff, 0 0 0.25rem #0ff;
 }
 #photo {
@@ -147,31 +140,26 @@ export default {
   transition: all ease-in 0.25s;
 }
 #date {
-  /* padding: 0 0.5rem; */
+  padding: 0 0.5rem;
   color: #ddd;
   font-size: 0.8125rem;
-  /* border: 1px solid green; */
 }
 #caption-content {
-  /* border: 1px solid yellow; */
-  /* padding: 0 0.5rem; */
+  padding: 0 0.5rem;
   font-weight: 400;
   word-wrap: break-word;
   color: white;
-  /* border: 1px solid white; */
 }
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
   box-shadow: .5px .5px 2px rgba(0, 0, 0, .2);
   backdrop-filter: blur(0.3125rem);  
-  /* border: 1px solid red; */
 }
 #message-caption {
   display: flex;
   flex-direction: column;
   padding: 0;
-  /* border: 1px solid red; */
 }
 #menu-edit {
   margin-left: 0.625rem;
