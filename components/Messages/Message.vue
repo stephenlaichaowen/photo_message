@@ -78,6 +78,8 @@ export default {
   },
   mounted() {
     this.$store.commit('getPhotoMessage')
+
+    if (!this.filteredMessages) return
   },
 }
 </script>
