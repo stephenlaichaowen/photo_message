@@ -54,7 +54,7 @@
 #search-input {
   resize: none;
   outline: none;
-  padding: 0.3125rem 30px;
+  padding: 0.3125rem 10px 0.3125rem 30px;
   border-radius: 2.5rem;
   border: none;
   /* width: 50%; */
