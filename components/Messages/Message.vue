@@ -4,29 +4,30 @@
       <div
         id="message"
         ref="message"
-        class="row rounded mx-3 my-2"
+        class="rounded mx-3 my-2"
         v-for="(item, idx) in filteredMessages"
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
       >
-        <div id="image-container" class="col-2 p-1" key="key1">
+        <div id="image-container" class="p-1" key="key1">
           <img
             :src="item.photo"
             key="key2"
             id="photo"
-            class="w-100 rounded"
+            class="rounded"
             alt="thumb"
             :class="{ active: idx == messageIdx }"
             @click="showPhotoModal(idx)"
           />
-        </div>
-        <div id="message-caption" class="col-10 pl-1" key="key3">
+
+        <div id="message-caption" class="pl-1" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
           <div id="date">
             {{ item.id.toLocaleString() }}
           </div>
+        </div>
         </div>
 
         <!-- <div id="menu-item" class="col-1"> -->
@@ -105,7 +106,9 @@ export default {
   align-items: flex-start;
 }
 #image-container {
-  padding: 0;
+  /* padding: 0; */
+  /* border: 1px solid red; */
+  display: flex;
 }
 .active {  
   /* box-shadow: 0 0 0.0625rem #fff, 0 0 0.125rem #fff, 0 0 0.125rem #fff, 0 0 0px #0ff, 0 0 0.0625rem #0ff, 0 0 0px #0ff, 0 0 0.25rem #0ff, 0 0 0.125rem #0ff; */
@@ -114,6 +117,9 @@ export default {
 #photo {
   border-radius: 50%;
   overflow: hidden;
+  width: 45px;
+  height: 45px;
+  /* display: inline-block; */
 }
 #menu-item:hover .delete {
   width: 1.875rem;
