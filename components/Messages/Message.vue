@@ -99,7 +99,7 @@ export default {
   align-items: flex-start;
 }
 .active {  
-  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 0px #0ff, 0 0 2px #0ff, 0 0 0px #0ff, 0 0 0.5rem #0ff, 0 0 0.25rem #0ff;
+  box-shadow: 0 0 0.125rem #fff, 0 0 0.25rem #fff, 0 0 0.25rem #fff, 0 0 0px #0ff, 0 0 0.125rem #0ff, 0 0 0px #0ff, 0 0 0.5rem #0ff, 0 0 0.25rem #0ff;
 }
 #photo {
   border-radius: 50%;

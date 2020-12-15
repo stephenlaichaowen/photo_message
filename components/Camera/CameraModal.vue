@@ -4,21 +4,11 @@
       <div id="modal-container">
           <video id="player" ref="camera" autoplay class="w-100"></video>
         <div id="icon-group">
-          <!-- <button
-            id="capture"
-            @click="takePhoto"
-            class="fas fa-circle fa-2x rounded-circle bg-white text-danger my-3"
-          ></button> -->
           <button
             id="capture"
             @click="takePhoto"
             class="my-3"
           ></button>
-          <!-- <i
-            id="icon-close"
-            @click="closeCameraModal"
-            class="fas fa-times text-light"
-          ></i> -->
         </div>
       </div>
     </div>
@@ -91,6 +81,8 @@ export default {
 
 <style scoped>
 #capture {
+  outline: none;
+  border: none;
   width: 2.8125rem;
   height: 2.8125rem;
   border-radius: 50%;
