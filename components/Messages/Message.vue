@@ -9,7 +9,7 @@
         :key="item.caption"
         v-hammer:swipe.right="() => removeMessage(item.id)"
       >
-        <div id="image-container" class="col-2 p-2" key="key1">
+        <div id="image-container" class="col-2 p-1" key="key1">
           <img
             :src="item.photo"
             key="key2"
@@ -20,7 +20,7 @@
             @click="showPhotoModal(idx)"
           />
         </div>
-        <div id="message-caption" class="col-10 pl-1" key="key3">
+        <div id="message-caption" class="col-10 pl-2" key="key3">
           <div id="caption-content" class="rounded text-light">
             {{ item.caption }}
           </div>
