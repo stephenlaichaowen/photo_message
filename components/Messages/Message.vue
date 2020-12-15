@@ -82,11 +82,11 @@ export default {
         return this.$store.state.searchKeyword
       },
     },
-    messages: {
-      get() {
-        return this.$store.getters.messages
-      },
-    },
+    // messages: {
+    //   get() {
+    //     return this.$store.getters.messages
+    //   },
+    // },
     filteredMessages: {
       get() {
         return this.$store.getters.messages.filter((item) =>
@@ -112,8 +112,6 @@ export default {
   },
   mounted() {
     this.$store.commit('getPhotoMessage')
-
-    // if (!this.filteredMessages) return
   },
 }
 </script>
