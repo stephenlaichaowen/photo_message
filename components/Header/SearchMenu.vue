@@ -18,7 +18,7 @@
         v-model="keyword"
         id="search-input"
         placeholder="Search..."
-        class="w-50 align-middle"
+        class="align-middle"
       />
       <!-- <img
         src="https://www.freeiconspng.com/uploads/black-close-icon-3.png"
@@ -54,16 +54,17 @@
 #search-input {
   resize: none;
   outline: none;
-  padding: 0.3125rem 10px 0.3125rem 30px;
+  padding: 0.3125rem 0.625rem 0.3125rem 2.1875rem;
   border-radius: 2.5rem;
   border: none;
-  /* width: 50%; */
+  width: 60%;
 }
 #search-container {
   height: 3.125rem;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
