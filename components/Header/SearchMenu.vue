@@ -31,8 +31,8 @@
   justify-content: center;
 }
 #icon-search {
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   position: absolute;
   top: 50%;
   left: 5px;
