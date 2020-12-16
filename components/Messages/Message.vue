@@ -37,7 +37,7 @@
       :key="item.caption"
       v-hammer:swipe.right="() => removeMessage(item.id)"
     >
-      <div id="image-container" class="col-2" key="key1">
+      <div id="image-container" class="col-2 p-1" key="key1">
         <div id="image-wrapper">
           <img
             :src="item.photo"
