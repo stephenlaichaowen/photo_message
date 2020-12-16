@@ -100,7 +100,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.scene .rocket::before {
+.rocket::after {
   content: '';
   position: absolute;
   bottom: -12.5rem;
