@@ -1,34 +1,5 @@
 <template>
-  <transition-group name="backInRight" tag="div">
-    <!-- <div
-        v-if="filteredMessageState"
-        id="message"
-        ref="message"
-        class="row rounded mx-2 my-3"
-        v-for="(item, idx) in filteredMessages"
-        :key="item.caption"
-        v-hammer:swipe.right="() => removeMessage(item.id)"
-      >
-        <div id="image-container" class="col-2 p-1" key="key1">
-          <img
-            :src="item.photo"
-            key="key2"
-            id="photo"
-            class="w-100 rounded"
-            alt="thumb"
-            :class="{ active: idx == messageIdx }"
-            @click="showPhotoModal(idx)"
-          />
-        </div>
-        <div id="message-caption" class="col-10" key="key3">
-          <div id="caption-content" class="rounded text-light">
-            {{ item.caption }}
-          </div>
-          <div id="date">
-            {{ item.id.toLocaleString() }}
-          </div>
-        </div>
-      </div> -->
+  <transition-group name="backInRight" tag="div">   
     <div
       id="message"
       ref="message"
