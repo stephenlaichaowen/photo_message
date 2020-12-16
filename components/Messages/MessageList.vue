@@ -7,11 +7,12 @@
 <style scoped>
 #message-list {
   height: calc(100vh - 6.25rem);
-  position: absolute;
+  width: 100%;
+  /* position: absolute;
   top: 3.125rem;
   bottom: 3.125rem;
   left: 0;  
-  z-index: 100;
+  z-index: 100; */
   overflow-y: scroll;    
 }
 </style>

@@ -66,12 +66,13 @@ export default {
 <style scoped>
 main {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: relative;
   /* background: #161623; */
-  background-image: url('/main-bg.jpg');
+  background-image: url('/bg-cosmos.jpg');
   background-position: center;
   background-size: cover;
+  /* filter: grayscale(80%); */
 }
 /* main::before {
   content: '';
