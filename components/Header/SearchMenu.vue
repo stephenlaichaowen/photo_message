@@ -14,7 +14,7 @@
           class="align-middle"
         />
         <img
-          src="/arrow-left.png"
+          src="https://tse2.mm.bing.net/th?id=OIP.AF9Kt8T07MPIU7h1wNBEEgHaHa&pid=Api&P=0&w=300&h=300"
           id="icon-search"
           @click="setSearchKeyword"
         />
