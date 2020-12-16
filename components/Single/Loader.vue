@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loaderState" class="scene" ref="scene">
+  <div v-if="loaderState" class="scene bg-dark" ref="scene">
     <div class="rocket">
       <img src="/rocket.png" alt="rocket" />
     </div>
