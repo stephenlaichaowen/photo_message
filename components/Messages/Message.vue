@@ -115,6 +115,9 @@ export default {
 </script>
 
 <style scoped>
+#image-container {
+  border: 1px solid red;
+}
 #date {
   color: #ddd;
   font-size: 0.8125rem;
