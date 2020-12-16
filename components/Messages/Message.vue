@@ -124,10 +124,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png');
+  /* background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png'); */
+  background-image: url('/photo-frame.png');
   /* background-position: center;
   background-size: cover; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 /* #image-container {
 } */
@@ -151,6 +152,8 @@ export default {
   align-items: flex-start;
 }
 .active {
+  /* example */
+  /* box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 0px #0ff, 0 0 14px #0ff, 0 0 0px #0ff, 0 0 41px #0ff, 0 0 22px #0ff; */
   box-shadow: 0 0 0.25rem #fff, 0 0 0.5rem #fff, 0 0 0.5rem #fff, 0 0 0px #0ff,
     0 0 0.25rem #0ff, 0 0 0px #0ff, 0 0 1rem #0ff, 0 0 0.5rem #0ff;
 }
