@@ -1,5 +1,6 @@
 <template>
-  <div v-if="loaderState" class="scene" ref="scene">
+  <!-- <div v-if="loaderState" class="scene" ref="scene"> -->
+  <div class="scene" ref="scene">
     <div class="rocket">
       <img src="/rocket.png" alt="rocket" />
     </div>
