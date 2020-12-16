@@ -14,7 +14,7 @@
           class="align-middle"
         />
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Arrow_icon.svg/768px-Arrow_icon.svg.png"
+          src="/arrow-left.png"
           id="icon-search"
           @click="setSearchKeyword"
         />
