@@ -115,11 +115,7 @@ export default {
 </script>
 
 <style scoped>
-/* #message-list {
-  margin: 3.125rem 0 3.125rem 0;
-} */
 #date {
-  /* padding: 0 0.25rem; */
   color: #ddd;
   font-size: 0.8125rem;
 }

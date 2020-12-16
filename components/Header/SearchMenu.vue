@@ -29,6 +29,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  border: 1px solid red;
 }
 #icon-search {
   width: 1.5625rem;
