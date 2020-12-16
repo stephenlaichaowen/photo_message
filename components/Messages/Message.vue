@@ -6,20 +6,19 @@
       class="row rounded mx-2 my-4"
       v-for="(item, idx) in filteredMessages"
       :key="item.caption"
-      v-hammer:swipe.right="() => removeMessage(item.id)"
+      v-hammer:swipe.right="() => removeMessage(item.caption)"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
-        <div id="image-wrapper" class="rounded">
+        <!-- <div id="image-wrapper" class="rounded"> -->
           <img
             :src="item.photo"
             key="key2"
-            id="photo"
-            class="rounded"
+            id="photo"           
             alt="thumb"
             :class="{ active: idx == messageIdx }"
             @click="showPhotoModal(idx)"
           />
-        </div>
+        <!-- </div> -->
       </div>
       <div id="message-caption" class="col-10 px-2" key="key3">
         <div id="caption-content" class="rounded text-light">
@@ -71,6 +70,7 @@ export default {
       alert('you swipe left')
     },
     removeMessage(id) {
+      console.log(`photo message id: ${id}`)
       this.$store.commit('removeMessage', id)
     },
     setMessageMenu(idx) {
@@ -88,24 +88,18 @@ export default {
 </script>
 
 <style scoped>
-#image-wrapper {
+/* #image-wrapper {
   width: 3.125rem;
   height: 3.125rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png'); */
   background-image: url('/frame2.png');
-  /* background-position: center;
-  background-size: cover; */
-  /* border: 1px solid red; */
-}
-/* #image-container {
 } */
 #photo {
-  /* border-radius: 50%;
-  overflow: hidden; */
+  border-radius: 50%;
+  overflow: hidden;
   width: 80%;
 }
 #date {
