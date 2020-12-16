@@ -37,7 +37,7 @@
       :key="item.caption"
       v-hammer:swipe.right="() => removeMessage(item.id)"
     >
-      <div id="image-container" class="col-2" key="key1">
+      <div id="image-container" class="col-2 p-1" key="key1">
         <div id="image-wrapper">
           <img
             :src="item.photo"
@@ -50,7 +50,7 @@
           />
         </div>
       </div>
-      <div id="message-caption" class="col-10 pl-3 pr-2" key="key3">
+      <div id="message-caption" class="col-10 px-2" key="key3">
         <div id="caption-content" class="rounded text-light">
           {{ item.caption }}
         </div>
@@ -122,7 +122,6 @@ export default {
   background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png');
   background-position: center;
   background-size: cover;
-  padding: 0.25rem;
 }
 /* #image-container {
   border: 1px solid red;
@@ -192,9 +191,10 @@ export default {
 }
 #message {
   background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(0, 0, 0, 0.5); */
   overflow: hidden;
   box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
-  /* backdrop-filter: blur(0.1875rem); */
+  backdrop-filter: blur(0.1875rem);
 }
 #message-caption {
   display: flex;
