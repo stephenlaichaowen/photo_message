@@ -78,6 +78,8 @@ export const mutations = {
     
     // delete item from local messages
     state.messages = state.messages.filter(item => item.id !== data)
+    console.log(`message index: ${data}`)
+    console.log(state.messages)
 
     // delete item from indexdb
     let db = new Localbase('db')
