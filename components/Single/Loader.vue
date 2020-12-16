@@ -53,7 +53,7 @@ export default {
   methods: {
     stars() {
       let count = 50
-      // let scene = document.querySelector('.scene')
+      let scene = document.querySelector('.scene')
       let i = 0
       while (i < count) {
         let star = document.createElement('i')
@@ -66,18 +66,18 @@ export default {
         star.style.height = h + 'px'
         star.style.animationDuration = duration + 's'
 
-        // scene.appendChild(star)
-        this.$refs.scene.appendChild(star)
+        scene.appendChild(star)
+        // this.$refs.scene.appendChild(star)
         i++
       }
     },
   },
   mounted() {
-    // this.stars()
+    this.stars()
 
-    this.x = Math.floor(Math.random() * window.innerWidth)
-    this.h = Math.random() * 100
-    this.duration = Math.random() * 1
+    // this.x = Math.floor(Math.random() * window.innerWidth)
+    // this.h = Math.random() * 100
+    // this.duration = Math.random() * 1
   },
 }
 </script>
