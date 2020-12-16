@@ -37,7 +37,7 @@
       :key="item.caption"
       v-hammer:swipe.right="() => removeMessage(item.id)"
     >
-      <div id="image-container" class="col-2 p-1" key="key1">
+      <div id="image-container" class="col-2" key="key1">
         <div id="image-wrapper">
           <img
             :src="item.photo"
@@ -118,6 +118,10 @@ export default {
 
 <style scoped>
 #image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 3.125rem;
   background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png');
   background-position: center;
@@ -125,6 +129,11 @@ export default {
 }
 #image-container {
   border: 1px solid red;
+}
+#photo {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80%;
 }
 #date {
   color: #ddd;
@@ -143,11 +152,6 @@ export default {
 .active {
   box-shadow: 0 0 0.25rem #fff, 0 0 0.5rem #fff, 0 0 0.5rem #fff, 0 0 0px #0ff,
     0 0 0.25rem #0ff, 0 0 0px #0ff, 0 0 1rem #0ff, 0 0 0.5rem #0ff;
-}
-#photo {
-  border-radius: 50%;
-  overflow: hidden;
-  width: 90%;
 }
 #menu-item:hover .delete {
   width: 1.875rem;
