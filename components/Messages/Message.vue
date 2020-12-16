@@ -119,13 +119,13 @@ export default {
 <style scoped>
 #image-wrapper {
   height: 3.125rem;
-}
-#image-container {
-  /* border: 1px solid red; */
   background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png');
   background-position: center;
   background-size: cover;
 }
+/* #image-container {
+  border: 1px solid red;
+} */
 #date {
   color: #ddd;
   font-size: 0.8125rem;
