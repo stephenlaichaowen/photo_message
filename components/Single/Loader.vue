@@ -1,6 +1,6 @@
 <template>
-  <div v-if="loaderState" id="container" class="bg-dark">
-    <img id="loader" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="loader">
+  <div v-if="loaderState" id="container">
+    <img id="loader" src="/loading.gif" alt="loader">
   </div>
 </template>
 
@@ -29,5 +29,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;  
+  background: #000;
 }
 </style>
