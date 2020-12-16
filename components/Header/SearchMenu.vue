@@ -30,6 +30,7 @@
   display: flex;
   justify-content: center;
   border: 1px solid red;
+  width: 100%;
 }
 #icon-search {
   width: 1.5625rem;
