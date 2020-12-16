@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="message-list">
     <transition-group name="backInRight" tag="div">
       <!-- <div
         v-if="filteredMessageState"
@@ -117,6 +117,9 @@ export default {
 </script>
 
 <style scoped>
+#message-list {
+  margin: 3.125rem 0 3.125rem 0;
+}
 #date {
   /* padding: 0 0.25rem; */
   color: #ddd;
