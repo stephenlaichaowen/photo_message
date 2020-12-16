@@ -18,7 +18,6 @@
           id="icon-search"
           @click="setSearchKeyword"
         />
-        <!-- <i id="icon-search" @click="setSearchKeyword" class="fas fa-arrow-left"></i> -->
         <img
           src="https://s3.amazonaws.com/s3.moveon.org/moui/close-icon.png"
           id="icon-close"
