@@ -1,22 +1,8 @@
 <template>
   <div id="searchbox">
-    <!-- <input
-      id="searchbox-input"
-      v-model="keyword"
-      @keyup.enter="setSearchKeyword"
-      type="text"
-      placeholder="Search..."
-      class="flex-grow-1 align-middle pr-5 rounded pl-1"
-    /> -->
-    <!-- <i
+    <div       
       id="icon-search"
-      @click="setSearchKeyword"
-      class="fas fa-search text-info"
-    ></i> -->
-    <div 
-      src="https://www.pinclipart.com/picdir/middle/485-4851736_free-clipart-icons.png" alt="search"
-      id="icon-search"
-      @click="setSearchKeyword"
+      @click="setSearchmenu"
     ></div>
   </div>
 </template>
@@ -30,9 +16,7 @@ export default {
   },
   methods: {
     setSearchKeyword() {
-      this.$store.commit('setSearchMenuState', true)
-      // this.$store.commit('setSearchKeyword', this.keyword)
-      // this.keyword = ''
+      this.$store.commit('setSearchmenu', true)
     }
   },
 }
@@ -48,7 +32,7 @@ export default {
   height: 1.375rem;
   color: var(--theme-color);
   /* background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png'); */
-  background: url('https://www.pinclipart.com/picdir/big/142-1425726_mouse-scroll-icon-search-circle-icon-png-clipart.png');
+  background: url('openSearchmenu');
   background-position: center;
   background-size: cover;
 }
