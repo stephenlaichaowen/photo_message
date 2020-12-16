@@ -4,7 +4,6 @@
       id="search-container"
       v-if="searchMenuState"
       class="bg-dark py-1 px-3"
-      @click.self="closeSearchMenu"
     >
       <div id="search-content">
         <input
@@ -19,6 +18,11 @@
           id="icon-search"
           @click="setSearchKeyword"
         />
+        <img
+          src="https://www.pngjoy.com/pngm/47/1062318_close-icon-close-button-png-icon-transparent-png.png"
+          id="icon-close"
+          @click="closeSearchMenu"
+        />
       </div>
     </div>
   </transition>
@@ -29,15 +33,20 @@
   position: relative;
   display: flex;
   justify-content: center;
-  /* border: 1px solid red; */
   width: 100%;
 }
 #icon-search {
+  left: 0.3125rem;
+}
+#icon-close {
+  right: 0.3125rem;
+}
+#icon-search,
+#icon-close {
   width: 1.5625rem;
   height: 1.5625rem;
   position: absolute;
   top: 50%;
-  left: 5px;
   transform: translateY(-50%);
 }
 #search-input {
