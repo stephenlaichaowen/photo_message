@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loaderState" class="scene bg-dark" ref="scene">
+  <div v-if="loaderState" class="scene" ref="scene">
     <div class="rocket">
       <img src="/rocket.png" alt="rocket" />
     </div>
@@ -94,7 +94,7 @@ export default {
   bottom: 3.125rem;
   width: 100%;
   height: calc(100vh - 6.25rem);
-  /* height: 100vh; */
+  background: #000;
   overflow: hidden;
   display: flex;
   justify-content: center;
