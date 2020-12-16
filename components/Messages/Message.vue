@@ -192,10 +192,9 @@ export default {
 }
 #message {
   background: rgba(255, 255, 255, 0.05);
-  /* background: rgba(0, 0, 0, 0.5); */
   overflow: hidden;
   box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(0.1875rem);
+  /* backdrop-filter: blur(0.1875rem); */
 }
 #message-caption {
   display: flex;
