@@ -1,6 +1,6 @@
 <template>
   <div v-if="loaderState" id="loader">
-    <img src="/loader.gif" alt="loader">
+    <img src="/loading.gif" alt="loader">
   </div>
 
   <!-- <div v-if="loaderState" id="loader" class="text-center text-light">
