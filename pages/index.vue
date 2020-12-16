@@ -67,12 +67,10 @@ export default {
 main {
   height: 100vh;
   width: 100vw;
-  position: relative;
-  /* background: #161623; */
+  position: fixed;
   background-image: url('/bg-cosmos.jpg');
   background-position: center;
   background-size: cover;
-  /* filter: grayscale(80%); */
 }
 /* main::before {
   content: '';

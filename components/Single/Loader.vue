@@ -1,19 +1,17 @@
 <template>
-  <!-- <div v-if="loaderState" id="loader">
-    <div class="scene" ref="scene">
-      <div class="rocket">
-        <img src="/rocket.png" alt="rocket">
-      </div>
-      <i 
-        class="star" 
-        v-for="i in 50" 
-        :key="i" 
-        :style="{ left: `${x}px`, width: `1px`, height: `${h}px`, animationDuration: `${duration}s` }"
-      ></i>      
+  <div v-if="loaderState" class="scene" ref="scene">
+    <div class="rocket">
+      <img src="/rocket.png" alt="rocket" />
     </div>
-  </div> -->
+    <i 
+      class="star" 
+      v-for="i in 50" 
+      :key="i" 
+      :style="{ left: `${x}px`, width: `1px`, height: `${h}px`, animationDuration: `${duration}s` }"
+    ></i>      
+  </div>
 
-  <div v-if="loaderState" id="loader" class="text-center text-light">
+  <!-- <div v-if="loaderState" id="loader" class="text-center text-light">
     <div class="spinner-grow text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
@@ -32,7 +30,7 @@
     <div class="spinner-grow text-dark" role="status">
       <span class="sr-only">Loading...</span>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -41,7 +39,7 @@ export default {
     return {
       x: null,
       h: null,
-      duration: null
+      duration: null,
     }
   },
   computed: {
@@ -54,31 +52,32 @@ export default {
   methods: {
     stars() {
       let count = 50
-      let scene = document.querySelector('.scene')
+      // let scene = document.querySelector('.scene')
       let i = 0
       while (i < count) {
         let star = document.createElement('i')
         let x = Math.floor(Math.random() * window.innerWidth)
         let duration = Math.random() * 1
-        let h = Math.random() * 100  
+        let h = Math.random() * 100
 
-        star.style.left = `${x}px`
-        star.style.width = `1px`
-        star.style.height = `${h}px`
+        star.style.left = x + 'px'
+        star.style.width = 1 +　'px'
+        star.style.height = h + 'px'
         star.style.animationDuration = duration + 's'
 
-        scene.appendChild(star)
+        // scene.appendChild(star)
+        this.$refs.scene.appendChild(star)
         i++
       }
-    }
+    },
   },
   mounted() {
     // this.stars()
-    
+
     this.x = Math.floor(Math.random() * window.innerWidth)
     this.h = Math.random() * 100
     this.duration = Math.random() * 1
-  }
+  },
 }
 </script>
 
@@ -89,26 +88,19 @@ export default {
   background: rgba(255, 255, 255, 0.5);
   animation: animateStars linear infinite;
 }
-#loader {
-  height: calc(100vh - 3.125rem);
-  /* height: 100vh; */
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-}
 .scene {
-  position: relative;
+  position: absolute;
+  top: 3.125rem;
+  bottom: 3.125rem;
   width: 100%;
-  /* height: calc(100vh - 6.25rem); */
-  height: 100vh;
+  height: calc(100vh - 6.25rem);
+  /* height: 100vh; */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.rocket::before {
+.scene .rocket::before {
   content: '';
   position: absolute;
   bottom: -12.5rem;
@@ -117,21 +109,20 @@ export default {
   width: 0.625rem;
   height: 12.5rem;
   background: linear-gradient(#00d0ff, transparent);
-  filter: blur(1.25rem);
 }
 .rocket {
   position: relative;
-  animation: animate 0.2s ease infinite;
+  animation: animateRocket 0.2s ease infinite;
 }
-@keyframes animate {
-  0%, 100% {
+@keyframes animateRocket {
+  0%,
+  100% {
     transform: translateY(-0.125rem);
   }
   50% {
     transform: translateY(0.125rem);
   }
 }
-
 @keyframes animateStars {
   0% {
     transform: translateY(0);
