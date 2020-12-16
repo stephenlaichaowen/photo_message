@@ -126,10 +126,10 @@ export default {
   background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png');
   background-position: center;
   background-size: cover;
-}
-#image-container {
   border: 1px solid red;
 }
+/* #image-container {
+} */
 #photo {
   border-radius: 50%;
   overflow: hidden;
