@@ -26,7 +26,7 @@ export default {
 #icon-search {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0.625rem;
   transform: translateY(-50%);
   width: 1.375rem;
   height: 1.375rem;
@@ -45,7 +45,7 @@ export default {
 #searchbox {
   position: relative;
   margin-left: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .slideInRight-enter-active {
   animation: slideInRight 0.5s;
