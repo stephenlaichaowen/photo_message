@@ -28,6 +28,32 @@
   </transition>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      keyword: '',
+    }
+  },
+  computed: {
+    searchMenuState: {
+      get() {
+        return this.$store.getters.searchMenuState
+      },
+    },
+  },
+  methods: {
+    setSearchKeyword() {
+      this.$store.commit('setSearchKeyword', this.keyword)
+      this.keyword = ''
+    },
+    closeSearchMenu() {
+      this.$store.commit('setSearchMenuState', false)
+    },
+  },
+}
+</script>
+
 <style scoped>
 #search-content {
   position: relative;
@@ -89,30 +115,4 @@
 }
 </style>
 
-<script>
-export default {
-  data() {
-    return {
-      keyword: '',
-    }
-  },
-  computed: {
-    searchMenuState: {
-      get() {
-        return this.$store.getters.searchMenuState
-      },
-    },
-  },
-  methods: {
-    setSearchKeyword() {
-      // this.$store.commit('setSearchMenuState', true)
-      this.$store.commit('setSearchKeyword', this.keyword)
-      this.keyword = ''
-    },
-    closeSearchMenu() {
-      this.$store.commit('setSearchMenuState', false)
-    },
-  },
-}
-</script>
 

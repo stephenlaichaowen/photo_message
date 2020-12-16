@@ -75,6 +75,7 @@ export default {
       this.$store.commit('setMessageMenuState', true)
     },
     showPhotoModal(idx) {
+      console.log(`photo index: ${idx}`)
       this.$store.commit('showBigPhoto', idx)
       this.$store.commit('setPhotoModalState', true)
     },
