@@ -38,15 +38,17 @@
       v-hammer:swipe.right="() => removeMessage(item.id)"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
-        <img
-          :src="item.photo"
-          key="key2"
-          id="photo"
-          class="w-100 rounded"
-          alt="thumb"
-          :class="{ active: idx == messageIdx }"
-          @click="showPhotoModal(idx)"
-        />
+        <div id="image-wrapper">
+          <img
+            :src="item.photo"
+            key="key2"
+            id="photo"
+            class="w-100 rounded"
+            alt="thumb"
+            :class="{ active: idx == messageIdx }"
+            @click="showPhotoModal(idx)"
+          />
+        </div>
       </div>
       <div id="message-caption" class="col-10 px-2" key="key3">
         <div id="caption-content" class="rounded text-light">
@@ -115,8 +117,11 @@ export default {
 </script>
 
 <style scoped>
+#image-wrapper {
+  height: 3.125rem;
+}
 #image-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-image: url('https://baileymunchkins.files.wordpress.com/2016/03/gold_and_brown_transparent_photo_frame.png');
   background-position: center;
   background-size: cover;
