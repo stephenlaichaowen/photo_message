@@ -32,7 +32,7 @@ export default {
   height: 1.375rem;
   color: var(--theme-color);
   /* background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png'); */
-  background: url('openSearchmenu');
+  background: url('https://www.pinclipart.com/picdir/middle/485-4851736_free-clipart-icons.png');
   background-position: center;
   background-size: cover;
 }
