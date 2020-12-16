@@ -1,28 +1,7 @@
 <template>
-  <div v-if="loaderState" id="loader">
-    <img src="/loading.gif" alt="loader">
+  <div v-if="loaderState" id="container">
+    <img id="loader" src="/loading.gif" alt="loader">
   </div>
-
-  <!-- <div v-if="loaderState" id="loader" class="text-center text-light">
-    <div class="spinner-grow text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div> -->
 </template>
 
 <script>
@@ -39,9 +18,13 @@ export default {
 
 <style scoped>
 #loader {
+  width: 30%;
+}
+#container {
   position: fixed;
   top: 0;
   left: 0;
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
