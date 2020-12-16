@@ -13,14 +13,14 @@
           placeholder="Search..."
           class="align-middle"
         />
-        <!-- <img
+        <img
           src="/arrow-left.png"
           id="icon-search"
           @click="setSearchKeyword"
-        /> -->
-        <i id="icon-search" @click="setSearchKeyword" class="fas fa-arrow-left"></i>
+        />
+        <!-- <i id="icon-search" @click="setSearchKeyword" class="fas fa-arrow-left"></i> -->
         <img
-          src="https://www.pngjoy.com/pngm/47/1062318_close-icon-close-button-png-icon-transparent-png.png"
+          src="https://s3.amazonaws.com/s3.moveon.org/moui/close-icon.png"
           id="icon-close"
           @click="closeSearchMenu"
         />
