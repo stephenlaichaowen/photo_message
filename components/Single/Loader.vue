@@ -7,7 +7,7 @@
       class="star" 
       v-for="i in 50" 
       :key="i" 
-      :style="{ left: `${x}px`, width: `1px`, height: `${h}px`, animationDuration: `${duration}s` }"
+      :style="{ left: `${x}rem`, width: `1rem`, height: `${h}rem`, animationDuration: `${duration}s` }"
     ></i>      
   </div>
 
@@ -60,9 +60,9 @@ export default {
         let duration = Math.random() * 1
         let h = Math.random() * 100
 
-        star.style.left = x + 'px'
-        star.style.width = 1 +　'px'
-        star.style.height = h + 'px'
+        star.style.left = x + 'rem'
+        star.style.width = 1 +　'rem'
+        star.style.height = h + 'rem'
         star.style.animationDuration = duration + 's'
 
         // scene.appendChild(star)
