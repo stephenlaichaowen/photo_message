@@ -4,12 +4,12 @@
     <div class="rocket">
       <img src="/rocket.png" alt="rocket" />
     </div>
-    <i 
+    <!-- <i 
       class="star" 
       v-for="i in 50" 
       :key="i" 
       :style="{ left: `${x}rem`, width: `1rem`, height: `${h}rem`, animationDuration: `${duration}s` }"
-    ></i>      
+    ></i>       -->
   </div>
 
   <!-- <div v-if="loaderState" id="loader" class="text-center text-light">
@@ -61,9 +61,9 @@ export default {
         let duration = Math.random() * 1
         let h = Math.random() * 100
 
-        star.style.left = x + 'rem'
-        star.style.width = 1 +　'rem'
-        star.style.height = h + 'rem'
+        star.style.left = x + 'px'
+        star.style.width = 1 +　'px'
+        star.style.height = h + 'px'
         star.style.animationDuration = duration + 's'
 
         // scene.appendChild(star)
@@ -110,6 +110,7 @@ export default {
   width: 0.625rem;
   height: 12.5rem;
   background: linear-gradient(#00d0ff, transparent);
+  filter: blur(0.3125rem);
 }
 .rocket {
   position: relative;
