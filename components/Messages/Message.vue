@@ -1,5 +1,5 @@
 <template>
-  <transition-group name="backInRight" tag="div">   
+  <transition-group name="backInRight" tag="div">
     <div
       id="message"
       ref="message"
@@ -9,16 +9,14 @@
       v-hammer:swipe.right="() => removeMessage(item.caption)"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
-        <!-- <div id="image-wrapper" class="rounded"> -->
-          <img
-            :src="item.photo"
-            key="key2"
-            id="photo"           
-            alt="thumb"
-            :class="{ active: idx == messageIdx }"
-            @click="showPhotoModal(idx)"
-          />
-        <!-- </div> -->
+        <img
+          :src="item.photo"
+          key="key2"
+          id="photo"
+          alt="thumb"
+          :class="{ active: idx == messageIdx }"
+          @click="showPhotoModal(idx)"
+        />
       </div>
       <div id="message-caption" class="col-10 px-2" key="key3">
         <div id="caption-content" class="rounded text-light">

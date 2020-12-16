@@ -15,7 +15,7 @@
           @keyup.enter="sendMessage"
           type="text"
           maxlength="80"
-          placeholder="Image Caption..."
+          placeholder="Short Message..."
           class="flex-grow-1 w-100 align-middle pr-5"
         />
         <img
