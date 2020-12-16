@@ -66,10 +66,14 @@ export default {
 <style scoped>
 main {
   height: 100vh;
+  width: 100%;
   position: relative;
-  background: #161623;
+  /* background: #161623; */
+  background-image: url('/main-bg.jpg');
+  background-position: center;
+  background-size: cover;
 }
-main::before {
+/* main::before {
   content: '';
   position: absolute;
   top: 0;
@@ -90,6 +94,6 @@ main:after {
   height: 100%;
   background: linear-gradient(#2196f3, #e91e63);
   clip-path: circle(20% at 10% 10%);
-}
+} */
 </style>
 
