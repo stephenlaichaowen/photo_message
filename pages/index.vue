@@ -3,7 +3,8 @@
     <Header />
     <SearchMenu />
     <Loader />
-    <MessageList />
+    <!-- <MessageList /> -->
+    <Message />
     <Footer />
     <PhotoModal />
     <CameraModal v-if="cameraModalState" @hide-modal="cameraModalState=false" />    

@@ -1,7 +1,6 @@
 <template>
-  <div id="message-list">
-    <transition-group name="backInRight" tag="div">
-      <!-- <div
+  <transition-group name="backInRight" tag="div">
+    <!-- <div
         v-if="filteredMessageState"
         id="message"
         ref="message"
@@ -30,36 +29,35 @@
           </div>
         </div>
       </div> -->
-      <div
-        id="message"
-        ref="message"
-        class="row rounded ml-2 mr-5 my-2"
-        v-for="(item, idx) in filteredMessages"
-        :key="item.caption"
-        v-hammer:swipe.right="() => removeMessage(item.id)"
-      >
-        <div id="image-container" class="col-2 p-1" key="key1">
-          <img
-            :src="item.photo"
-            key="key2"
-            id="photo"
-            class="w-100 rounded"
-            alt="thumb"
-            :class="{ active: idx == messageIdx }"
-            @click="showPhotoModal(idx)"
-          />
+    <div
+      id="message"
+      ref="message"
+      class="row rounded ml-2 mr-5 my-2"
+      v-for="(item, idx) in filteredMessages"
+      :key="item.caption"
+      v-hammer:swipe.right="() => removeMessage(item.id)"
+    >
+      <div id="image-container" class="col-2 p-1" key="key1">
+        <img
+          :src="item.photo"
+          key="key2"
+          id="photo"
+          class="w-100 rounded"
+          alt="thumb"
+          :class="{ active: idx == messageIdx }"
+          @click="showPhotoModal(idx)"
+        />
+      </div>
+      <div id="message-caption" class="col-10 px-2" key="key3">
+        <div id="caption-content" class="rounded text-light">
+          {{ item.caption }}
         </div>
-        <div id="message-caption" class="col-10 px-2" key="key3">
-          <div id="caption-content" class="rounded text-light">
-            {{ item.caption }}
-          </div>
-          <div id="date">
-            {{ item.id.toLocaleString() }}
-          </div>
+        <div id="date">
+          {{ item.id.toLocaleString() }}
         </div>
       </div>
-    </transition-group>
-  </div>
+    </div>
+  </transition-group>
 </template>
 
 <script>
@@ -117,9 +115,9 @@ export default {
 </script>
 
 <style scoped>
-#message-list {
+/* #message-list {
   margin: 3.125rem 0 3.125rem 0;
-}
+} */
 #date {
   /* padding: 0 0.25rem; */
   color: #ddd;
@@ -135,8 +133,9 @@ export default {
   display: flex;
   align-items: flex-start;
 }
-.active {  
-  box-shadow: 0 0 0.25rem #fff, 0 0 0.5rem #fff, 0 0 0.5rem #fff, 0 0 0px #0ff, 0 0 0.25rem #0ff, 0 0 0px #0ff, 0 0 1rem #0ff, 0 0 0.5rem #0ff;
+.active {
+  box-shadow: 0 0 0.25rem #fff, 0 0 0.5rem #fff, 0 0 0.5rem #fff, 0 0 0px #0ff,
+    0 0 0.25rem #0ff, 0 0 0px #0ff, 0 0 1rem #0ff, 0 0 0.5rem #0ff;
 }
 #photo {
   border-radius: 50%;
@@ -187,8 +186,8 @@ export default {
 #message {
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, .2);
-  backdrop-filter: blur(0.3125rem);  
+  box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.3125rem);
 }
 #message-caption {
   display: flex;
