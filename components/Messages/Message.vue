@@ -43,7 +43,7 @@
             :src="item.photo"
             key="key2"
             id="photo"
-            class="w-100 rounded"
+            class="rounded"
             alt="thumb"
             :class="{ active: idx == messageIdx }"
             @click="showPhotoModal(idx)"
@@ -123,9 +123,9 @@ export default {
   background-position: center;
   background-size: cover;
 }
-/* #image-container {
+#image-container {
   border: 1px solid red;
-} */
+}
 #date {
   color: #ddd;
   font-size: 0.8125rem;
@@ -147,6 +147,7 @@ export default {
 #photo {
   border-radius: 50%;
   overflow: hidden;
+  width: 90%;
 }
 #menu-item:hover .delete {
   width: 1.875rem;
