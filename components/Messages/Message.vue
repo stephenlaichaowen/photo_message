@@ -174,7 +174,6 @@ export default {
   transition: all ease-in 0.25s;
 }
 #caption-content {
-  /* padding: 0 0.25rem; */
   font-weight: 400;
   word-wrap: break-word;
   color: white;

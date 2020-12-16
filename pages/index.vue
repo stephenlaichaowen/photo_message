@@ -68,7 +68,7 @@ main {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background-image: url('/bg.jpg');
+  background-image: url('/bg-1.jpg');
   background-position: center;
   background-size: cover;
 }
