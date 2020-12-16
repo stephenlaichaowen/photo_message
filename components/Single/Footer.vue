@@ -15,7 +15,7 @@
           @keyup.enter="sendMessage"
           type="text"
           maxlength="30"
-          placeholder="Short Message..."
+          placeholder="Please type short messages..."
           class="flex-grow-1 w-100 align-middle pr-5"
         />
         <img
