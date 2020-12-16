@@ -86,15 +86,6 @@ export default {
 </script>
 
 <style scoped>
-/* #image-wrapper {
-  width: 3.125rem;
-  height: 3.125rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('/frame2.png');
-} */
 #photo {
   border-radius: 50%;
   overflow: hidden;
@@ -167,6 +158,8 @@ export default {
   overflow: hidden;
   box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.1875rem);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
 }
 #message-caption {
   display: flex;
