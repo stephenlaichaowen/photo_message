@@ -1,6 +1,6 @@
 <template>
-  <div v-if="loaderState" id="container">
-    <img id="loader" src="/loading.gif" alt="loader">
+  <div v-if="loaderState" id="container" class="bg-dark">
+    <img id="loader" src="https://cdn.dribbble.com/users/612275/screenshots/2611394/loading-animation-new-800x600.gif" alt="loader">
   </div>
 </template>
 
@@ -28,6 +28,6 @@ export default {
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 </style>
