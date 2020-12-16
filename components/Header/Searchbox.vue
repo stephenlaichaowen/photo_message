@@ -14,7 +14,7 @@
       class="fas fa-search text-info"
     ></i> -->
     <div 
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png" alt="search"
+      src="https://www.pinclipart.com/picdir/middle/485-4851736_free-clipart-icons.png" alt="search"
       id="icon-search"
       @click="setSearchKeyword"
     ></div>
