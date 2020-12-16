@@ -80,10 +80,10 @@ export default {
   methods: {
     onSwipe(e) {
       if (e.type === 'swipeleft') {
-        this.moveLeft()
+        this.moveRight()
       }
       if (e.type === 'swiperight') {
-        this.moveRight()
+        this.moveLeft()
       }
     },
     moveLeft() {
