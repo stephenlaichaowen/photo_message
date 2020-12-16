@@ -5,7 +5,7 @@
       ref="photoframe"
       class="bg-dark"
       v-if="photoModalState"
-      @click="closePhotoModal"
+      @click.self="closePhotoModal"
     >
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
