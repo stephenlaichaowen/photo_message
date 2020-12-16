@@ -80,8 +80,8 @@ export const mutations = {
     state.messages = state.messages.filter(item => item.id !== data)
 
     // delete item from indexdb
-    // let db = new Localbase('db')
-    // db.collection('photo-message').doc({ id: data }).delete()
+    let db = new Localbase('db')
+    db.collection('photo-message').doc({ id: data }).delete()
   }
   
 }
