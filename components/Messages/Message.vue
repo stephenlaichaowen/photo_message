@@ -158,8 +158,9 @@ export default {
   overflow: hidden;
   box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.1875rem);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  /* border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem; */
+  border-radius: 2.5rem;
 }
 #message-caption {
   display: flex;
