@@ -133,8 +133,8 @@ export default {
 /* #image-container {
 } */
 #photo {
-  border-radius: 50%;
-  overflow: hidden;
+  /* border-radius: 50%;
+  overflow: hidden; */
   width: 80%;
 }
 #date {
