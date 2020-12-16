@@ -1,13 +1,13 @@
 <template>
   <main>
-    <!-- <Header />
-    <SearchMenu /> -->
+    <Header />
+    <SearchMenu />
     <Loader />
-    <!-- <MessageList />
+    <MessageList />
     <Footer />
     <PhotoModal />
     <CameraModal v-if="cameraModalState" @hide-modal="cameraModalState=false" />    
-    <CameraMenu @show-modal="cameraModalState=true" /> -->
+    <CameraMenu @show-modal="cameraModalState=true" />
   </main>
 </template>
 
