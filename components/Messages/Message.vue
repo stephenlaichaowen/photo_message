@@ -32,7 +32,7 @@
     <div
       id="message"
       ref="message"
-      class="row rounded mx-3 my-4"
+      class="row rounded mx-2 my-4"
       v-for="(item, idx) in filteredMessages"
       :key="item.caption"
       v-hammer:swipe.right="() => removeMessage(item.id)"
