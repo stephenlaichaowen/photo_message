@@ -15,8 +15,8 @@ export default {
     }
   },
   methods: {
-    setSearchKeyword() {
-      this.$store.commit('setSearchmenu', true)
+    setSearchmenu() {
+      this.$store.commit('setSearchMenuState', true)
     }
   },
 }
@@ -45,6 +45,7 @@ export default {
 #searchbox {
   position: relative;
   margin-left: auto;
+  border: 1px solid red;
 }
 .slideInRight-enter-active {
   animation: slideInRight 0.5s;
