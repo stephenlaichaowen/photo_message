@@ -40,6 +40,8 @@
 }
 #icon-close {
   right: 0.3125rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
 #icon-search,
 #icon-close {
