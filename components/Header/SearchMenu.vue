@@ -18,10 +18,15 @@
           id="icon-search"
           @click="setSearchKeyword"
         />
-        <img
+        <!-- <img
           src="https://s3.amazonaws.com/s3.moveon.org/moui/close-icon.png"
           id="icon-close"
           @click="closeSearchMenu"
+        /> -->
+        <img
+          src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"
+          id="icon-close"
+          @click="setSearchKeyword"
         />
       </div>
     </div>
@@ -80,7 +85,7 @@ export default {
 #search-input {
   resize: none;
   outline: none;
-  padding: 0.25rem 0.625rem 0.25rem 2.1875rem;
+  padding: 0.25rem 0.625rem 0.25rem 2.5rem;
   border-radius: 2.5rem;
   border: none;
   width: 100%;
