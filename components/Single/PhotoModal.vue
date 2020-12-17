@@ -10,7 +10,7 @@
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
           <img
-            :src="messages[messageIdx].photo"
+            :src="filteredMessages[messageIdx].photo"
             ref="bigPhoto"
             id="big-photo"
             :alt="messageIdx"
@@ -61,9 +61,9 @@ export default {
         return this.$store.state.messageIdx
       },
     },
-    messages: {
+    filteredMessages: {
       get() {
-        return this.$store.getters.messages
+        return this.$store.getters.filteredMessages
       },
     },
     photoSrc: {
