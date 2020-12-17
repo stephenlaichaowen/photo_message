@@ -1,5 +1,6 @@
 <template>
-  <div id="message-list" class="bg-info">
+  <!-- <div id="message-list" class="bg-info"> -->
+  <div id="message-list">
     <Message />   
   </div>
 </template>
