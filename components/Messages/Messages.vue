@@ -99,6 +99,7 @@ export default {
   z-index: 200;
   /* padding: 3.125rem 0; */
   overflow-y: scroll;   
+  width: 100vw;
 }
 #photo {
   border-radius: 50%;
