@@ -1,18 +1,20 @@
 <template>
-  <div id="message-list">
+  <div id="message-list" class="bg-info">
     <Message />   
   </div>
 </template>
 
 <style scoped>
 #message-list {
-  height: calc(100vh - 6.25rem);  
+  /* height: calc(100vh - 6.25rem);  
   width: 100%;
   position: absolute;
   top: 3.125rem;
   bottom: 3.125rem;
-  left: 0;  
+  left: 0;   */
+
+  padding: 3.125rem 0;
   /* z-index: 100; */
-  overflow-y: scroll;    
+  /* overflow-y: scroll;     */
 }
 </style>
