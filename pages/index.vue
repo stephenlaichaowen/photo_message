@@ -11,29 +11,6 @@
   </main>
 </template>
 
-<style scoped>
-main {
-  height: 100%;
-  overflow-y: scroll;
-
-  /* height: 100vh;
-  width: 100%;
-
-  position: relative;
-  overflow-y: scroll; */
-
-  /* position: absolute; */
-  
-
-  /* height: 100vh;
-  width: 100vw;
-  position: fixed;
-  background-image: url('/bg-3.jpg');
-  background-position: center;
-  background-size: cover; */
-}
-</style>
-
 <script>
 export default {
   head() {

@@ -91,13 +91,14 @@ export default {
 
 <style scoped>
 #messages {
-  position: fixed;
+  position: absolute;
   padding: 0 0.5rem;
   top: 3.125rem;
   bottom: 3.125rem;
   height: calc(100vh - 6.25rem); 
-  z-index: 500;
+  z-index: 200;
   overflow-y: scroll;   
+  width: 100%;
 }
 #photo {
   border-radius: 50%;
@@ -118,17 +119,6 @@ export default {
   font-weight: 400;
   word-wrap: break-word;
   color: white;
-}
-#message {
-  position: relative;
-  height: 100%;
-  overflow-y: scroll;
-  /* background: rgba(255, 255, 255, 0.05); */
-  /* overflow-y: scroll; */
-  /* overflow: hidden; */
-  /* box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2); */
-  /* backdrop-filter: blur(0.3125rem); */
-  /* border-radius: 2.5rem; */
 }
 #message-caption {
   display: flex;
