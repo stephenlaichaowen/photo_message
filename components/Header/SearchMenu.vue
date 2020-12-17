@@ -16,7 +16,7 @@
         <img
           src="/arrow.png"
           id="icon-search"
-          @click="setSearchKeyword"
+          @click="$store.commit('getPhotoMessage')"
         />
         <!-- <img
           src="https://s3.amazonaws.com/s3.moveon.org/moui/close-icon.png"
