@@ -1,10 +1,10 @@
 <template>
   <main class="bg-info">
-    <Header />
+    <!-- <Header /> -->
     <SearchMenu />
     <Loader />
     <MessageList />
-    <Footer />
+    <!-- <Footer /> -->
     <PhotoModal />
     <CameraModal v-if="cameraModalState" @hide-modal="cameraModalState=false" />    
     <CameraMenu @show-modal="cameraModalState=true" />
