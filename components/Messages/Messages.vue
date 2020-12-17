@@ -20,13 +20,16 @@
           @click="showPhotoModal(idx)"
         />
       </div>
-      <div id="message-caption" class="col-10 px-2" key="key3">
+      <div id="message-caption" class="col-9 px-2" key="key3">
         <div id="caption-content" class="rounded text-light">
           {{ item.caption }}
         </div>
         <div id="date">
           {{ item.id.toLocaleString() }}
         </div>
+      </div>
+      <div id="option">
+        <img src="https://cdn0.iconfinder.com/data/icons/round-action-bar/48/more-512.png" alt="option">
       </div>
     </div>
   </transition-group>
@@ -92,12 +95,11 @@ export default {
 </script>
 
 <style scoped>
-/* #image-container {
-  border: 1px solid magenta;
+#option img {
+  width: 20px;
+  height: 20px;
+  /* background-color: rgba(255, 255, 255, 0.5); */
 }
-#message {
-  border: 1px solid red;
-} */
 #messages {
   position: absolute;
   top: 3.125rem;

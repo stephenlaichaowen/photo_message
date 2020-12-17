@@ -14,7 +14,7 @@
           v-model="caption"
           @keyup.enter="sendMessage"
           type="text"
-          maxlength="30"
+          maxlength="60"
           placeholder="Please type short messages..."
           class="flex-grow-1 w-100 align-middle pr-5"
         />
