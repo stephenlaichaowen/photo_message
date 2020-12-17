@@ -6,7 +6,7 @@
     </div> -->
     <div
       id="message"
-      class="row rounded pl-4 pr-3 py-1"
+      class="row rounded pl-4 pr-3 pb-1"
       v-for="(item, idx) in messages"
       :key="item.caption"
     >
@@ -92,12 +92,12 @@ export default {
 </script>
 
 <style scoped>
-#image-container {
+/* #image-container {
   border: 1px solid magenta;
 }
 #message {
   border: 1px solid red;
-}
+} */
 #messages {
   position: absolute;
   top: 3.125rem;
@@ -107,7 +107,7 @@ export default {
   overflow-y: scroll;   
   overflow-x: hidden;
   width: 100vw;
-  padding: 0.25rem;
+  padding: 0.5rem 0.25rem 0 0.25rem;
 }
 #photo {
   border-radius: 50%;
