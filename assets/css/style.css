@@ -2,7 +2,7 @@
     --theme-color: #17a2b8;    
     --search-icon: #00FEDE;
 }
-*, *::before, *::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,8 +10,9 @@
     font-weight: 300;
 }
 body {
-    min-height: 100vh;
+    min-height: 100vh; 
     position: relative;
+    overscroll-behavior-y: scroll;
 }
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s;

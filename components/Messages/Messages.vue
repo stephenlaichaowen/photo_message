@@ -1,9 +1,9 @@
 <template>
+<div id="messages" class="bg-info">
   <transition-group name="backInRight" tag="div">
     <div
       id="message"
-      ref="message"
-      class="row rounded pl-4 py-2"
+      class="row rounded pl-3 pt-2"
       v-for="(item, idx) in messages"
       :key="item.caption"
       v-hammer:swipe.right="() => removeMessage(item.caption)"
@@ -28,6 +28,7 @@
       </div>
     </div>
   </transition-group>
+  </div>
 </template>
 
 <script>
@@ -89,6 +90,16 @@ export default {
 </script>
 
 <style scoped>
+#messages {
+  position: fixed;
+  padding: 0 0.5rem;
+  top: 3.125rem;
+  bottom: 3.125rem;
+  height: calc(100vh - 6.25rem);
+  z-index: 200;
+  /* padding: 3.125rem 0; */
+  overflow-y: scroll;   
+}
 #photo {
   border-radius: 50%;
   overflow: hidden;
@@ -97,16 +108,6 @@ export default {
 #date {
   color: #ddd;
   font-size: 0.8125rem;
-}
-#menu-icon {
-  color: rgba(255, 255, 255, 0.3);
-}
-#menu {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
 }
 .active {
   /* example */
@@ -124,7 +125,7 @@ export default {
   /* background: rgba(255, 255, 255, 0.05); */
   /* overflow-y: scroll; */
   /* overflow: hidden; */
-  box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2); */
   /* backdrop-filter: blur(0.3125rem); */
   /* border-radius: 2.5rem; */
 }
@@ -135,21 +136,6 @@ export default {
 }
 #menu-edit {
   margin-left: 0.625rem;
-}
-#menu-trash {
-  margin-left: auto;
-}
-#menu-item-container {
-  margin-top: 0.3125rem;
-  display: flex;
-}
-#menu-item {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-#menu-burger {
-  color: rgba(255, 255, 255, 0.3);
 }
 .backInRight-enter-active {
   animation: backInRight 0.3s;

@@ -3,7 +3,7 @@
     <Header />
     <SearchMenu />
     <Loader />
-    <MessageList />
+    <Messages />
     <Footer />
     <PhotoModal />
     <CameraModal v-if="cameraModalState" @hide-modal="cameraModalState=false" />    
@@ -13,10 +13,11 @@
 
 <style scoped>
 main {
-  /* height: 100%;
-  width: 100%; */
+  height: 100vh;
+  width: 100%;
 
-  /* position: relative; */
+  position: relative;
+  overflow-y: scroll;
 
   /* position: absolute; */
   
