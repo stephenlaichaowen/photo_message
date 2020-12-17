@@ -99,11 +99,11 @@ export default {
 <style scoped>
 #option img {
   width: 15px;
-  height: 20px;
+  height: 15px;
   /* background-color: rgba(255, 255, 255, 0.5); */
 }
 #option {
-  padding-top: 2px;
+  padding-top: 5px;
 }
 #messages {
   position: absolute;
