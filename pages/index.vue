@@ -11,6 +11,22 @@
   </main>
 </template>
 
+<style scoped>
+main {
+  /* height: 100%;
+  width: 100%; */
+
+  position: relative;
+
+  /* height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: url('/bg-3.jpg');
+  background-position: center;
+  background-size: cover; */
+}
+</style>
+
 <script>
 export default {
   head() {
@@ -63,17 +79,5 @@ export default {
 }
 </script>
 
-<style scoped>
-main {
-  height: 100%;
-  width: 100%;
 
-  /* height: 100vh;
-  width: 100vw;
-  position: fixed;
-  background-image: url('/bg-3.jpg');
-  background-position: center;
-  background-size: cover; */
-}
-</style>
 
