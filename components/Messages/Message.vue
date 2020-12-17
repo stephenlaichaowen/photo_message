@@ -1,33 +1,35 @@
 <template>
-  <transition-group name="backInRight" tag="div">
-    <div
-      id="message"
-      ref="message"
-      class="row mx-3 my-4"
-      v-for="(item, idx) in filteredMessages"
-      :key="item.caption"
-      v-hammer:swipe.right="() => removeMessage(item.caption)"
-    >
-      <div id="image-container" class="col-2 p-1" key="key1">
-        <img
-          :src="item.photo"
-          key="key2"
-          id="photo"
-          alt="thumb"
-          :class="{ active: idx == messageIdx }"
-          @click="showPhotoModal(idx)"
-        />
-      </div>
-      <div id="message-caption" class="col-10 px-1" key="key3">
-        <div id="caption-content" class="rounded text-light">
-          {{ item.caption }}
+  <div>
+    <transition-group name="backInRight" tag="div">
+      <div        
+        id="message"
+        ref="message"
+        class="row rounded mx-3 my-4"
+        v-for="(item, idx) in messages"
+        :key="item.caption"
+        v-hammer:swipe.right="() => removeMessage(item.caption)"
+      >
+        <div id="image-container" class="col-2 p-1" key="key1">
+          <img
+            :src="item.photo"
+            key="key2"
+            id="photo"
+            alt="thumb"
+            :class="{ active: idx == messageIdx }"
+            @click="showPhotoModal(idx)"
+          />
         </div>
-        <div id="date">
-          {{ item.id.toLocaleString() }}
+        <div id="message-caption" class="col-10 px-1" key="key3">
+          <div id="caption-content" class="rounded text-light">
+            {{ item.caption }}
+          </div>
+          <div id="date">
+            {{ item.id.toLocaleString() }}
+          </div>
         </div>
       </div>
-    </div>
-  </transition-group>
+    </transition-group>
+  </div>
 </template>
 
 <script>
@@ -36,7 +38,8 @@ export default {
     return {
       photoSrc: null,
       messageMenuState: false,
-      tempMessages: [],
+      tempMessages: null,
+      searchState: false
     }
   },
   computed: {
@@ -50,18 +53,18 @@ export default {
         return this.$store.state.searchKeyword
       },
     },
-    // messages: {
-    //   get() {
-    //     return this.$store.getters.messages
-    //   },
-    // },
-    filteredMessages: {
+    
+    messages: {
       get() {
-        return this.$store.getters.messages.filter((item) =>
-          item.caption.includes(this.searchKeyword)
-        )
+        return this.$store.getters.messages
       },
     },
+
+    // filteredMessages: {
+    //   get() {
+    //     return this.$store.getters.filteredMessages
+    //   },
+    // },    
   },
   methods: {
     onSwipeLeft() {
@@ -75,7 +78,8 @@ export default {
       this.$store.commit('setMessageMenuState', true)
     },
     showPhotoModal(idx) {
-      console.log(`photo index: ${idx}`)
+      // alert(`photo index: ${idx}`)
+      // console.log(`photo index: ${idx}`)
       this.$store.commit('showBigPhoto', idx)
       this.$store.commit('setPhotoModalState', true)
     },
@@ -158,7 +162,7 @@ export default {
   overflow: hidden;
   box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.3125rem);
-  border-radius: 2.5rem;
+  /* border-radius: 2.5rem; */  
 }
 #message-caption {
   display: flex;

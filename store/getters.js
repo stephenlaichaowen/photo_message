@@ -7,6 +7,7 @@ export const getters = {
   cameraIcon: state => state.cameraIcon,
   message: state => state.message,
   messages: state => state.messages,
+  filteredMessages: state => state.filteredMessages,
   bigPhoto: state => state.bigPhoto,
   cameraModalState: state => state.cameraModalState,
   cameraMenuState: state => state.cameraMenuState,

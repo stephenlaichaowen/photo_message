@@ -6,6 +6,7 @@ export const state = {
   photoSrc: null,
   cameraIcon: false,
   messages: [],
+  filteredMessages: [],
   message: {},
   bigPhoto: null,
   cameraModalState: false,

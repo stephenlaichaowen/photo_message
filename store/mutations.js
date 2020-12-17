@@ -11,61 +11,78 @@ export const mutations = {
   setCameraMenuState: (state, data) => state.cameraMenuState = data,
   clearCameraIcon: (state, data) => state.cameraIcon = data,
   setSearchMenuState: (state, data) => state.searchMenuState = data,
-  
+
   // savePhotoSrc: (state, data) => console.log(`mutations: ${state.photoSrc}`),
-  
-  showBigPhoto: (state, data) => { 
+
+  showBigPhoto: (state, data) => {
     state.messageIdx = data
     console.log(state.messageIdx)
   },
   setMessageMenuState: (state, data) => state.messageMenuState = data,
   getMessageId: (state, data) => state.messageId = data,
-  increaseMessageIdx: state => { 
-    if (state.messageIdx >= state.messages.length-1) {
+  increaseMessageIdx: state => {
+    if (state.messageIdx >= state.messages.length - 1) {
       state.messageIdx = 0
       return
     } else {
-      state.messageIdx ++
+      state.messageIdx++
     }
     console.log(state.messageIdx)
   },
-  decreaseMessageIdx: state => { 
-    if (state.messageIdx <= 0) { 
-      state.messageIdx = state.messages.length-1
+  decreaseMessageIdx: state => {
+    if (state.messageIdx <= 0) {
+      state.messageIdx = state.messages.length - 1
       return
     } else {
-      state.messageIdx --
+      state.messageIdx--
     }
     console.log(state.messageIdx)
   },
 
   getPhotoMessage: state => {
-   
+
     // retrieve messages from localStorage
     // state.messages = JSON.parse(localStorage.getItem('photo-message')) || []
-    
+
     let db = new Localbase('db')
-    db.collection('photo-message').get().then(messages => { 
+    db.collection('photo-message').get().then(messages => {
       state.messages = messages.reverse()
+      // state.filteredMessages = messages.reverse()
       state.loaderState = false
     }) || []
   },
 
   setSearchKeyword: (state, data) => {
+
     state.searchKeyword = data
     console.log(state.searchKeyword)
+
+    // state.filteredMessages = state.messages.filter((item) =>
+    //   item.caption.includes(state.searchKeyword)
+    // )
+
+    state.messages = state.messages.filter((item) =>
+      item.caption.includes(state.searchKeyword)
+    )
+
+    // if (state.searchKeyword !== '') {
+    //   state.filteredMessages = state.messages.filter((item) =>
+    //     item.caption.includes(state.searchKeyword)
+    //   )
+    // } else {
+    //   state.filteredMessages = state.messages
+    // }
+
   },
-  
-  saveMessage: (state, data) => { 
-    
-    state.message = data 
-    
+
+  saveMessage: (state, data) => {
+
+    state.message = data
+
     // update local messages
     state.messages.unshift(state.message)
-    state.messagesLength = state.messages.length
-    console.log(state.messagesLength)
-    localStorage.setItem('message-number', state.messagesLength)
-    
+    // state.filteredMessages = state.messages
+
     // persisit local messages to indexdb
     let db = new Localbase('db')
     db.collection('photo-message').add(state.message)
@@ -74,8 +91,8 @@ export const mutations = {
     // localStorage.setItem('photo-message', JSON.stringify(state.messages))
   },
 
-  removeMessage: (state, data) => { 
-    
+  removeMessage: (state, data) => {
+
     // delete item from local messages
     state.messages = state.messages.filter(item => item.caption !== data)
 
@@ -83,5 +100,5 @@ export const mutations = {
     let db = new Localbase('db')
     db.collection('photo-message').doc({ caption: data }).delete()
   }
-  
+
 }
