@@ -1,15 +1,23 @@
 <template>
   <main class="bg-info">
     <Header />
-    <SearchMenu />
-    <Loader />
     <Messages />
     <Footer />
+    
+    <SearchMenu />
+    <Loader />
     <PhotoModal />
     <CameraModal v-if="cameraModalState" @hide-modal="cameraModalState=false" />    
     <CameraMenu @show-modal="cameraModalState=true" />
   </main>
 </template>
+
+<style>
+/* body {
+  height: 100%;
+  overflow-y: scroll;
+} */
+</style>
 
 <script>
 export default {

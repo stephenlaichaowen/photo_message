@@ -1,12 +1,15 @@
 <template>
 <div id="messages" class="bg-info">
   <transition-group name="backInRight" tag="div">
+    <!-- <div>
+      v-hammer:swipe.right="() => removeMessage(item.caption)"      
+    </div> -->
     <div
       id="message"
       class="row rounded pl-3 pt-2"
       v-for="(item, idx) in messages"
       :key="item.caption"
-      v-hammer:swipe.right="() => removeMessage(item.caption)"
+      @click="removeMessage(item.caption)"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
         <img
@@ -90,17 +93,21 @@ export default {
 </script>
 
 <style scoped>
+#image-container {
+  border: 1px solid magenta;
+}
+#message {
+  border: 1px solid red;
+}
 #messages {
   position: fixed;
-  padding: 0 0.5rem;
   top: 3.125rem;
   bottom: 3.125rem;
-  /* height: calc(100vh - 6.25rem);  */
+  height: calc(100vh - 6.25rem); 
   z-index: 200;
-  overflow: scroll;   
-  overflow-x: hiddern;
+  overflow-y: scroll;   
   width: 100vw;
-  /* height: 100%; */
+  padding: 0 0.5rem;
 }
 #photo {
   border-radius: 50%;
@@ -126,9 +133,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0;
-}
-#menu-edit {
-  margin-left: 0.625rem;
 }
 .backInRight-enter-active {
   animation: backInRight 0.3s;
