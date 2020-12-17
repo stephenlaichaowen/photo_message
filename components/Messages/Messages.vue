@@ -6,11 +6,11 @@
     </div> -->
     <div
       id="message"
-      class="row rounded pl-4 pr-3"
+      class="row rounded pl-4 pr-3 py-1"
       v-for="(item, idx) in messages"
       :key="item.caption"
     >
-      <div id="image-container" class="col-2 p-1 py-1" key="key1">
+      <div id="image-container" class="col-2 p-1" key="key1">
         <img
           :src="item.photo"
           key="key2"
