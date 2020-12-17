@@ -16,6 +16,6 @@
 
   padding: 3.125rem 0;
   /* z-index: 100; */
-  /* overflow-y: scroll;     */
+  overflow-y: scroll;    
 }
 </style>
