@@ -7,7 +7,7 @@
     <div
       id="message"
       class="row rounded pl-4 pr-3 pb-1"
-      v-for="(item, idx) in filteredMessages"
+      v-for="(item, idx) in messages"
       :key="item.caption"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
