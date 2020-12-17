@@ -6,7 +6,7 @@
     </div> -->
     <div
       id="message"
-      class="row rounded pl-3 pt-1"
+      class="row rounded px-3"
       v-for="(item, idx) in messages"
       :key="item.caption"
     >
