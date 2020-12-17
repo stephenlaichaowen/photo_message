@@ -102,9 +102,9 @@ export default {
   height: 15px;
   /* background-color: rgba(255, 255, 255, 0.5); */
 }
-#option {
+/* #option {
   padding-top: 5px;
-}
+} */
 #messages {
   position: absolute;
   top: 3.125rem;
