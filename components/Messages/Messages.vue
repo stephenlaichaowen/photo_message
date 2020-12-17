@@ -9,7 +9,6 @@
       class="row rounded pl-3 pt-1"
       v-for="(item, idx) in messages"
       :key="item.caption"
-      @click="removeMessage(item.caption)"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
         <img
