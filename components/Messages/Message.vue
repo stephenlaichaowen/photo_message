@@ -1,35 +1,33 @@
 <template>
-  <div>
-    <transition-group name="backInRight" tag="div">
-      <div        
-        id="message"
-        ref="message"
-        class="row rounded px-3 py-4"
-        v-for="(item, idx) in messages"
-        :key="item.caption"
-        v-hammer:swipe.right="() => removeMessage(item.caption)"
-      >
-        <div id="image-container" class="col-2 p-1" key="key1">
-          <img
-            :src="item.photo"
-            key="key2"
-            id="photo"
-            alt="thumb"
-            :class="{ active: idx == messageIdx }"
-            @click="showPhotoModal(idx)"
-          />
+  <transition-group name="backInRight" tag="div">
+    <div
+      id="message"
+      ref="message"
+      class="row rounded pl-4 py-2"
+      v-for="(item, idx) in messages"
+      :key="item.caption"
+      v-hammer:swipe.right="() => removeMessage(item.caption)"
+    >
+      <div id="image-container" class="col-2 p-1" key="key1">
+        <img
+          :src="item.photo"
+          key="key2"
+          id="photo"
+          alt="thumb"
+          :class="{ active: idx == messageIdx }"
+          @click="showPhotoModal(idx)"
+        />
+      </div>
+      <div id="message-caption" class="col-10 px-2" key="key3">
+        <div id="caption-content" class="rounded text-light">
+          {{ item.caption }}
         </div>
-        <div id="message-caption" class="col-10 px-1" key="key3">
-          <div id="caption-content" class="rounded text-light">
-            {{ item.caption }}
-          </div>
-          <div id="date">
-            {{ item.id.toLocaleString() }}
-          </div>
+        <div id="date">
+          {{ item.id.toLocaleString() }}
         </div>
       </div>
-    </transition-group>
-  </div>
+    </div>
+  </transition-group>
 </template>
 
 <script>
@@ -39,7 +37,7 @@ export default {
       photoSrc: null,
       messageMenuState: false,
       tempMessages: null,
-      searchState: false
+      searchState: false,
     }
   },
   computed: {
@@ -53,7 +51,7 @@ export default {
         return this.$store.state.searchKeyword
       },
     },
-    
+
     messages: {
       get() {
         return this.$store.getters.messages
@@ -64,7 +62,7 @@ export default {
     //   get() {
     //     return this.$store.getters.filteredMessages
     //   },
-    // },    
+    // },
   },
   methods: {
     onSwipeLeft() {
@@ -116,53 +114,19 @@ export default {
   box-shadow: 0 0 0.25rem #fff, 0 0 0.5rem #fff, 0 0 0.5rem #fff, 0 0 0px #0ff,
     0 0 0.25rem #0ff, 0 0 0px #0ff, 0 0 1rem #0ff, 0 0 0.5rem #0ff;
 }
-#menu-item:hover .delete {
-  width: 1.875rem;
-  height: 1.875rem;
-  opacity: 1;
-}
-#menu-item:hover .delete:after {
-  transform: translate(-50%, -50%) scale(1);
-}
-#menu-item .delete:after {
-  position: absolute;
-  content: '';
-  width: 1rem;
-  height: 1rem;
-  top: 50%;
-  left: 50%;
-  background-image: url('https://nourabusoud.github.io/vue-todo-list/images/trash.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: all ease-in 0.25s;
-}
-#menu-item .delete {
-  border-radius: 50%;
-  position: absolute;
-  height: 50%;
-  top: 50%;
-  bottom: 0;
-  right: 0;
-  cursor: pointer;
-  opacity: 0;
-  width: 0;
-  background-color: #f56468;
-  color: #fff;
-  transition: all ease-in 0.25s;
-}
 #caption-content {
   font-weight: 400;
   word-wrap: break-word;
   color: white;
 }
 #message {
-  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  /* background: rgba(255, 255, 255, 0.05); */
+  /* overflow-y: scroll; */
   /* overflow: hidden; */
   box-shadow: 0.0313rem 0.0313rem 0.125rem rgba(0, 0, 0, 0.2);
   /* backdrop-filter: blur(0.3125rem); */
-  /* border-radius: 2.5rem; */  
+  /* border-radius: 2.5rem; */
 }
 #message-caption {
   display: flex;

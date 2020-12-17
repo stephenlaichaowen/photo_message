@@ -16,7 +16,10 @@ main {
   /* height: 100%;
   width: 100%; */
 
-  position: relative;
+  /* position: relative; */
+
+  /* position: absolute; */
+  
 
   /* height: 100vh;
   width: 100vw;
