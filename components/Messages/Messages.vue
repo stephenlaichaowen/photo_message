@@ -105,8 +105,9 @@ export default {
   height: calc(100vh - 6.25rem); 
   z-index: 200;
   overflow-y: scroll;   
+  overflow-x: hidden;
   width: 100vw;
-  padding: 8px;
+  padding: 0.5rem;
 }
 #photo {
   border-radius: 50%;
