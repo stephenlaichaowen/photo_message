@@ -6,7 +6,7 @@
     </div> -->
     <div
       id="message"
-      class="row rounded pl-3 pt-2"
+      class="row rounded pl-3 pt-1"
       v-for="(item, idx) in messages"
       :key="item.caption"
       @click="removeMessage(item.caption)"
@@ -107,7 +107,7 @@ export default {
   z-index: 200;
   overflow-y: scroll;   
   width: 100vw;
-  padding: 0.5rem;
+  padding: 8px;
 }
 #photo {
   border-radius: 50%;
