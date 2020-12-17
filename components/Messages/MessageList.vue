@@ -16,11 +16,11 @@
 
   z-index: 100;
 
-  position: relative;
+  /* position: relative;
   top: 3.125rem;
-  bottom: 3.125rem;
+  bottom: 3.125rem; */
 
-  /* padding: 3.125rem 0; */
-  overflow-y: scroll;    
+  padding: 3.125rem 0;
+  overflow: auto;    
 }
 </style>
