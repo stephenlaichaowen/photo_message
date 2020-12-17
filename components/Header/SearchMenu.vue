@@ -16,7 +16,7 @@
         <img
           src="/arrow.png"
           id="icon-search"
-          @click="$store.commit('getPhotoMessage')"
+          @click="closeSearchMenu"
         />
         <!-- <img
           src="https://s3.amazonaws.com/s3.moveon.org/moui/close-icon.png"
@@ -52,7 +52,8 @@ export default {
       this.$store.commit('setSearchKeyword', this.keyword)
       this.keyword = ''
     },
-    closeSearchMenu() {
+    closeSearchMenu() {      
+      this.$store.commit('getPhotoMessage')
       this.$store.commit('setSearchMenuState', false)
     },
   },
