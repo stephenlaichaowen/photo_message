@@ -21,6 +21,6 @@
   bottom: 3.125rem; */
 
   padding: 3.125rem 0;
-  overflow: auto;    
+  overflow-y: scroll;    
 }
 </style>
