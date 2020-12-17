@@ -28,7 +28,7 @@
           {{ item.id.toLocaleString() }}
         </div>
       </div>
-      <div id="option">
+      <div id="option" @click="removeMessage(item.caption)">
         <img src="https://cdn0.iconfinder.com/data/icons/round-action-bar/48/more-512.png" alt="option">
       </div>
     </div>
