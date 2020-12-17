@@ -15,17 +15,12 @@
         />
         <img
           src="/arrow.png"
-          id="icon-search"
+          id="icon-back"
           @click="closeSearchMenu"
         />
-        <!-- <img
-          src="https://s3.amazonaws.com/s3.moveon.org/moui/close-icon.png"
-          id="icon-close"
-          @click="closeSearchMenu"
-        /> -->
         <img
           src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"
-          id="icon-close"
+          id="icon-search"
           @click="setSearchKeyword"
         />
       </div>
@@ -67,18 +62,22 @@ export default {
   justify-content: center;
   width: 100%;
 }
-#icon-search {
+#icon-back {
   left: 0.3125rem;
-}
-#icon-close {
-  right: 0.3125rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-#icon-search,
-#icon-close {
   width: 1.5625rem;
   height: 1.5625rem;
+}
+#icon-search {
+  right: 0.625rem;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+#icon-back,
+#icon-search {
+  /* width: 1.5625rem;
+  height: 1.5625rem; */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
