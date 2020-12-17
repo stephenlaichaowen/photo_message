@@ -68,7 +68,7 @@ export default {
 
     filteredMessages: {
       get() {
-        return this.$store.getters.messages.filter((item) => item.caption.includes(state.searchKeyword))
+        return this.$store.getters.messages.filter((item) => item.caption.includes(this.searchKeyword))
       },
     },
   },
