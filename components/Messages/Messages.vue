@@ -107,7 +107,7 @@ export default {
   overflow-y: scroll;   
   overflow-x: hidden;
   width: 100vw;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
 }
 #photo {
   border-radius: 50%;
