@@ -10,7 +10,7 @@
       v-for="(item, idx) in messages"
       :key="item.caption"
     >
-      <div id="image-container" class="col-2 p-1" key="key1">
+      <div id="image-container" class="col-2 p-1 py-1" key="key1">
         <img
           :src="item.photo"
           key="key2"
@@ -92,12 +92,12 @@ export default {
 </script>
 
 <style scoped>
-/* #image-container {
+#image-container {
   border: 1px solid magenta;
 }
 #message {
   border: 1px solid red;
-} */
+}
 #messages {
   position: absolute;
   top: 3.125rem;
