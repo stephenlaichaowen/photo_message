@@ -9,11 +9,10 @@
     font-family: 'Roboto Condensed', serif;
     font-weight: 300;
 }
-body {
+/* body {
     min-height: 100vh; 
     position: relative;
-    /* overscroll-behavior-y: scroll; */
-}
+} */
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s;
 }

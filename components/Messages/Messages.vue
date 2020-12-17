@@ -95,11 +95,11 @@ export default {
   padding: 0 0.5rem;
   top: 3.125rem;
   bottom: 3.125rem;
-  height: calc(100vh - 6.25rem);
-  z-index: 200;
-  /* padding: 3.125rem 0; */
+  height: calc(100% - 6.25rem); 
+  z-index: 100;
   overflow-y: scroll;   
-  width: 100vw;
+  /* width: 100%;
+  height: 100%; */
 }
 #photo {
   border-radius: 50%;

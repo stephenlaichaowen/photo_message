@@ -13,11 +13,14 @@
 
 <style scoped>
 main {
-  height: 100vh;
+  height: 100%;
+  overflow-y: scroll;
+
+  /* height: 100vh;
   width: 100%;
 
   position: relative;
-  overflow-y: scroll;
+  overflow-y: scroll; */
 
   /* position: absolute; */
   

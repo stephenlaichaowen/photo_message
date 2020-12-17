@@ -4,13 +4,6 @@
   </div>
 </template>
 
-<style>
-body {
-  position: relative;
-  overflow: scroll;
-}
-</style>
-
 <script>
 export default {
   mounted() {
