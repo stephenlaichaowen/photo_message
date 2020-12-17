@@ -1,5 +1,5 @@
 <template>
-<div id="messages" class="bg-info">
+<div id="messages" class="bg-dark">
   <transition-group name="backInRight" tag="div">
     <div
       id="message"

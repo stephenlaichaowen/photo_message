@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-info">
+  <main class="bg-dark">
     <Header />
     <SearchMenu />
     <Loader />
