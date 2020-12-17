@@ -96,7 +96,7 @@ export default {
   top: 3.125rem;
   bottom: 3.125rem;
   height: calc(100vh - 6.25rem); 
-  z-index: 100;
+  z-index: 500;
   overflow-y: scroll;   
 }
 #photo {
