@@ -95,11 +95,9 @@ export default {
   padding: 0 0.5rem;
   top: 3.125rem;
   bottom: 3.125rem;
-  height: calc(100% - 6.25rem); 
+  height: calc(100vh - 6.25rem); 
   z-index: 100;
   overflow-y: scroll;   
-  /* width: 100%;
-  height: 100%; */
 }
 #photo {
   border-radius: 50%;
@@ -123,6 +121,8 @@ export default {
 }
 #message {
   position: relative;
+  height: 100%;
+  overflow-y: scroll;
   /* background: rgba(255, 255, 255, 0.05); */
   /* overflow-y: scroll; */
   /* overflow: hidden; */
