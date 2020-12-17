@@ -92,12 +92,12 @@ export default {
 </script>
 
 <style scoped>
-#image-container {
+/* #image-container {
   border: 1px solid magenta;
 }
 #message {
   border: 1px solid red;
-}
+} */
 #messages {
   position: absolute;
   top: 3.125rem;
