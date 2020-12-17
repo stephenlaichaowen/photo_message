@@ -30,7 +30,8 @@
       </div>
       <div id="option" @click="removeMessage(item.caption)">
         <!-- <img src="https://cdn0.iconfinder.com/data/icons/round-action-bar/48/more-512.png" alt="option"> -->
-        <img src="https://lh3.googleusercontent.com/proxy/sKraN151Y1n960Q3Iqlg6XKbN8wNKICgWgZBfu4uJGShN5UpdRSsikLa_V7IVzrUqX_qm4VMM1azzRsrKxy60rNmnVnkxp_4LUmxGOvUQjm_5tfdcrRSZzSFi-nPuVyqDFmkU-QxnJUQdcTzxGvktUtjrGKX8ej8OegbbWki5VSjI5-Xn8GTTdtt0NQV9AOhHK9gZUQZ_KhnEuRlQ2i7tWgi" alt="option">
+        <!-- <img src="https://lh3.googleusercontent.com/proxy/sKraN151Y1n960Q3Iqlg6XKbN8wNKICgWgZBfu4uJGShN5UpdRSsikLa_V7IVzrUqX_qm4VMM1azzRsrKxy60rNmnVnkxp_4LUmxGOvUQjm_5tfdcrRSZzSFi-nPuVyqDFmkU-QxnJUQdcTzxGvktUtjrGKX8ej8OegbbWki5VSjI5-Xn8GTTdtt0NQV9AOhHK9gZUQZ_KhnEuRlQ2i7tWgi" alt="option"> -->
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/right-drection-arrow-1179729.png" alt="arrow">
       </div>
     </div>
   </transition-group>
