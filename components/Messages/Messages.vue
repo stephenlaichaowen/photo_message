@@ -107,7 +107,7 @@ export default {
   z-index: 200;
   overflow-y: scroll;   
   width: 100vw;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
 }
 #photo {
   border-radius: 50%;
