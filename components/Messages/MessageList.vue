@@ -14,8 +14,13 @@
   bottom: 3.125rem;
   left: 0;   */
 
-  padding: 3.125rem 0;
   /* z-index: 100; */
+
+  position: relative;
+  top: 3.125rem;
+  bottom: 3.125rem;
+
+  /* padding: 3.125rem 0; */
   overflow-y: scroll;    
 }
 </style>
