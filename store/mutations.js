@@ -57,9 +57,9 @@ export const mutations = {
     state.searchKeyword = data
     console.log(state.searchKeyword)
 
-    // state.filteredMessages = state.messages.filter((item) =>
-    //   item.caption.includes(state.searchKeyword)
-    // )
+    state.filteredMessages = state.messages.filter((item) =>
+      item.caption.includes(state.searchKeyword)
+    )
 
     // state.messages = state.messages.filter((item) =>
     //   item.caption.includes(state.searchKeyword)
@@ -81,7 +81,7 @@ export const mutations = {
 
     // update local messages
     state.messages.unshift(state.message)
-    // state.filteredMessages = state.messages
+    state.filteredMessages = state.messages
 
     // persisit local messages to indexdb
     let db = new Localbase('db')
@@ -94,8 +94,8 @@ export const mutations = {
   removeMessage: (state, data) => {
 
     // delete item from local messages
-    // state.messages = state.messages.filter(item => item.caption !== data)
-    state.messages.filter(item => item.caption !== data)
+    state.messages = state.messages.filter(item => item.caption !== data)
+    // state.messages.filter(item => item.caption !== data)
 
     // delete item from indexdb
     let db = new Localbase('db')

@@ -66,9 +66,15 @@ export default {
       },
     },
 
+    // filteredMessages: {
+    //   get() {
+    //     return this.$store.getters.messages.filter((item) => item.caption.includes(this.searchKeyword))
+    //   },
+    // },
+
     filteredMessages: {
       get() {
-        return this.$store.getters.messages.filter((item) => item.caption.includes(this.searchKeyword))
+        return this.$store.getters.filteredMessages
       },
     },
   },
