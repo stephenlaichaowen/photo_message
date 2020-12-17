@@ -7,7 +7,7 @@
     <div
       id="message"
       class="row rounded pl-4 pr-3 pb-1"
-      v-for="(item, idx) in messages"
+      v-for="(item, idx) in filteredMessages"
       :key="item.caption"
     >
       <div id="image-container" class="col-2 p-1" key="key1">
@@ -66,11 +66,11 @@ export default {
       },
     },
 
-    // filteredMessages: {
-    //   get() {
-    //     return this.$store.getters.filteredMessages
-    //   },
-    // },
+    filteredMessages: {
+      get() {
+        return this.$store.getters.messages.filter((item) => item.caption.includes(state.searchKeyword))
+      },
+    },
   },
   methods: {
     onSwipeLeft() {
