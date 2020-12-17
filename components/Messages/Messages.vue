@@ -91,16 +91,16 @@ export default {
 
 <style scoped>
 #messages {
-  position: relative;
+  position: fixed;
   padding: 0 0.5rem;
-  /* top: 3.125rem;
-  bottom: 3.125rem; */
+  top: 3.125rem;
+  bottom: 3.125rem;
   /* height: calc(100vh - 6.25rem);  */
   z-index: 200;
   overflow: scroll;   
   overflow-x: hiddern;
   width: 100vw;
-  height: 100%;
+  /* height: 100%; */
 }
 #photo {
   border-radius: 50%;
