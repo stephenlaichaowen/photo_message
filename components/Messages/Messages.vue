@@ -99,7 +99,7 @@ export default {
   border: 1px solid red;
 }
 #messages {
-  position: fixed;
+  position: absolute;
   top: 3.125rem;
   bottom: 3.125rem;
   height: calc(100vh - 6.25rem); 
