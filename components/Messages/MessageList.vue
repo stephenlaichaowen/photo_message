@@ -14,7 +14,7 @@
   bottom: 3.125rem;
   left: 0;   */
 
-  /* z-index: 100; */
+  z-index: 100;
 
   position: relative;
   top: 3.125rem;
