@@ -110,12 +110,12 @@ export default {
   width: 1.375rem;
   height: 1.375rem;
 }
-#footer {
+/* #footer {
   position: fixed;
   left: 0;
   bottom: 0;
   z-index: 300;
-}
+} */
 .withphoto {
   color: transparent !important;
   background-size: cover;
