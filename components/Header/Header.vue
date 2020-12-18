@@ -1,7 +1,7 @@
 <template>
   <div id="header" v-if="!loaderState" class="bg-light">
     <Logo />
-    <Searchbox />
+    <!-- <Searchbox /> -->
   </div>
 </template>
 
