@@ -1,5 +1,6 @@
 <template>
-<div id="messages" class="bg-info">
+<!-- <div id="messages" class="bg-info"> -->
+<div id="messages">
   <transition-group name="backInRight" tag="div">
     <!-- <div>
       v-hammer:swipe.right="() => removeMessage(item.caption)"      
@@ -121,6 +122,8 @@ export default {
   overflow-x: hidden;
   width: 100vw;
   padding: 0.5rem 0.25rem 0 0.25rem;
+  z-index: 200;
+  backdrop-filter: blur(15px);
 }
 #photo {
   border-radius: 50%;

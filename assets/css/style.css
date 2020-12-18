@@ -9,6 +9,18 @@
     font-family: 'Roboto Condensed', serif;
     font-weight: 300;
 }
+/* body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url('https://image-cdn.hypb.st/https%3A%2F%2Fhk.hypebeast.com%2Ffiles%2F2020%2F02%2Fmonster-hunter-live-movie-character-poster-release-milla-jovovich-tony-gaa-1.jpg?q=75&w=800&cbr=1&fit=max');
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+  } */
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s;
 }
