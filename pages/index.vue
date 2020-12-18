@@ -28,8 +28,8 @@ main {
   background-image: url('https://images.unsplash.com/photo-1484353371297-d8cfd2895020?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1057&q=80');
   background-position: center;
   background-size: cover;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   background-blend-mode: multiply;
 }
 </style>
