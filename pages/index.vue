@@ -3,7 +3,7 @@
   <main>
     <Header />
     <Messages />
-    <Footer />
+    <!-- <Footer /> -->
 
     <SearchMenu />
     <Loader />
