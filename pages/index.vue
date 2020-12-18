@@ -5,7 +5,7 @@
     <Messages />
     <!-- <Footer /> -->
 
-    <CameraButton />
+    <CameraButton @show-modal="cameraModalState=true" />
     <SearchMenu />
     <Loader />
     <PhotoModal />

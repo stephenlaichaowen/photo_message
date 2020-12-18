@@ -89,8 +89,7 @@ export default {
       this.$store.commit('saveBackCameraStream', this.backCameraStream)
       this.$store.commit('setCameraMode', false)
     },
-  },
-  mounted() {},
+  }
 }
 </script>
 
