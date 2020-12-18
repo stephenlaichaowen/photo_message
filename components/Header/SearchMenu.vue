@@ -98,7 +98,8 @@ export default {
   justify-content: center;
   position: fixed;
   left: 0;
-  top: 0;
+  /* top: 0; */
+  bottom: 0;
   z-index: 800;
 }
 .slideInUp-enter-active {

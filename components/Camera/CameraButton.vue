@@ -1,5 +1,5 @@
 <template>
-  <div id="camera-button">
+  <div v-if="!$store.state.loaderState" id="camera-button">
     <!-- <img src="https://www.iconarchive.com/download/i7886/hopstarter/soft-scraps/Button-Blank-Red.ico" alt="camera-button"> -->
     <!-- <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-blue-camera-button-cirlce-png-image_4255760.jpg" alt="camera-button"> -->
     <!-- <img 
