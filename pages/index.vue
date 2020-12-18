@@ -29,7 +29,7 @@ main {
   background-position: center;
   background-size: cover;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
   background-blend-mode: multiply;
 }
 </style>
