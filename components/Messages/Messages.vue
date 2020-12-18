@@ -123,7 +123,7 @@ export default {
   width: 100vw;
   padding: 0.5rem 0.25rem 0 0.25rem;
   z-index: 200;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(12px);
 }
 #photo {
   border-radius: 50%;
