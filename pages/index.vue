@@ -3,8 +3,9 @@
   <main>
     <Header />
     <Messages />
-    <Footer />
+    <!-- <Footer /> -->
 
+    <CameraButton />
     <SearchMenu />
     <Loader />
     <PhotoModal />
@@ -21,15 +22,10 @@ main {
   width: 100vw;
   height: 100vh;
   z-index: 50;
-  /* background-image: url('https://image-cdn.hypb.st/https%3A%2F%2Fhk.hypebeast.com%2Ffiles%2F2020%2F07%2Fmonster-hunter-movie-delayed-2021-milla-jovovich-1.jpg?q=75&w=800&cbr=1&fit=max'); */
-  /* background-image: url('https://images.unsplash.com/photo-1607960402358-a5ceb04ebeb3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZyaWVuZHNoaXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); */
-  /* background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'); */
-  /* background-image: url('https://images.unsplash.com/photo-1508905475152-c325323ac955?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'); */
   background-image: url('https://images.unsplash.com/photo-1484353371297-d8cfd2895020?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1057&q=80');
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
-  /* background-color: rgba(255, 255, 255, 0.1); */
   background-blend-mode: multiply;
 }
 </style>
