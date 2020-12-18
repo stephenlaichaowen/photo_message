@@ -1,9 +1,10 @@
 <template>
-  <transition name="slideInUp">
+  <!-- <transition name="slideInUp"> -->
+      <!-- v-if="searchMenuState" -->
     <div
       id="search-container"
-      v-if="searchMenuState"
       class="bg-dark py-1 px-3"
+      v-if="!$store.state.loaderState"
     >
       <div id="search-content">
         <input
@@ -25,7 +26,7 @@
         />
       </div>
     </div>
-  </transition>
+  <!-- </transition> -->
 </template>
 
 <script>
