@@ -1,5 +1,5 @@
 <template>
-  <div id="header" v-if="!loaderState" class="bg-light">
+  <div id="header" v-if="!loaderState" class="bg-dark">
     <Logo />
     <!-- <Searchbox /> -->
   </div>
@@ -69,6 +69,7 @@ export default {
   height: 3.125rem;
   z-index: 300;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 </style>
