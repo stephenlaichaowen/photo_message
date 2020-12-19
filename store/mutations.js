@@ -63,12 +63,22 @@ export const mutations = {
 
   saveMessage: (state, data) => {
 
-    state.message = data
+    // send local message to backend
+    this.$socket.emit('new message', data)
 
-    // update local messages
+    // receive remote message and save to local
+    this.$socket.on('new message', message => {
+      if (!message) { state.message = data }
+      else { state.message = message }
+    })
+    
+    /**** save local message ****/
+    // state.message = data
+
+    /**** update local messages ****/
     state.messages.unshift(state.message)
 
-    // persisit local messages to indexdb
+    /**** persisit local messages to indexdb ****/
     let db = new Localbase('db')
     db.collection('photo-message').add(state.message)
 
@@ -78,12 +88,31 @@ export const mutations = {
 
   removeMessage: (state, data) => {
 
-    // delete item from local messages
-    state.messages = state.messages.filter(item => item.caption !== data)
+    // send message ID (caption) to backend
+    this.$socket.emit('remove message', data)
 
-    // delete item from indexdb
-    let db = new Localbase('db')
-    db.collection('photo-message').doc({ caption: data }).delete()
+    // receive message ID from backend and remove item from local messages 
+    this.$socket.on('reomove message', message => {
+      if (!message) { 
+        state.messages = state.messages.filter(item => item.caption !== data) 
+        
+        let db = new Localbase('db')
+        db.collection('photo-message').doc({ caption: data }).delete()    
+      }
+      else { 
+        state.messages = state.messages.filter(item => item.caption !== message) 
+        
+        let db = new Localbase('db')
+        db.collection('photo-message').doc({ caption: message }).delete()    
+      }
+    })
+    
+    /*** delete item from local messages ***/
+    // state.messages = state.messages.filter(item => item.caption !== data)
+
+    /*** delete item from indexdb ***/
+    // let db = new Localbase('db')
+    // db.collection('photo-message').doc({ caption: data }).delete()    
   }
 
 }
