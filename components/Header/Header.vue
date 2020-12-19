@@ -1,7 +1,7 @@
 <template>
   <div id="header" v-if="!loaderState" class="bg-dark">
     <Logo />
-    <!-- <Searchbox /> -->
+    <Searchbox />
   </div>
 </template>
 
@@ -61,7 +61,7 @@ export default {
   align-items: center;
 }
 #header {
-  padding: 0.5rem 0.625rem 0.5rem 0.9375rem;
+  padding: 0.5rem 0.625rem 0.5rem 1.25rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +69,7 @@ export default {
   height: 3.125rem;
   z-index: 300;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 </style>

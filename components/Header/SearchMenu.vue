@@ -1,10 +1,9 @@
 <template>
-  <!-- <transition name="slideInUp"> -->
-      <!-- v-if="searchMenuState" -->
+  <transition name="slideInUp">
     <div
+      v-if="searchMenuState"
       id="search-container"
       class="bg-dark py-1 px-3"
-      v-if="!$store.state.loaderState"
     >
       <div id="search-content">
         <input
@@ -26,7 +25,7 @@
         />
       </div>
     </div>
-  <!-- </transition> -->
+  </transition>
 </template>
 
 <script>
@@ -97,11 +96,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  margin-bottom: 0.5rem;
   position: fixed;
   left: 0;
-  /* top: 0; */
-  bottom: 0;
-  z-index: 800;
+  top: 0;
+  z-index: 400;
 }
 .slideInUp-enter-active {
   animation: slideInUp 0.3s;

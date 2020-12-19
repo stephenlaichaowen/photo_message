@@ -1,5 +1,31 @@
 <template>
   <div v-if="!loaderState" id="footer" class="container-fluid">
+    <!-- <div id="container" class="toolbar row bg-dark">
+      <div class="col py-2 d-flex">
+        <button
+          id="camera"
+          @click="showCameraModal"
+          :class="{ withphoto: cameraIcon }"
+          class="ml-0 px-1 mr-2 text-dark bg-dark"
+          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
+        ></button>
+        <input
+          id="caption"
+          v-model="caption"
+          @keyup.enter="sendMessage"
+          type="text"
+          maxlength="60"
+          placeholder="Please type short messages..."
+          class="flex-grow-1 w-100 align-middle pr-5"
+        />
+        <img
+          src="https://image.flaticon.com/icons/svg/941/941565.svg"
+          alt="paper plane"
+          id="send"
+          @click.prevent="sendMessage"
+        />
+      </div>
+    </div> -->
     <div id="container" class="toolbar row bg-dark">
       <div class="col py-2 d-flex">
         <button

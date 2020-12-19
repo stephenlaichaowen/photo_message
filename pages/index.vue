@@ -1,16 +1,18 @@
 <template>
-  <!-- <main class="bg-info"> -->
   <main>
     <Header />
     <Messages />
-    <!-- <Footer /> -->
+    <Footer />
 
-    <CameraButton @show-modal="cameraModalState=true" />
     <SearchMenu />
+    <!-- <CameraButton @show-modal="cameraModalState = true" /> -->
     <Loader />
     <PhotoModal />
-    <CameraModal v-if="cameraModalState" @hide-modal="cameraModalState=false" />    
-    <CameraMenu @show-modal="cameraModalState=true" />
+    <CameraModal
+      v-if="cameraModalState"
+      @hide-modal="cameraModalState = false"
+    />
+    <CameraMenu @show-modal="cameraModalState = true" />
   </main>
 </template>
 
@@ -39,7 +41,7 @@ export default {
   },
   data() {
     return {
-      cameraModalState: false
+      cameraModalState: false,
     }
   },
   methods: {
@@ -57,10 +59,20 @@ export default {
         style: { width: '100%' },
       })
     },
+    scrollDown() {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        document.getElementById('navbar').style.top = '0'
+      } else {
+        document.getElementById('navbar').style.top = '-3.125rem'
+      }
+    },
   },
   mounted() {
     if ('mediaDevices' in navigator) {
-      // this.init()
+      this.init()
     } else {
       this.$toastr.Add({
         name: 'Error Notification',

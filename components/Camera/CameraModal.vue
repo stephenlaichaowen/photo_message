@@ -2,13 +2,9 @@
   <transition name="fadeInUp">
     <div id="mymodal" class="bg-dark" @click.self="closeCameraModal">
       <div id="modal-container">
-          <video id="player" ref="camera" autoplay class="w-100"></video>
-        <div id="icon-group">
-          <button
-            id="capture"
-            @click="takePhoto"
-            class="my-3"
-          ></button>
+        <video id="player" ref="camera" autoplay class="w-100"></video>
+        <div id="icon-group" class="my-3">
+          <button id="capture" @click="takePhoto"></button>
         </div>
       </div>
     </div>
@@ -20,7 +16,7 @@ export default {
   data() {
     return {
       photo: null,
-      showVideo: false
+      showVideo: false,
     }
   },
   computed: {
@@ -75,11 +71,30 @@ export default {
   mounted() {
     if (this.cameraMode) this.$refs.camera.srcObject = this.videoStream
     if (!this.cameraMode) this.$refs.camera.srcObject = this.backCameraStream
-  }
+  },
 }
 </script>
 
 <style scoped>
+.withphoto {
+  color: transparent !important;
+  background-size: cover;
+  background-position: center;
+}
+#camera {
+  outline: none;
+  border-radius: 0.25rem;
+  border: none;
+  background: url('https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/device-camera-icon.png');
+  background-position: center;
+  background-size: cover;
+  width: 2.75rem;
+  height: 2.125rem;
+}
+#camera-switch {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 #capture {
   outline: none;
   border: none;
@@ -92,7 +107,7 @@ export default {
 }
 #icon-group {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
 }
 #icon-close {
@@ -114,6 +129,7 @@ export default {
   height: 100vh;
   z-index: 1000;
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
 }
 @keyframes fadeInUp {
