@@ -54,12 +54,9 @@ export default {
 </script>
 
 <style scoped>
-.selected {
-  border-bottom: 1px solid white;
-}
 #option img {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 #message {
   position: relative;
