@@ -1,7 +1,6 @@
 <template>
-  <transition name="slideInUp">
+  <transition v-if="!$store.state.loaderState" name="slideInUp">
     <div
-      v-if="searchMenuState"
       id="search-container"
       class="bg-dark py-1 px-3"
     >
@@ -34,13 +33,6 @@ export default {
     return {
       keyword: '',
     }
-  },
-  computed: {
-    searchMenuState: {
-      get() {
-        return this.$store.getters.searchMenuState
-      },
-    },
   },
   methods: {
     setSearchKeyword() {
@@ -97,10 +89,10 @@ export default {
   align-items: center;
   justify-content: center;
   
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   position: fixed;
   left: 0;
-  top: 0;
+  bottom: 0;
   z-index: 400;
 }
 .slideInUp-enter-active {

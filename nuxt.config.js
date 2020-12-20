@@ -71,5 +71,9 @@ export default {
       display: 'fullscreen',
       orientation: 'portrait'
     }
+  },
+
+  router: {
+    base: '/photo-message-frontend/'
   }
 }

@@ -1,39 +1,13 @@
 <template>
-  <div v-if="!loaderState" id="footer" class="container-fluid">
-    <!-- <div id="container" class="toolbar row bg-dark">
-      <div class="col py-2 d-flex">
-        <button
-          id="camera"
-          @click="showCameraModal"
-          :class="{ withphoto: cameraIcon }"
-          class="ml-0 px-1 mr-2 text-dark bg-dark"
-          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
-        ></button>
-        <input
-          id="caption"
-          v-model="caption"
-          @keyup.enter="sendMessage"
-          type="text"
-          maxlength="60"
-          placeholder="Please type short messages..."
-          class="flex-grow-1 w-100 align-middle pr-5"
-        />
-        <img
-          src="https://image.flaticon.com/icons/svg/941/941565.svg"
-          alt="paper plane"
-          id="send"
-          @click.prevent="sendMessage"
-        />
-      </div>
-    </div> -->
+  <div v-if="!$store.state.loaderState" id="footer" class="container-fluid">
     <div id="container" class="toolbar row bg-dark">
       <div class="col py-2 d-flex">
         <button
           id="camera"
-          @click="showCameraModal"
-          :class="{ withphoto: cameraIcon }"
+          @click="$store.commit('setCameraMenuState', true)"
+          :class="{ withphoto: $store.state.cameraIcon }"
           class="ml-0 px-1 mr-2 text-dark bg-dark"
-          :style="{ backgroundImage: cameraIcon ? `url('${photo}')` : '' }"
+          :style="{ backgroundImage: $store.state.cameraIcon ? `url('${$store.state.photo}')` : '' }"
         ></button>
         <input
           id="caption"
@@ -45,7 +19,7 @@
           class="flex-grow-1 w-100 align-middle pr-5"
         />
         <img
-          src="https://image.flaticon.com/icons/svg/941/941565.svg"
+          :src="imgSrc"
           alt="paper plane"
           id="send"
           @click.prevent="sendMessage"
@@ -59,45 +33,13 @@
 export default {
   data() {
     return {
-      socket: null,
       caption: null,
-      videoStream: null,
-      modalState: true,
-      messageArray: [],
-      message: {},
-      options: {
-        video: {
-          width: 600,
-          height: 600,
-        },
-        audio: false,
-      },
+      imgSrc: 'https://image.flaticon.com/icons/svg/941/941565.svg'
     }
   },
-  computed: {
-    loaderState: {
-      get() {
-        return this.$store.getters.loaderState
-      },
-    },
-    cameraIcon: {
-      get() {
-        return this.$store.getters.cameraIcon
-      },
-    },
-    photo: {
-      get() {
-        return this.$store.getters.photo
-      },
-    },
-  },
   methods: {
-    showCameraModal() {
-      console.log(`camera menu opened`)
-      this.$store.commit('setCameraMenuState', true)
-    },
     sendMessage() {
-      if (!this.photo || !this.caption) {
+      if (!this.$store.state.photo || !this.caption) {
         this.$toastr.Add({
           name: 'Warning Notification',
           title: 'Warning',
@@ -115,7 +57,7 @@ export default {
 
       this.message = {
         id: new Date(),
-        photo: this.photo,
+        photo: this.$store.state.photo,
         caption: this.caption,
       }
       this.$store.commit('saveMessage', this.message)
@@ -151,7 +93,7 @@ export default {
   outline: none;
   border-radius: 0.25rem;
   border: none;
-  background: url('https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/device-camera-icon.png');
+  background: url('/camera-icon.png');
   background-position: center;
   background-size: cover;
   width: 2.75rem;

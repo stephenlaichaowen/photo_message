@@ -1,20 +1,8 @@
 <template>
-  <div v-if="loaderState" id="container">
+  <div v-if="$store.state.loaderState" id="container">
     <img id="loader" src="/loading.gif" alt="loader">
   </div>
 </template>
-
-<script>
-export default {
-  computed: {
-    loaderState: {
-      get() {
-        return this.$store.getters.loaderState
-      },
-    }
-  }
-}
-</script>
 
 <style scoped>
 #loader {

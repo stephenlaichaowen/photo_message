@@ -4,7 +4,7 @@
       id="camera-menu"
       @click.self="closeCameraMenu"
       class="bg-dark"
-      v-if="cameraMenuState"
+      v-if="$store.state.cameraMenuState"
     >
       <li @click="openFrontCamera">Front Camera</li>
       <li v-if="mobileState" @click="openBackCamera">Back Camera</li>
@@ -44,12 +44,7 @@ export default {
       get() {
         return this.$store.state.mobileState
       },
-    },
-    cameraMenuState: {
-      get() {
-        return this.$store.getters.cameraMenuState
-      },
-    },
+    }
   },
   methods: {
     closeCameraMenu() {
@@ -67,10 +62,10 @@ export default {
           this.frontCameraOptions
         )
       }
-      // this.$emit('show-modal', true)
-      this.$emit('show-modal')
       this.$store.commit('saveStream', this.videoStream)
       this.$store.commit('setCameraMode', true)
+      // this.$emit('show-modal')
+      this.$store.commit('setCameraModalState', true)
     },
     async openBackCamera() {
       console.log(`back camera on`)
@@ -84,10 +79,10 @@ export default {
           this.backCameraOptions
         )
       }
-      // this.$emit('show-modal', true)
-      this.$emit('show-modal')
       this.$store.commit('saveBackCameraStream', this.backCameraStream)
       this.$store.commit('setCameraMode', false)
+      // this.$emit('show-modal')
+      this.$store.commit('setCameraModalState', true)
     },
   }
 }

@@ -4,39 +4,19 @@
       id="photoframe"
       ref="photoframe"
       class="bg-dark"
-      v-if="photoModalState"
+      v-if="$store.state.photoModalState"
       @click.self="closePhotoModal"
     >
       <div id="image-container" ref="imageContainer">
         <v-zoomer>
           <img
-            :src="messages[messageIdx].photo"
+            :src="$store.state.messages[$store.state.messageIdx].photo"
             ref="bigPhoto"
             id="big-photo"
-            :alt="messageIdx"
+            :alt="$store.state.messageIdx"
             v-hammer:swipe.horizontal="onSwipe"
           />
         </v-zoomer>
-        <!-- <i
-          @click="closePhotoModal"
-          id="icon-close-right"
-          class="fas fa-chevron-right fa-2x icon-arrow"
-        ></i>
-        <i
-          @click="closePhotoModal"
-          id="icon-close-left"
-          class="fas fa-chevron-left fa-2x icon-arrow"
-        ></i>
-        <i
-          @click="moveLeft"
-          id="arrow-left"
-          class="fas fa-chevron-left fa-2x icon-arrow"
-        ></i>
-        <i
-          @click="moveRight"
-          id="arrow-right"
-          class="fas fa-chevron-right fa-2x icon-arrow"
-        ></i> -->
       </div>
     </div>
   </transition>
@@ -49,71 +29,20 @@ export default {
       title: 'Photo Message',
     }
   },
-  data() {
-    return {
-      photo: null,
-      zoomState: 1,
-    }
-  },
-  computed: {
-    messageIdx: {
-      get() {
-        return this.$store.state.messageIdx
-      },
-    },
-    messages: {
-      get() {
-        return this.$store.getters.messages
-      },
-    },
-    photoSrc: {
-      get() {
-        return this.$store.getters.bigPhoto
-      },
-    },
-    photoModalState: {
-      get() {
-        return this.$store.getters.photoModalState
-      },
-    },
-  },
   methods: {
+    closePhotoModal() {
+      this.$store.commit('setPhotoModalState', false)
+      this.$store.commit('setRemovedMessageId', null)
+    },
     onSwipe(e) {
       if (e.type === 'swipeleft') {
-        this.moveRight()
+        this.$store.commit('increaseMessageIdx')
       }
       if (e.type === 'swiperight') {
-        this.moveLeft()
+        this.$store.commit('decreaseMessageIdx')
       }
-    },
-    moveLeft() {
-      this.$store.commit('decreaseMessageIdx')
-    },
-    moveRight() {
-      this.$store.commit('increaseMessageIdx')
-    },
-    zoomOut() {
-      if (this.zoomState <= 1) {
-        this.zoomState = 1
-      } else {
-        this.zoomState--
-        this.$refs.bigPhoto.style.transform = `translate(0, 0) scale(${this.zoomState})`
-      }
-    },
-    zoomIn() {
-      if (this.zoomState >= 2) {
-        this.zoomState = 2
-      } else {
-        this.zoomState++
-        this.$refs.bigPhoto.style.transform = `translate(0, 0) scale(${this.zoomState})`
-      }
-    },
-    closePhotoModal() {
-      console.log(`close photo modal`)
-      this.$store.commit('setPhotoModalState', false)
-    },
-  },
-  mounted() {},
+    }
+  }
 }
 </script>
 

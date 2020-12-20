@@ -2,17 +2,16 @@
   <main>
     <Header />
     <Messages />
+    <OptionMenu />
     <Footer />
 
-    <SearchMenu />
-    <!-- <CameraButton @show-modal="cameraModalState = true" /> -->
     <Loader />
+    <!-- <SearchMenu /> -->
     <PhotoModal />
-    <CameraModal
-      v-if="cameraModalState"
-      @hide-modal="cameraModalState = false"
-    />
-    <CameraMenu @show-modal="cameraModalState = true" />
+
+    <CameraButton />
+    <CameraMenu />
+    <CameraModal />
   </main>
 </template>
 
@@ -43,20 +42,20 @@ export default {
         style: { width: '100%' },
       })
     },
-    scrollDown() {
-      if (
-        document.body.scrollTop > 50 ||
-        document.documentElement.scrollTop > 50
-      ) {
-        document.getElementById('navbar').style.top = '0'
-      } else {
-        document.getElementById('navbar').style.top = '-3.125rem'
-      }
-    },
+    // scrollDown() {
+    //   if (
+    //     document.body.scrollTop > 50 ||
+    //     document.documentElement.scrollTop > 50
+    //   ) {
+    //     document.getElementById('navbar').style.top = '0'
+    //   } else {
+    //     document.getElementById('navbar').style.top = '-3.125rem'
+    //   }
+    // },
   },
   mounted() {
     if ('mediaDevices' in navigator) {
-      this.init()
+      // this.init()
     } else {
       this.$toastr.Add({
         name: 'Error Notification',
@@ -68,13 +67,10 @@ export default {
         position: 'toast-top-full-width',
         type: 'error',
         preventDuplicates: true,
-        style: { width: '100%' },
+        style: { width: '100%' }
       })
     }
-  },
-  created() {
-    console.log(`connect to server successfully !`)
-  },
+  }
 }
 </script>
 

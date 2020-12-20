@@ -1,4 +1,5 @@
 export const mutations = {
+
   saveStream: (state, data) => state.stream = data,
   saveBackCameraStream: (state, data) => state.backCameraStream = data,
   saveStream: (state, data) => state.stream = data,
@@ -11,15 +12,20 @@ export const mutations = {
   setCameraMenuState: (state, data) => state.cameraMenuState = data,
   clearCameraIcon: (state, data) => state.cameraIcon = data,
   setSearchMenuState: (state, data) => state.searchMenuState = data,
+  setMessageMenuState: (state, data) => state.messageMenuState = data,
+  getMessageId: (state, data) => state.messageId = data,
+  setOptionMenuState: (state, data) => {
+    state.optionMenuState = data
+    console.log(`option menu state: ${state.optionMenuState}`)
+  },
 
-  // savePhotoSrc: (state, data) => console.log(`mutations: ${state.photoSrc}`),
+  setRemovedMessageId: (state, data) => state.messageIdx = data,
 
   showBigPhoto: (state, data) => {
     state.messageIdx = data
+    state.photoModalState = true
     console.log(state.messageIdx)
   },
-  setMessageMenuState: (state, data) => state.messageMenuState = data,
-  getMessageId: (state, data) => state.messageId = data,
   increaseMessageIdx: state => {
     if (state.messageIdx >= state.messages.length - 1) {
       state.messageIdx = 0
@@ -38,7 +44,6 @@ export const mutations = {
     }
     console.log(state.messageIdx)
   },
-
   getPhotoMessage: state => {
 
     // retrieve messages from localStorage
@@ -50,7 +55,6 @@ export const mutations = {
       state.loaderState = false
     }) || []
   },
-
   setSearchKeyword: (state, data) => {
 
     state.searchKeyword = data
@@ -60,20 +64,19 @@ export const mutations = {
       item.caption.includes(state.searchKeyword)
     )
   },
-
   saveMessage: (state, data) => {
 
-    // send local message to backend
-    this.$socket.emit('new message', data)
+    // // send local message to backend
+    // this.$socket.emit('new message', data)
 
-    // receive remote message and save to local
-    this.$socket.on('new message', message => {
-      if (!message) { state.message = data }
-      else { state.message = message }
-    })
-    
+    // // receive remote message and save to local
+    // this.$socket.on('new message', message => {
+    //   if (!message) { state.message = data }
+    //   else { state.message = message }
+    // })
+
     /**** save local message ****/
-    // state.message = data
+    state.message = data
 
     /**** update local messages ****/
     state.messages.unshift(state.message)
@@ -86,33 +89,41 @@ export const mutations = {
     // localStorage.setItem('photo-message', JSON.stringify(state.messages))
   },
 
-  removeMessage: (state, data) => {
+  setRemoveMessageState: (state, data) => {
+    state.removeMessageState = data
+  },
 
-    // send message ID (caption) to backend
-    this.$socket.emit('remove message', data)
+  removeTempMessage: (state, data) => { state.tempMessage = data},
 
-    // receive message ID from backend and remove item from local messages 
-    this.$socket.on('reomove message', message => {
-      if (!message) { 
-        state.messages = state.messages.filter(item => item.caption !== data) 
-        
-        let db = new Localbase('db')
-        db.collection('photo-message').doc({ caption: data }).delete()    
-      }
-      else { 
-        state.messages = state.messages.filter(item => item.caption !== message) 
-        
-        let db = new Localbase('db')
-        db.collection('photo-message').doc({ caption: message }).delete()    
-      }
-    })
-    
+  // removeMessage: (state, data) => {
+  removeMessage: state => {
+
+    // // send message ID (caption) to backend
+    // this.$socket.emit('remove message', data)
+
+    // // receive message ID from backend and remove item from local messages 
+    // this.$socket.on('reomove message', message => {
+    //   if (!message) { 
+    //     state.messages = state.messages.filter(item => item.caption !== data) 
+
+    //     let db = new Localbase('db')
+    //     db.collection('photo-message').doc({ caption: data }).delete()    
+    //   }
+    //   else { 
+    //     state.messages = state.messages.filter(item => item.caption !== message) 
+
+    //     let db = new Localbase('db')
+    //     db.collection('photo-message').doc({ caption: message }).delete()    
+    //   }
+    // })
+
     /*** delete item from local messages ***/
     // state.messages = state.messages.filter(item => item.caption !== data)
+    state.messages = state.messages.filter(item => item.caption !== state.tempMessage)
 
     /*** delete item from indexdb ***/
-    // let db = new Localbase('db')
-    // db.collection('photo-message').doc({ caption: data }).delete()    
+    let db = new Localbase('db')
+    // db.collection('photo-message').doc({ caption: data }).delete()
+    db.collection('photo-message').doc({ caption: state.tempMessage }).delete()
   }
-
 }

@@ -2,7 +2,7 @@
   <div id="searchbox">
     <div       
       id="icon-search"
-      @click="setSearchmenu"
+      @click="$store.commit('setSearchMenuState', true)"
     ></div>
   </div>
 </template>
@@ -13,12 +13,7 @@ export default {
     return {
       keyword: ''
     }
-  },
-  methods: {
-    setSearchmenu() {
-      this.$store.commit('setSearchMenuState', true)
-    }
-  },
+  }
 }
 </script>
 

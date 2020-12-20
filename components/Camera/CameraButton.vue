@@ -1,10 +1,6 @@
 <template>
   <div v-if="!$store.state.loaderState" id="camera-button">
-      <!-- src="https://www.freeiconspng.com/thumbs/web-camera-icon/web-camera-icon-24.png" -->
-    <img 
-      src="https://www.freeiconspng.com/thumbs/photography-icon-png/camera-icon-circle-21.png"
-      @click="openFrontCamera"
-    >
+    <img :src="imgSrc" @click="openCameraModal" />
   </div>
 </template>
 
@@ -12,6 +8,7 @@
 export default {
   data() {
     return {
+      imgSrc: '/camera-icon.png',
       isBackCameraExisted: false,
       videoStream: null,
       backCameraStream: null,
@@ -36,9 +33,8 @@ export default {
     }
   },
   methods: {
-     async openFrontCamera() {
+    async openCameraModal() {
       console.log(`front camera on`)
-      // this.$store.commit('setCameraMenuState', false)
 
       if (
         'mediaDevices' in navigator &&
@@ -48,11 +44,10 @@ export default {
           this.frontCameraOptions
         )
       }
-      // this.$emit('show-modal', true)
-      this.$emit('show-modal')
       this.$store.commit('saveStream', this.videoStream)
       this.$store.commit('setCameraMode', true)
-    }
+      this.$store.commit('setCameraModalState', true)
+    },
   },
 }
 </script>
@@ -67,6 +62,7 @@ img {
   bottom: 3.75rem;
   width: 3.125rem;
   height: 3.125rem;
-  z-index: 250;
+  z-index: 300;
+  overflow: hidden;
 }
 </style>

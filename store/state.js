@@ -19,5 +19,9 @@ export const state = {
   searchboxState: false,
   searchKeyword: '',
   cameraModalState: false,
-  searchMenuState: false
+  searchMenuState: false,
+  optionMenuState: false,
+  tempMessage: null,
+  removeMessageState: false,
+  // removedMessageId: null
 }

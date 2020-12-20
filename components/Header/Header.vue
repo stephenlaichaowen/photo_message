@@ -1,35 +1,9 @@
 <template>
-  <div id="header" v-if="!loaderState" class="bg-dark">
+  <div id="header" v-if="!$store.state.loaderState" class="bg-dark">
     <Logo />
-    <Searchbox />
+    <!-- <Searchbox /> -->
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      keyword: '',
-    }
-  },
-  computed: {
-    loaderState: {
-      get() {
-        return this.$store.getters.loaderState
-      },
-    }
-  },
-  methods: {
-    setSearchboxState() {
-      console.log(`open searchbox`)
-      this.$store.commit('setSearchboxState', true)
-    },
-    setKeyword() {
-      this.$store.commit('setKeyword', this.keyword)
-    },
-  },
-}
-</script>
 
 <style scoped>
 #searchbox-input {
@@ -69,7 +43,6 @@ export default {
   height: 3.125rem;
   z-index: 300;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }
 </style>

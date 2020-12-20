@@ -1,21 +1,5 @@
 export const getters = {
-  photoModalState: state => state.photoModalState,
-  stream: state => state.stream,
-  backCameraStream: state => state.backCameraStream,
-  photo: state => state.photo,
-  photoSrc: state => state.photo,
-  cameraIcon: state => state.cameraIcon,
-  message: state => state.message,
-  messages: state => state.messages,
-  filteredMessages: state => state.filteredMessages,
-  bigPhoto: state => state.bigPhoto,
-  cameraModalState: state => state.cameraModalState,
-  cameraMenuState: state => state.cameraMenuState,
-  cameraMode: state => state.cameraMode,
-  mobileState: state => state.mobileState,
-  loaderState: state => state.loaderState,
-  messageMenuState: state => state.messageMenuState,
-  messageId: state => state.messageId,
-  searchKeyword: state => state.searchKeyword,
-  searchMenuState: state => state.searchMenuState
+  
+  photoModalState: state => state.photoModalState 
+  
 }

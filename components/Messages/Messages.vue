@@ -3,9 +3,10 @@
     <transition-group name="backInRight" tag="div">
       <div
         id="message"
-        class="row rounded pl-4 pr-3 pb-1"
-        v-for="(item, idx) in messages"
+        class="row rounded pl-4 pr-3 py-1"
+        v-for="(item, idx) in $store.state.messages"
         :key="item.caption"
+        @click="$store.commit('setRemovedMessageId', idx)"
       >
         <div id="image-container" class="col-2 p-1" key="key1">
           <img
@@ -13,8 +14,8 @@
             key="key2"
             id="photo"
             alt="thumb"
-            :class="{ active: idx == messageIdx }"
-            @click="showPhotoModal(idx)"
+            :class="{ active: idx == $store.state.messageIdx }"
+            @click="$store.commit('showBigPhoto', idx)"
           />
         </div>
         <div id="message-caption" class="col-9 px-2" key="key3">
@@ -25,9 +26,10 @@
             {{ item.id.toLocaleString() }}
           </div>
         </div>
-        <div id="option" @click="removeMessage(item.caption)">
+        <div id="option">
           <img
-            src="https://cdn3.iconfinder.com/data/icons/basic-user-interface-5/64/dots_dot_dot-menu_option_nav_navigation_main-512.png"
+            @click="removeMessage(item.caption, idx)"
+            src="https://cdn1.iconfinder.com/data/icons/interface-59/24/option-menu-vertical-more-dots-512.png"
             alt="arrow"
           />
         </div>
@@ -38,45 +40,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      photoSrc: null,
-      messageMenuState: false,
-      tempMessages: null,
-      searchState: false,
-    }
-  },
-  computed: {
-    messageIdx: {
-      get() {
-        return this.$store.state.messageIdx
-      },
-    },
-    searchKeyword: {
-      get() {
-        return this.$store.state.searchKeyword
-      },
-    },
-    messages: {
-      get() {
-        return this.$store.getters.messages
-      },
-    },
-  },
   methods: {
-    onSwipeLeft() {
-      alert('you swipe left')
-    },
-    removeMessage(id) {
-      console.log(`photo message id: ${id}`)
-      this.$store.commit('removeMessage', id)
-    },
-    setMessageMenu(idx) {
-      this.$store.commit('setMessageMenuState', true)
-    },
-    showPhotoModal(idx) {
-      this.$store.commit('showBigPhoto', idx)
-      this.$store.commit('setPhotoModalState', true)
+    removeMessage(item, idx) {
+      this.$store.commit('removeTempMessage', item)
+      this.$store.commit('setOptionMenuState', true)
+      this.$store.commit('setRemovedMessageId', idx)
     },
   },
   mounted() {
@@ -86,14 +54,16 @@ export default {
 </script>
 
 <style scoped>
-#option img {
-  width: 15px;
-  height: 15px;
-  /* background-color: rgba(255, 255, 255, 0.5); */
+.selected {
+  border-bottom: 1px solid white;
 }
-/* #option {
-  padding-top: 5px;
-} */
+#option img {
+  width: 20px;
+  height: 20px;
+}
+#message {
+  position: relative;
+}
 #messages {
   position: absolute;
   top: 3.125rem;
@@ -103,8 +73,8 @@ export default {
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100vw;
-  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
-  /* padding-bottom: 0.5rem; */
+  /* padding: 0.5rem 0.25rem 0 0.25rem; */
+  padding: 0.25rem;
   z-index: 200;
   backdrop-filter: blur(12px);
 }
