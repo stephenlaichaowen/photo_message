@@ -3,10 +3,10 @@
     <Header />
     <Messages />
     <OptionMenu />
-    <Footer />
+    <!-- <Footer /> -->
 
     <Loader />
-    <!-- <SearchMenu /> -->
+    <SearchMenu />
     <PhotoModal />
 
     <CameraButton />

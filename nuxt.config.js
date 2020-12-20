@@ -73,7 +73,7 @@ export default {
     }
   },
 
-  router: {
-    base: '/photo-message-frontend/'
-  }
+  // router: {
+  //   base: '/photo-message-frontend/'
+  // }
 }
