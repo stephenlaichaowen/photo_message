@@ -64,8 +64,9 @@ export default {
 #messages {
   position: absolute;
   top: 3.125rem;
-  bottom: 3.125rem;
-  height: calc(100vh - 6.25rem);
+  /* bottom: 3.125rem; */
+  bottom: 0;
+  height: calc(100vh - 3.125rem);
   z-index: 200;
   overflow-y: scroll;
   overflow-x: hidden;

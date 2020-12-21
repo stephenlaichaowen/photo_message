@@ -1,5 +1,6 @@
 <template>
-  <transition v-if="!$store.state.loaderState" name="slideInUp">
+  <!-- <transition v-if="!$store.state.loaderState" name="slideInUp"> -->
+  <transition v-if="$store.state.searchMenuState" name="slideInUp">
     <div
       id="search-container"
       class="py-1 px-3"
@@ -96,7 +97,8 @@ export default {
   /* margin-bottom: 0.5rem; */
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
+  /* bottom: 0; */
   z-index: 400;
 }
 .slideInUp-enter-active {

@@ -25,7 +25,7 @@
         <div id="icon-group" class="my-3">
           <img
             id="thumbnail-icon"
-            :src="$store.state.photo"
+            :src="$store.state.cameraIcon ? $store.state.photo : '/avatar.png'"
           >
           <img
             id="capture-icon"
@@ -120,12 +120,12 @@ export default {
 }
 #thumbnail-icon,
 #camera-switch-icon {
-  width: 35px;
-  height: 35px;
+  width: 2.1875rem;
+  height: 2.1875rem;
 }
 #close-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
 }
 #capture-icon {
   width: 3.75rem;

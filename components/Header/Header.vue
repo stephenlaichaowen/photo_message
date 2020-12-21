@@ -1,7 +1,7 @@
 <template>
   <div id="header" v-if="!$store.state.loaderState" class="bg-info">
     <Logo />
-    <!-- <Searchbox /> -->
+    <Searchbox />
   </div>
 </template>
 
