@@ -2,17 +2,51 @@
   <transition name="fadeInLeft" v-if="$store.state.cameraModalState">
     <div id="mymodal" class="bg-dark">
       <div id="modal-container">
-        <video 
-          id="player" ref="camera" autoplay class="w-100"
-          :srcObject.prop="$store.state.cameraMode ? $store.state.stream : $store.state.backCameraStream">
-        </video>
+        <video
+          id="player"
+          ref="camera"
+          autoplay
+          class="w-100"
+          :srcObject.prop="
+            $store.state.cameraMode
+              ? $store.state.stream
+              : $store.state.backCameraStream
+          "
+        ></video>
+        <div id="caption-input-container" class="mt-0">
+          <textarea
+            id="caption"
+            placeholder="Image Caption..."
+            style="resize: none"
+            maxlength="120"
+            class="pl-1 pt-1 flex-grow-1 w-100 rounded border-light align-middle pr-5"
+          ></textarea>
+        </div>
         <div id="icon-group" class="my-3">
-          <img id="capture-icon" :src="captureIcon" @click="takePhoto" alt="capture icon">
-          <img 
-            id="close-icon" src="/close-icon.jpg" 
+          <img
+            id="thumbnail-icon"
+            :src="$store.state.photo"
+          >
+          <img
+            id="capture-icon"
+            :src="captureIcon"
+            @click="takePhoto"
+            alt="capture icon"
+          />
+          <img
+            id="camera-switch-icon"
+            src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios12-facetime-flip-camera-icon.png"
+            alt="camera-swtich-icon"
+            @click="toggleCamera"
+          />
+        </div>        
+        <div id="close-icon-container" class="mt-5">
+          <img
+            id="close-icon"
+            src="/close-icon.jpg"
             alt="close icon"
             @click="closeCameraModal"
-          >
+          />
         </div>
       </div>
     </div>
@@ -24,10 +58,13 @@ export default {
   data() {
     return {
       photo: null,
-      captureIcon: '/capture-icon.png'
+      captureIcon: '/capture-icon.png',
     }
   },
-  methods: {    
+  methods: {
+    toggleCamera() {
+
+    },
     closeCameraModal() {
       this.$store.commit('setCameraModalState', false)
       this.turnOffCamera()
@@ -40,23 +77,28 @@ export default {
       let context = canvas.getContext('2d')
       context.drawImage(this.$refs.camera, 0, 0, canvas.width, canvas.height)
       this.photo = context.canvas.toDataURL()
-      
-      this.$store.commit('savePhoto', this.photo)
-      this.$store.commit('clearCameraIcon', true)
 
-      this.closeCameraModal()
+      this.$store.commit('savePhoto', this.photo)
+      this.$store.commit('clearCameraIcon', true)      
     },
     turnOffCamera() {
-      this.$refs.camera.pause()      
+      this.$refs.camera.pause()
 
-      if (this.$store.state.cameraMode) this.$store.state.stream.getTracks()[0].stop()
-      if (!this.$store.state.cameraMode) this.$store.state.backCameraStream.getTracks()[0].stop()
-    }
-  }
+      if (this.$store.state.cameraMode)
+        this.$store.state.stream.getTracks()[0].stop()
+      if (!this.$store.state.cameraMode)
+        this.$store.state.backCameraStream.getTracks()[0].stop()
+    },
+  },
 }
 </script>
 
 <style scoped>
+#close-icon-container {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
 .withphoto {
   color: transparent !important;
   background-size: cover;
@@ -72,24 +114,28 @@ export default {
   width: 2.75rem;
   height: 2.125rem;
 }
-#camera-switch {
-  width: 2.5rem;
-  height: 2.5rem;
+#thumbnail-icon {
+  border-radius: 50%;
+  overflow: hidden;
+}
+#thumbnail-icon,
+#camera-switch-icon {
+  width: 35px;
+  height: 35px;
 }
 #close-icon {
   width: 2.5rem;
   height: 2.5rem;
 }
 #capture-icon {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 3.75rem;
+  height: 3.75rem;
 }
 #icon-group {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* position: relative; */
 }
 #icon-close {
   position: absolute;
