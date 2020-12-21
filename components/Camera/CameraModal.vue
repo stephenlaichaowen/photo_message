@@ -13,18 +13,18 @@
               : $store.state.backCameraStream
           "
         ></video>
-        <div id="caption-input-container">
+        <div id="caption-input-container" class="p-3">
           <textarea
             id="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="pl-2 pt-1 w-100 bg-light"
+            class="px-2 py-1 w-100 bg-light rounded"
           ></textarea>
         </div>
         <div id="icon-group" class="my-3">
           <img
             id="thumbnail-icon"
-            :src="$store.state.cameraIcon ? $store.state.photo : '/avatar.png'"
+            :src="$store.state.cameraIcon ? $store.state.photo : '/photo-icon.png'"
           >
           <img
             id="capture-icon"
@@ -39,7 +39,7 @@
             @click="toggleCamera"
           />
         </div>        
-        <div id="close-icon-container" class="mt-5">
+        <div id="close-icon-container">
           <img
             id="close-icon"
             src="/close-icon.jpg"
@@ -97,13 +97,20 @@ export default {
   resize: none;
   border: none;
 }
-#caption-input-container {
+/* #caption-input-container {
   margin-top: -0.4375rem;
-}
+} */
 #close-icon-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   /* border: 1px solid red; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  /* height: 3.125em; */
 }
 .withphoto {
   color: transparent !important;
@@ -123,6 +130,7 @@ export default {
 #thumbnail-icon {
   border-radius: 50%;
   overflow: hidden;
+  /* border: 1px solid red; */
 }
 #thumbnail-icon,
 #camera-switch-icon {
