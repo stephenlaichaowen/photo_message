@@ -2,7 +2,7 @@
   <transition v-if="!$store.state.loaderState" name="slideInUp">
     <div
       id="search-container"
-      class="bg-dark py-1 px-3"
+      class="bg-info py-1 px-3"
     >
       <div id="search-content">
         <input
@@ -10,7 +10,7 @@
           v-model="keyword"
           id="search-input"
           placeholder="Search..."
-          class="align-middle"
+          class="align-middle bg-dark"
         />
         <img
           src="/arrow.png"
@@ -18,7 +18,7 @@
           @click="closeSearchMenu"
         />
         <img
-          src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"
+          src="/search-icon.webp"
           id="icon-search"
           @click="setSearchKeyword"
         />
@@ -74,13 +74,16 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 }
+#search-input::placeholder {
+  color: white;
+}
 #search-input {
   resize: none;
   outline: none;
   padding: 0.25rem 0.625rem 0.25rem 2.5rem;
   border-radius: 2.5rem;
   border: none;
-  width: 100%;
+  width: 100%;  
 }
 #search-container {
   height: 3.125rem;

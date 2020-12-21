@@ -1,6 +1,6 @@
 <template>
   <div id="logo">
-    <span id="title" class="text-info">Photo Message</span>
+    <span id="title" class="text-light">Photo Message</span>
     <span class="badge bg-danger ml-2 text-light">{{
       $store.state.messages.length
     }}</span>

@@ -1,5 +1,5 @@
 <template>
-  <div id="header" v-if="!$store.state.loaderState" class="bg-dark">
+  <div id="header" v-if="!$store.state.loaderState" class="bg-info">
     <Logo />
     <!-- <Searchbox /> -->
   </div>
