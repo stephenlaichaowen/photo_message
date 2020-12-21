@@ -6,7 +6,7 @@
           <img 
             class="trashcan"
             @click="deleteMessage"
-            src="/trash-icon-white.png" alt="trash icon">
+            src="/trashcan-icon-white.png" alt="trash icon">
         </div>
         <!-- <img 
           class="close"
@@ -70,7 +70,7 @@ export default {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 500;
+  z-index: 250;
 }
 .slideInUp-enter-active {
   animation: slideInUp 0.3s;
