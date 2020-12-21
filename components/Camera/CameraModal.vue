@@ -13,13 +13,15 @@
               : $store.state.backCameraStream
           "
         ></video>
-        <div id="caption-input-container" class="p-3">
+        <!-- <div id="caption-input-container" class="p-3"> -->
+        <div id="caption-input-container">
           <textarea
             id="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="px-2 py-1 w-100 bg-light rounded"
+            class="p-2 w-100 bg-light rounded align-middle pr-5"
           ></textarea>
+          <img id="paperplane-icon" src="/paperplane-final.png" alt="paper plane icon">
         </div>
         <div id="icon-group" class="my-3">
           <img
@@ -93,13 +95,22 @@ export default {
 </script>
 
 <style scoped>
+#paperplane-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
 #caption {
   resize: none;
   border: none;
 }
-/* #caption-input-container {
+#caption-input-container {
   margin-top: -0.4375rem;
-} */
+  position: relative;  
+}
 #close-icon-container {
   display: flex;
   align-items: center;

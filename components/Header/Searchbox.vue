@@ -1,7 +1,7 @@
 <template>
   <div id="searchbox">
     <img   
-      src="/magnifier.png"
+      src="/magnifier-final.png"
       id="icon-search"
       @click="$store.commit('setSearchMenuState', true)"
     >
@@ -22,25 +22,9 @@ export default {
 #icon-search {
   width: 1.375rem;
   height: 1.375rem;
-  /* position: absolute;
-  top: 50%;
-  right: 0.625rem;
-  transform: translateY(-50%);
-  color: var(--theme-color);
-  background: url('https://www.pinclipart.com/picdir/middle/485-4851736_free-clipart-icons.png');
-  background-position: center;
-  background-size: cover; */
 }
-/* #searchbox-input {
-  width: 7.5rem;
-  resize: none;
-  outline: none;
-  border: none;
-} */
 #searchbox {
   /* border: 1px solid red; */
-  /* position: relative;
-  margin-left: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
