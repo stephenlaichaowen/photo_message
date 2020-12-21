@@ -2,7 +2,7 @@
   <transition v-if="!$store.state.loaderState" name="slideInUp">
     <div
       id="search-container"
-      class="bg-info py-1 px-3"
+      class="bg-dark py-1 px-3"
     >
       <div id="search-content">
         <input
@@ -10,7 +10,7 @@
           v-model="keyword"
           id="search-input"
           placeholder="Search..."
-          class="align-middle bg-dark"
+          class="align-middle bg-info"
         />
         <img
           src="/arrow.png"
@@ -74,9 +74,9 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 }
-#search-input::placeholder {
+/* #search-input::placeholder {
   color: white;
-}
+} */
 #search-input {
   resize: none;
   outline: none;
