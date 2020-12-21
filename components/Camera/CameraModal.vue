@@ -1,7 +1,7 @@
 <template>
   <transition name="fadeInLeft" v-if="$store.state.cameraModalState">
     <div id="mymodal" class="bg-dark">
-      <div id="modal-container">
+      <div id="modal-container" class="p-0 m-0">
         <video
           id="player"
           ref="camera"
@@ -13,13 +13,12 @@
               : $store.state.backCameraStream
           "
         ></video>
-        <div id="caption-input-container" class="mt-0">
+        <div id="caption-input-container">
           <textarea
             id="caption"
             placeholder="Image Caption..."
-            style="resize: none"
             maxlength="120"
-            class="pl-1 pt-1 flex-grow-1 w-100 rounded border-light align-middle pr-5"
+            class="pl-2 pt-1 w-100 bg-light"
           ></textarea>
         </div>
         <div id="icon-group" class="my-3">
@@ -94,6 +93,13 @@ export default {
 </script>
 
 <style scoped>
+#caption {
+  resize: none;
+  border: none;
+}
+#caption-input-container {
+  margin-top: -0.4375rem;
+}
 #close-icon-container {
   display: flex;
   justify-content: center;

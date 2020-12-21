@@ -1,9 +1,10 @@
 <template>
   <div id="searchbox">
-    <div       
+    <img   
+      src="/magnifier.png"
       id="icon-search"
       @click="$store.commit('setSearchMenuState', true)"
-    ></div>
+    >
   </div>
 </template>
 
@@ -19,17 +20,16 @@ export default {
 
 <style scoped>
 #icon-search {
-  position: absolute;
+  width: 1.375rem;
+  height: 1.375rem;
+  /* position: absolute;
   top: 50%;
   right: 0.625rem;
   transform: translateY(-50%);
-  width: 1.375rem;
-  height: 1.375rem;
   color: var(--theme-color);
-  /* background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/768px-Feedbin-Icon-home-search.svg.png'); */
   background: url('https://www.pinclipart.com/picdir/middle/485-4851736_free-clipart-icons.png');
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 /* #searchbox-input {
   width: 7.5rem;
@@ -38,9 +38,12 @@ export default {
   border: none;
 } */
 #searchbox {
-  position: relative;
-  margin-left: auto;
   /* border: 1px solid red; */
+  /* position: relative;
+  margin-left: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slideInRight-enter-active {
   animation: slideInRight 0.5s;
