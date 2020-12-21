@@ -20,7 +20,7 @@
     <div id="close-icon-container">
       <img
         id="close-icon"
-        src="/close-icon.jpg"
+        src="/close-icon-white.png"
         alt="close icon"
         @click="closePhotoModal"
       />
@@ -39,7 +39,7 @@ export default {
   methods: {
     closePhotoModal() {
       this.$store.commit('setPhotoModalState', false)
-      this.$store.commit('setRemovedMessageId', null)
+      // this.$store.commit('setRemovedMessageId', null)
     },
     onSwipe(e) {
       if (e.type === 'swipeleft') {

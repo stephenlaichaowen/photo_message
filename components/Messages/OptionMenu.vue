@@ -1,7 +1,7 @@
 <template>
   <transition name="slideInUp" v-if="$store.state.optionMenuState">
     <div id="option-container" class="bg-info">
-      <div id="flex-box">
+      <div id="flex-box" @click.self="closeOptionMenu">
         <div class="icon">
           <img 
             class="trashcan"
