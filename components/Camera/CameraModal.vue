@@ -13,7 +13,6 @@
               : $store.state.backCameraStream
           "
         ></video>
-        <!-- <div id="caption-input-container" class="p-3"> -->
         <div id="caption-input-container" class="p-3">
           <textarea
             id="caption"
@@ -21,7 +20,7 @@
             maxlength="120"
             class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
-          <img id="paperplane-icon" src="/paperplane-final.png" alt="paper plane icon">
+          <img id="paperplane-icon" src="/paperplane-icon.png" alt="paper plane icon">
         </div>
         <div id="icon-group" class="my-3">
           <img
@@ -36,7 +35,7 @@
           />
           <img
             id="camera-switch-icon"
-            src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios12-facetime-flip-camera-icon.png"
+            src="/cameraswitch-icon.png"
             alt="camera-swtich-icon"
             @click="toggleCamera"
           />

@@ -1,7 +1,7 @@
 <template>
   <div id="searchbox">
     <img   
-      src="/magnifier-final-6.png"
+      src="/search.png"
       id="icon-search"
       @click="$store.commit('setSearchMenuState', true)"
     >

@@ -28,7 +28,7 @@
         <div id="option">
           <img
             @click="removeMessage(item.caption, idx)"
-            src="https://cdn1.iconfinder.com/data/icons/interface-59/24/option-menu-vertical-more-dots-512.png"
+            src="https://cdn.iconscout.com/icon/free/png-512/menu-bar-lines-option-list-hamburger-web-5-3177.png"
             alt="arrow"
           />
         </div>

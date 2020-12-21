@@ -17,7 +17,15 @@
             v-hammer:swipe.horizontal="onSwipe"
           />
         </v-zoomer>
-      </div>
+      </div>      
+    <div id="close-icon-container">
+      <img
+        id="close-icon"
+        src="/close-icon.jpg"
+        alt="close icon"
+        @click="closePhotoModal"
+      />
+    </div>
     </div>
   </transition>
 </template>
@@ -47,53 +55,26 @@ export default {
 </script>
 
 <style scoped>
-#icon-close-right {
-  top: 1rem;
-  right: 1rem;
-}
-#icon-close-left {
-  top: 1rem;
-  left: 1rem;
-}
-#arrow-left {
-  left: 0.9375rem;
-}
-#arrow-right {
-  right: 0.9375rem;
-}
-.icon-arrow {
-  position: absolute;
-  /* top: 50%;
-  transform: translateY(-50%); */
-  color: rgba(255, 255, 255, 0.5);
-}
-.icon-zoom {
-  padding: 0.2rem 0.5rem;
-  color: rgba(255, 255, 255, 0.5);
-}
-/* #zoom-icon {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+#close-icon-container {
+  width: 100%;
   display: flex;
-} */
-#icon-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  color: rgba(255, 255, 255, 0.5);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 1rem 0;
+  bottom: 0;
+  left: 0;
 }
-/* #big-photo:hover {
-  transform: scale(2);
-} */
+#close-icon {
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
 #big-photo {
   width: 100%;
 }
 #image-container {
   position: relative;
   width: 100%;
-  /* height: 100%; */
-  /* overflow: hidden; */
 }
 #photoframe {
   position: fixed;
@@ -104,6 +85,8 @@ export default {
   z-index: 500;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .zoomIn-enter-active {

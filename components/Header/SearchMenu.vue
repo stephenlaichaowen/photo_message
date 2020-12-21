@@ -1,5 +1,4 @@
 <template>
-  <!-- <transition v-if="!$store.state.loaderState" name="slideInUp"> -->
   <transition v-if="$store.state.searchMenuState" name="slideInUp">
     <div
       id="search-container"
@@ -19,7 +18,7 @@
           @click="closeSearchMenu"
         />
         <img
-          src="/search-icon.webp"
+          src="/go-icon.jpg"
           id="icon-search"
           @click="setSearchKeyword"
         />
@@ -57,8 +56,8 @@ export default {
 }
 #icon-back {
   left: 0.3125rem;
-  width: 1.5625rem;
-  height: 1.5625rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 #icon-search {
   right: 0.625rem;
