@@ -103,11 +103,12 @@ export default {
   right: 2rem;
 }
 #caption::placeholder {
-  color: white;
+  color: #17a2b8;
 }
 #caption {
   resize: none;
   border: none;
+  color: #17a2b8;
 }
 #caption-input-container {
   margin-top: -0.4375rem;
