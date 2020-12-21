@@ -3,7 +3,6 @@
     <div
       id="photoframe"
       ref="photoframe"
-      class="bg-dark"
       v-if="$store.state.photoModalState"
       @click.self="closePhotoModal"
     >
@@ -88,6 +87,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #000;
 }
 .zoomIn-enter-active {
   animation: zoomIn 0.3s;

@@ -20,7 +20,7 @@
             maxlength="120"
             class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
-          <img id="paperplane-icon" src="/paperplane-icon.png" alt="paper plane icon">
+          <img id="paperplane-icon" src="/paper-plane-icon.png" alt="paper plane icon">
         </div>
         <div id="icon-group" class="my-3">
           <img
@@ -118,11 +118,12 @@ export default {
   align-items: center;
   justify-content: center;
   /* border: 1px solid red; */
-  position: fixed;
+  /* position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: 1rem 0;
+  width: 100%; */
+  /* margin-top: 2rem; */
+  padding: 3rem 0 1rem 0;
   /* height: 3.125em; */
 }
 .withphoto {
