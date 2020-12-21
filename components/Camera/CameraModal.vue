@@ -25,7 +25,7 @@
         <div id="icon-group" class="my-3">
           <img
             id="thumbnail-icon"
-            :src="$store.state.cameraIcon ? $store.state.photo : '/photo-icon.png'"
+            :src="$store.state.cameraIcon ? $store.state.photo : '/photoicon-final.png'"
           >
           <img
             id="capture-icon"
@@ -35,7 +35,7 @@
           />
           <img
             id="camera-switch-icon"
-            src="/cameraswitch-icon-final.png"
+            src="/cameraswitch-icon.png"
             alt="camera-swtich-icon"
             @click="toggleCamera"
           />
@@ -43,7 +43,7 @@
         <div id="close-icon-container">
           <img
             id="close-icon"
-            src="/close-icon-final.png"
+            src="/close-icon-white.png"
             alt="close icon"
             @click="closeCameraModal"
           />
@@ -102,13 +102,13 @@ export default {
   transform: translateY(-50%);
   right: 2rem;
 }
-#caption::placeholder {
+/* #caption::placeholder {
   color: #17a2b8;
-}
+} */
 #caption {
   resize: none;
   border: none;
-  color: #17a2b8;
+  color: white;
 }
 #caption-input-container {
   margin-top: -0.4375rem;
