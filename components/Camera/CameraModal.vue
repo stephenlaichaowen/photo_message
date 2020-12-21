@@ -20,7 +20,7 @@
             maxlength="120"
             class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
-          <img id="paperplane-icon" src="/paper-plane-icon.png" alt="paper plane icon">
+          <img id="paperplane-icon" src="/paperplane-icon-final.png" alt="paper plane icon">
         </div>
         <div id="icon-group" class="my-3">
           <img
@@ -35,7 +35,7 @@
           />
           <img
             id="camera-switch-icon"
-            src="/cameraswitch-icon.png"
+            src="/cameraswitch-icon-final.png"
             alt="camera-swtich-icon"
             @click="toggleCamera"
           />
@@ -43,7 +43,7 @@
         <div id="close-icon-container">
           <img
             id="close-icon"
-            src="/close-icon.jpg"
+            src="/close-icon-final.png"
             alt="close icon"
             @click="closeCameraModal"
           />
