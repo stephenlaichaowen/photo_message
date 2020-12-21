@@ -1,7 +1,7 @@
 <template>
   <transition name="fadeInLeft" v-if="$store.state.cameraModalState">
-    <div id="mymodal" class="bg-dark">
-      <div id="modal-container" class="p-0 m-0">
+    <div id="mymodal">
+      <div id="modal-container">
         <video
           id="player"
           ref="camera"
@@ -14,12 +14,12 @@
           "
         ></video>
         <!-- <div id="caption-input-container" class="p-3"> -->
-        <div id="caption-input-container">
+        <div id="caption-input-container" class="p-3">
           <textarea
             id="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="p-2 w-100 bg-light rounded align-middle pr-5"
+            class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
           <img id="paperplane-icon" src="/paperplane-final.png" alt="paper plane icon">
         </div>
@@ -101,7 +101,10 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 1rem;
+  right: 2rem;
+}
+#caption::placeholder {
+  color: white;
 }
 #caption {
   resize: none;
@@ -183,6 +186,7 @@ export default {
   display: flex;
   /* flex-direction: column; */
   align-items: center;
+  background: #000;
 }
 @keyframes fadeInLeft {
   0% {
