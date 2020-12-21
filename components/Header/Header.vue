@@ -35,7 +35,7 @@
   align-items: center;
 }
 #header {
-  padding: 0.5rem 0.625rem 0.5rem 1.25rem;
+  padding: 0.5rem 1rem 0.5rem 1.25rem;
   position: fixed;
   top: 0;
   left: 0;

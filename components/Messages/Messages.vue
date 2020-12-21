@@ -6,7 +6,6 @@
         class="row rounded pl-4 pr-3 py-1"
         v-for="(item, idx) in $store.state.messages"
         :key="item.caption"
-        @click="$store.commit('setRemovedMessageId', idx)"
       >
         <div id="image-container" class="col-2 p-1" key="key1">
           <img
@@ -40,11 +39,32 @@
 
 <script>
 export default {
+  data() {
+    return {
+      itemSelectedState: false,
+      optionMenuState: false
+    }
+  },
   methods: {
+    selectItem(idx) {
+      this.itemSelectedState = !this.itemSelectedState
+      if (this.itemSelectedState) this.$store.commit('setRemovedMessageId', idx)
+      if (!this.itemSelectedState) this.$store.commit('setRemovedMessageId', null)
+    },
     removeMessage(item, idx) {
       this.$store.commit('removeTempMessage', item)
-      this.$store.commit('setOptionMenuState', true)
-      this.$store.commit('setRemovedMessageId', idx)
+      // this.$store.commit('setOptionMenuState', true)
+      // this.$store.commit('setRemovedMessageId', idx)
+
+      this.optionMenuState = !this.optionMenuState
+
+      if (this.optionMenuState) {
+        this.$store.commit('setOptionMenuState', this.optionMenuState)
+        this.$store.commit('setRemovedMessageId', idx)
+      } else {
+        this.$store.commit('setOptionMenuState', this.optionMenuState)
+        this.$store.commit('setRemovedMessageId', null)
+      }
     },
   },
   mounted() {

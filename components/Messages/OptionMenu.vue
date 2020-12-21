@@ -1,19 +1,18 @@
 <template>
   <transition name="slideInUp" v-if="$store.state.optionMenuState">
-    <div id="option-container" class="bg-dark">
+    <div id="option-container" class="bg-info">
       <div id="flex-box">
         <div class="icon">
           <img 
             class="trashcan"
             @click="deleteMessage"
-            src="/trash-icon.png" alt="trash icon">
+            src="/trash-icon-final-v2.png" alt="trash icon">
         </div>
-        <div class="icon">
-          <img 
-            class="close"
-            @click="closeOptionMenu"
-            src="/close-icon.jpg" alt="close icon">
-        </div>
+        <!-- <img 
+          class="close"
+          @click="closeOptionMenu"
+          src="/close-icon.jpg" alt="close icon"
+        > -->
       </div>
     </div>
   </transition>
@@ -41,13 +40,19 @@ export default {
   height: 1.5625rem;
 }
 .close {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  /* transform: translateY(-50%); */
 }
 #flex-box {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  position: relative;
 }
 .icon {
   width: 50%;
