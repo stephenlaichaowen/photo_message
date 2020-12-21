@@ -6,7 +6,7 @@
           <img 
             class="trashcan"
             @click="deleteMessage"
-            src="/trash-icon-final-v2.png" alt="trash icon">
+            src="/trash-icon-white.png" alt="trash icon">
         </div>
         <!-- <img 
           class="close"

@@ -74,9 +74,13 @@ export default {
 </script>
 
 <style scoped>
+#option {
+  /* border: 1px solid red; */
+}
 #option img {
   width: 1.25rem;
-  height: 1.25rem;
+  height: 1.875rem;
+  /* border: 1px solid yellow; */
 }
 #message {
   position: relative;
