@@ -102,9 +102,9 @@ export default {
   transform: translateY(-50%);
   right: 2rem;
 }
-/* #caption::placeholder {
-  color: #17a2b8;
-} */
+#caption::placeholder {
+  color: white;
+}
 #caption {
   resize: none;
   border: none;
