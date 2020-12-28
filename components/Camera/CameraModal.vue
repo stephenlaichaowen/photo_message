@@ -240,7 +240,8 @@ export default {
   top: 1rem;
 }
 #player {
-  width: 22.5rem;
+  width: 100%;
+  /* width: 22.5rem; */
   height: 18rem;
 }
 #modal-container {
