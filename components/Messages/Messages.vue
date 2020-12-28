@@ -56,7 +56,7 @@ export default {
       // this.$store.commit('setOptionMenuState', true)
       // this.$store.commit('setRemovedMessageId', idx)
 
-      // this.optionMenuState = !this.optionMenuState
+      this.$store.state.optionMenuState = !this.$store.state.optionMenuState
 
       if (this.$store.state.optionMenuState) {
         // this.$store.commit('setOptionMenuState', this.optionMenuState)
