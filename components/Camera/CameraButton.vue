@@ -57,8 +57,8 @@ img {
 }
 #camera-button {
   position: fixed;
-  right: 2.1875rem;
-  bottom: 1.875rem;
+  right: 2.5rem;
+  bottom: 2.5rem;
   width: 3.125rem;
   height: 3.125rem;
   z-index: 300;
