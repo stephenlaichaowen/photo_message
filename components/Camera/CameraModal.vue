@@ -61,7 +61,7 @@ export default {
       captureIcon: '/capture-icon.png',
       videoStream: null,
       backCameraStream: null,
-      isFrontCamera: false,
+      isFrontCamera: true,
       frontCameraOptions: {
         video: {
           width: 600,
@@ -213,7 +213,7 @@ export default {
   top: 1rem;
 }
 #player {
-  width: 100%;
+  width: 22.5rem;
   height: 18rem;
 }
 #modal-container {
