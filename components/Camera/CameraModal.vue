@@ -19,7 +19,7 @@
             ref="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="p-2 w-100 bg-dark rounded align-middle pr-5"
+            class="p-2 bg-dark rounded align-middle pr-5"
           ></textarea>
           <img
             id="paperplane-icon"
@@ -157,13 +157,17 @@ export default {
 </script>
 
 <style scoped>
+#caption-input-container {
+  display: flex;
+  justify-content: center;
+}
 #paperplane-icon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 2rem;
+  right: 45px;
 }
 #caption::placeholder {
   color: white;
@@ -172,7 +176,7 @@ export default {
   resize: none;
   border: none;
   color: white;
-  width: 22.5rem;
+  width: 300px;
 }
 #caption-input-container {
   margin-top: -0.4375rem;
@@ -241,7 +245,8 @@ export default {
 }
 #modal-container {
   /* width: 100vw; */
-  width: 22.5rem;
+  /* width: 22.5rem; */
+  padding: 0;
 }
 #mymodal {
   position: fixed;
