@@ -149,6 +149,7 @@ export default {
   resize: none;
   border: none;
   color: white;
+  width: 22.5rem;
 }
 #caption-input-container {
   margin-top: -0.4375rem;
