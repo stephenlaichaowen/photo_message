@@ -18,6 +18,7 @@
             id="caption"
             placeholder="Image Caption..."
             maxlength="120"
+            :autofocus="isAutofocus"
             class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
           <img id="paperplane-icon" src="/paperplane-icon-final.png" alt="paper plane icon">
@@ -62,6 +63,7 @@ export default {
       videoStream: null,
       backCameraStream: null,
       isFrontCamera: true,
+      isAutofocus: false,
       frontCameraOptions: {
         video: {
           width: 600,
@@ -120,6 +122,7 @@ export default {
 
       this.$store.commit('savePhoto', this.photo)
       this.$store.commit('clearCameraIcon', true)      
+      this.isAutofocus = true
     },
     turnOffCamera() {
       this.$refs.camera.pause()
