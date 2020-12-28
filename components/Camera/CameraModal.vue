@@ -84,7 +84,6 @@ export default {
   },
   methods: {
     async toggleCamera() {
-      console.log(`back camera on`)
       this.isFrontCamera = !this.isFrontCamera
       this.turnOffCamera()
 
@@ -217,7 +216,8 @@ export default {
   height: 18rem;
 }
 #modal-container {
-  width: 100vw;
+  /* width: 100vw; */
+  width: 22.5rem;
 }
 #mymodal {
   position: fixed;
