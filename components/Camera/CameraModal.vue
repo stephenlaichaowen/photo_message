@@ -61,7 +61,7 @@ export default {
       captureIcon: '/capture-icon.png',
       videoStream: null,
       backCameraStream: null,
-      isFrontCamera: true,
+      isFrontCamera: false,
       frontCameraOptions: {
         video: {
           width: 600,
