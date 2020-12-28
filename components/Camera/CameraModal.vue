@@ -59,11 +59,43 @@ export default {
     return {
       photo: null,
       captureIcon: '/capture-icon.png',
+      videoStream: null,
+      backCameraStream: null,
+      frontCameraOptions: {
+        video: {
+          width: 600,
+          height: 600,
+          facingMode: 'user',
+        },
+        audio: false,
+      },
+      backCameraOptions: {
+        video: {
+          width: 600,
+          height: 600,
+          facingMode: {
+            exact: 'environment',
+          },
+        },
+        audio: false,
+      },
     }
   },
   methods: {
-    toggleCamera() {
+    async toggleCamera() {
+      console.log(`back camera on`)
 
+      if (
+        'mediaDevices' in navigator &&
+        'getUserMedia' in navigator.mediaDevices
+      ) {
+        this.backCameraStream = await navigator.mediaDevices.getUserMedia(
+          this.backCameraOptions
+        )
+      }
+      this.$store.commit('saveBackCameraStream', this.backCameraStream)
+      this.$store.commit('setCameraMode', false)
+      this.$store.commit('setCameraModalState', true)
     },
     closeCameraModal() {
       this.$store.commit('setCameraModalState', false)

@@ -9,7 +9,6 @@ export default {
   data() {
     return {
       imgSrc: '/camera-icon.png',
-      isBackCameraExisted: false,
       videoStream: null,
       backCameraStream: null,
       frontCameraOptions: {
