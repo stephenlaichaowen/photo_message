@@ -176,7 +176,7 @@ export default {
   resize: none;
   border: none;
   color: white;
-  width: 300px;
+  width: 18.75rem;
 }
 #caption-input-container {
   margin-top: -0.4375rem;
@@ -244,9 +244,8 @@ export default {
   height: 18rem;
 }
 #modal-container {
-  /* width: 100vw; */
-  width: 22.5rem;
-  /* padding: 0; */
+  width: 100vw;
+  /* width: 22.5rem; */
 }
 #mymodal {
   position: fixed;
