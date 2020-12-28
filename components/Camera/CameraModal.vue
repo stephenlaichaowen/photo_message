@@ -12,6 +12,7 @@
               ? $store.state.stream
               : $store.state.backCameraStream
           "
+          style="width:360px;height:288px;background:black"
         ></video>
         <div id="caption-input-container" class="p-3">
           <textarea
