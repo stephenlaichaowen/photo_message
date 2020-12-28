@@ -16,18 +16,27 @@
         <div id="caption-input-container" class="p-3">
           <textarea
             id="caption"
+            ref="caption"
             placeholder="Image Caption..."
             maxlength="120"
             :autofocus="isAutofocus"
             class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
-          <img id="paperplane-icon" src="/paperplane-icon-final.png" alt="paper plane icon">
+          <img
+            id="paperplane-icon"
+            src="/paperplane-icon-final.png"
+            alt="paper plane icon"
+          />
         </div>
         <div id="icon-group" class="my-3">
           <img
             id="thumbnail-icon"
-            :src="$store.state.cameraIcon ? $store.state.photo : '/photoicon-final.png'"
-          >
+            :src="
+              $store.state.cameraIcon
+                ? $store.state.photo
+                : '/photoicon-final.png'
+            "
+          />
           <img
             id="capture-icon"
             :src="captureIcon"
@@ -40,7 +49,7 @@
             alt="camera-swtich-icon"
             @click="toggleCamera"
           />
-        </div>        
+        </div>
         <div id="close-icon-container">
           <img
             id="close-icon"
@@ -94,14 +103,18 @@ export default {
         'getUserMedia' in navigator.mediaDevices
       ) {
         if (this.isFrontCamera) {
-          this.videoStream = await navigator.mediaDevices.getUserMedia(this.frontCameraOptions)
+          this.videoStream = await navigator.mediaDevices.getUserMedia(
+            this.frontCameraOptions
+          )
 
           this.$store.commit('saveStream', this.videoStream)
           this.$store.commit('setCameraMode', true)
-        } 
+        }
         if (!this.isFrontCamera) {
-          this.backCameraStream = await navigator.mediaDevices.getUserMedia(this.backCameraOptions)
-          
+          this.backCameraStream = await navigator.mediaDevices.getUserMedia(
+            this.backCameraOptions
+          )
+
           this.$store.commit('saveBackCameraStream', this.backCameraStream)
           this.$store.commit('setCameraMode', false)
         }
@@ -121,8 +134,12 @@ export default {
       this.photo = context.canvas.toDataURL()
 
       this.$store.commit('savePhoto', this.photo)
-      this.$store.commit('clearCameraIcon', true)      
+      this.$store.commit('clearCameraIcon', true)
       this.isAutofocus = true
+      setTimeout(() => {
+        this.$refs.caption.focus()
+      })
+      console.log(`autofocus: ${this.isAutofocus}`)
     },
     turnOffCamera() {
       this.$refs.camera.pause()
@@ -132,6 +149,9 @@ export default {
       if (!this.$store.state.cameraMode)
         this.$store.state.backCameraStream.getTracks()[0].stop()
     },
+  },
+  mounted() {
+    console.log(`autofocus: ${this.isAutofocus}`)
   },
 }
 </script>
@@ -156,7 +176,7 @@ export default {
 }
 #caption-input-container {
   margin-top: -0.4375rem;
-  position: relative;  
+  position: relative;
 }
 #close-icon-container {
   display: flex;
