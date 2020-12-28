@@ -92,14 +92,13 @@ export default {
         'getUserMedia' in navigator.mediaDevices
       ) {
         if (this.isFrontCamera) {
-          this.videoStream = await navigator.mediaDevices.getUserMedia(
-            this.frontCameraOptions)
+          this.videoStream = await navigator.mediaDevices.getUserMedia(this.frontCameraOptions)
 
           this.$store.commit('saveStream', this.videoStream)
           this.$store.commit('setCameraMode', true)
-        } else {
-          this.backCameraStream = await navigator.mediaDevices.getUserMedia(
-            this.backCameraOptions)
+        } 
+        if (!this.isFrontCamera) {
+          this.backCameraStream = await navigator.mediaDevices.getUserMedia(this.backCameraOptions)
           
           this.$store.commit('saveBackCameraStream', this.backCameraStream)
           this.$store.commit('setCameraMode', false)
