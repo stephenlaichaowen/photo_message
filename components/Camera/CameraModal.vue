@@ -167,7 +167,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 45px;
+  right: 2.8125rem;
 }
 #caption::placeholder {
   color: white;
@@ -176,7 +176,7 @@ export default {
   resize: none;
   border: none;
   color: white;
-  width: 18.75rem;
+  width: 18.125rem;
 }
 #caption-input-container {
   margin-top: -0.4375rem;
