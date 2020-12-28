@@ -86,6 +86,7 @@ export default {
     async toggleCamera() {
       console.log(`back camera on`)
       this.isFrontCamera = !this.isFrontCamera
+      this.turnOffCamera()
 
       if (
         'mediaDevices' in navigator &&
