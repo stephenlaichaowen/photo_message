@@ -17,6 +17,7 @@
           <textarea
             id="caption"
             ref="caption"
+            v-model="caption"
             placeholder="Image Caption..."
             maxlength="120"
             class="p-2 bg-dark rounded align-middle pr-5"
@@ -25,6 +26,7 @@
             id="paperplane-icon"
             src="/paperplane-icon-final.png"
             alt="paper plane icon"
+            @click="sendMessage"
           />
         </div>
         <div id="icon-group" class="my-3">
@@ -71,6 +73,7 @@ export default {
       videoStream: null,
       backCameraStream: null,
       isFrontCamera: true,
+      caption: null,
       // isAutofocus: false,
       frontCameraOptions: {
         video: {
@@ -93,6 +96,34 @@ export default {
     }
   },
   methods: {
+    sendMessage() {
+      if (!this.$store.state.photo || !this.caption) {
+        this.$toastr.Add({
+          name: 'Warning Notification',
+          title: 'Warning',
+          msg: 'Photo & Caption Required.',
+          clickClose: false,
+          timeout: 3000,
+          progressBarValue: 100,
+          position: 'toast-top-full-width',
+          type: 'warning',
+          preventDuplicates: true,
+          style: { width: '100%' },
+        })
+        return
+      }
+
+      this.message = {
+        id: new Date(),
+        photo: this.$store.state.photo,
+        caption: this.caption,
+      }
+      this.$store.commit('saveMessage', this.message)
+      this.closeCameraModal()    
+
+      this.caption = ''
+      // this.$store.commit('clearCameraIcon', false)
+    },
     async toggleCamera() {
       this.isFrontCamera = !this.isFrontCamera
       this.turnOffCamera()
