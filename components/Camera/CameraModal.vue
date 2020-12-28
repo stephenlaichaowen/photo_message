@@ -167,7 +167,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 2.8125rem;
+  right: 3.125rem;
 }
 #caption::placeholder {
   color: white;
