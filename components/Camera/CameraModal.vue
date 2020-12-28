@@ -19,7 +19,6 @@
             ref="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            :autofocus="isAutofocus"
             class="p-2 w-100 bg-dark rounded align-middle pr-5"
           ></textarea>
           <img
@@ -72,7 +71,7 @@ export default {
       videoStream: null,
       backCameraStream: null,
       isFrontCamera: true,
-      isAutofocus: false,
+      // isAutofocus: false,
       frontCameraOptions: {
         video: {
           width: 600,
@@ -123,6 +122,7 @@ export default {
     closeCameraModal() {
       this.$store.commit('setCameraModalState', false)
       this.turnOffCamera()
+      this.$refs.caption.style.outline = 'none'
     },
     takePhoto() {
       let canvas = document.createElement('canvas')
@@ -135,10 +135,10 @@ export default {
 
       this.$store.commit('savePhoto', this.photo)
       this.$store.commit('clearCameraIcon', true)
-      this.isAutofocus = true
-      setTimeout(() => {
+      // this.isAutofocus = true
+      // setTimeout(() => {
         this.$refs.caption.focus()
-      })
+      // })
       console.log(`autofocus: ${this.isAutofocus}`)
     },
     turnOffCamera() {
