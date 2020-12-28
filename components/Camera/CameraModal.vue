@@ -61,6 +61,7 @@ export default {
       captureIcon: '/capture-icon.png',
       videoStream: null,
       backCameraStream: null,
+      isFrontCamera: true,
       frontCameraOptions: {
         video: {
           width: 600,
@@ -84,18 +85,26 @@ export default {
   methods: {
     async toggleCamera() {
       console.log(`back camera on`)
+      this.isFrontCamera = !this.isFrontCamera
 
       if (
         'mediaDevices' in navigator &&
         'getUserMedia' in navigator.mediaDevices
       ) {
-        this.backCameraStream = await navigator.mediaDevices.getUserMedia(
-          this.backCameraOptions
-        )
+        if (this.isFrontCamera) {
+          this.videoStream = await navigator.mediaDevices.getUserMedia(
+            this.frontCameraOptions)
+
+          this.$store.commit('saveStream', this.videoStream)
+          this.$store.commit('setCameraMode', true)
+        } else {
+          this.backCameraStream = await navigator.mediaDevices.getUserMedia(
+            this.backCameraOptions)
+          
+          this.$store.commit('saveBackCameraStream', this.backCameraStream)
+          this.$store.commit('setCameraMode', false)
+        }
       }
-      this.$store.commit('saveBackCameraStream', this.backCameraStream)
-      this.$store.commit('setCameraMode', false)
-      this.$store.commit('setCameraModalState', true)
     },
     closeCameraModal() {
       this.$store.commit('setCameraModalState', false)
