@@ -245,8 +245,8 @@ export default {
 }
 #modal-container {
   /* width: 100vw; */
-  /* width: 22.5rem; */
-  padding: 0;
+  width: 22.5rem;
+  /* padding: 0; */
 }
 #mymodal {
   position: fixed;
