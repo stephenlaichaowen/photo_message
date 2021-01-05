@@ -1,5 +1,6 @@
-export const mutations = {
+// import io from socket.io-client
 
+export const mutations = {
   saveStream: (state, data) => state.stream = data,
   saveBackCameraStream: (state, data) => state.backCameraStream = data,
   saveStream: (state, data) => state.stream = data,
@@ -65,14 +66,16 @@ export const mutations = {
     )
   },
   saveMessage: (state, data) => {
-
-    // // send local message to backend
+    
     // this.$socket.emit('new message', data)
 
-    // // receive remote message and save to local
     // this.$socket.on('new message', message => {
-    //   if (!message) { state.message = data }
-    //   else { state.message = message }
+    //   if (!message) { 
+    //     state.message = data 
+    //   }
+    //   else { 
+    //     state.message = message 
+    //   }
     // })
 
     /**** save local message ****/

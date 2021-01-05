@@ -10,7 +10,6 @@ export default {
     return {
       imgSrc: '/camera-icon.png',
       videoStream: null,
-      backCameraStream: null,
       frontCameraOptions: {
         video: {
           width: 600,
@@ -18,17 +17,7 @@ export default {
           facingMode: 'user',
         },
         audio: false,
-      },
-      backCameraOptions: {
-        video: {
-          width: 600,
-          height: 600,
-          facingMode: {
-            exact: 'environment',
-          },
-        },
-        audio: false,
-      },
+      }      
     }
   },
   methods: {
@@ -43,6 +32,7 @@ export default {
       }
       this.$store.commit('saveStream', this.videoStream)
       this.$store.commit('setCameraMode', true)
+      // this.$store.commit('setMobileState', false)
       this.$store.commit('setCameraModalState', true)
     },
   },
@@ -57,8 +47,8 @@ img {
   position: fixed;
   right: 2.5rem;
   bottom: 2.5rem;
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 3.4375rem;
+  height: 3.4375rem;
   z-index: 300;
   overflow: hidden;
 }

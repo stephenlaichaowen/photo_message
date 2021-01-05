@@ -45,7 +45,6 @@ export default {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  /* transform: translateY(-50%); */
 }
 #flex-box {
   width: 100%;
@@ -62,11 +61,7 @@ export default {
 }
 #option-container {
   height: 3.125rem;
-  width: 100%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  
+  width: 100%;  
   position: fixed;
   left: 0;
   bottom: 0;

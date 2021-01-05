@@ -53,13 +53,10 @@ export default {
     },
     removeMessage(item, idx) {
       this.$store.commit('removeTempMessage', item)
-      // this.$store.commit('setOptionMenuState', true)
-      // this.$store.commit('setRemovedMessageId', idx)
 
       this.$store.state.optionMenuState = !this.$store.state.optionMenuState
 
       if (this.$store.state.optionMenuState) {
-        // this.$store.commit('setOptionMenuState', this.optionMenuState)
         this.$store.commit('setOptionMenuState', true)
         this.$store.commit('setRemovedMessageId', idx)
       }  
