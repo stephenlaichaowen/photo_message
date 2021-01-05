@@ -183,14 +183,6 @@ export default {
 
     const orientation = screen.orientation
     console.log(`orientation: ${orientation.type}`)
-    // if (orientation.type === 'landscape-primary') {
-    //   this.$refs.camera.style.height = 'auto'
-    //   this.$refs.camera.style.width = '100vw'
-    // }
-    // if (orientation.type === 'portrait-primary') {
-    //   this.$refs.camera.style.height = '100vh'
-    //   this.$refs.camera.style.width = 'auto'
-    // }
   },
 }
 </script>
