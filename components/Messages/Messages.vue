@@ -102,7 +102,9 @@ export default {
 #photo {
   border-radius: 50%;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
+  width: 2.875rem;
+  height: 2.875rem;
 }
 #date {
   color: #ddd;

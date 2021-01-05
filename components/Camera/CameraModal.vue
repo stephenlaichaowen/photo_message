@@ -19,7 +19,7 @@
             v-model="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="py-3 px-5 align-middle pr-5"
+            class="p-3 align-middle pr-5"
           ></textarea>
           <img
             id="paperplane-icon"
@@ -192,7 +192,6 @@ export default {
 
 <style scoped>
 #modal-container {
-  /* border: 1px solid red; */
   position: relative;
   height: 100%;
 }
@@ -201,7 +200,7 @@ export default {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 100%;
 }
 #paperplane-icon {
   width: 1.25rem;
@@ -209,7 +208,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 3.125rem;
+  right: 1.25rem;
 }
 #caption::placeholder {
   color: white;
@@ -271,7 +270,7 @@ export default {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -282,7 +281,7 @@ export default {
   top: 1rem;
 }
 #player {
-  height: 100%;
+  height: 100vh;
 }
 #mymodal {
   position: fixed;
@@ -294,10 +293,10 @@ export default {
   align-items: center;
   background: #000;
 }
-@media (max-width: 640px) and (max-height: 360px) {
+@media (max-width: 360px) {
   #icon-group, 
   #caption-input-container {
-    width: 100%;
+    width: 22.5rem;
   }
 }
 @keyframes fadeInLeft {

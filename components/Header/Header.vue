@@ -40,6 +40,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  /* width: 800px; */
   height: 3.125rem;
   z-index: 300;
   display: flex;
