@@ -49,7 +49,7 @@ img {
   bottom: 2.5rem;
   width: 3.4375rem;
   height: 3.4375rem;
-  z-index: 300;
+  z-index: 500;
   overflow: hidden;
 }
 </style>

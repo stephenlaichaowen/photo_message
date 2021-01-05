@@ -38,11 +38,8 @@
   padding: 0.5rem 1rem 0.5rem 1.25rem;
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 800px;
+  left: 0;
   width: 100%;
-  /* width: 800px; */
   height: 3.125rem;
   z-index: 300;
   display: flex;

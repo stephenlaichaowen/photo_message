@@ -1,25 +1,26 @@
 <template>
   <transition name="fadeInLeft" v-if="$store.state.cameraModalState">
-    <div id="mymodal" class="bg-dark">
+    <div id="mymodal">
       <div id="modal-container">
         <video
           id="player"
           ref="camera"
           autoplay
+          class="w-100"
           :srcObject.prop="
             $store.state.cameraMode
               ? $store.state.stream
               : $store.state.backCameraStream
           "
         ></video>
-        <div id="caption-input-container">
+        <div id="caption-input-container" class="p-3">
           <textarea
             id="caption"
             ref="caption"
             v-model="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="pl-3 pt-3 align-middle pr-5"
+            class="p-2 bg-dark rounded align-middle pr-5"
           ></textarea>
           <img
             id="paperplane-icon"
@@ -28,7 +29,7 @@
             @click="sendMessage"
           />
         </div>
-        <div id="icon-group" class="py-2">
+        <div id="icon-group" class="my-3">
           <img
             id="thumbnail-icon"
             :src="
@@ -50,14 +51,14 @@
             @click="toggleCamera"
           />
         </div>
-      </div>
-      <div id="close-icon-container">
-        <img
-          id="close-icon"
-          src="/close-icon-white.png"
-          alt="close icon"
-          @click="closeCameraModal"
-        />
+        <div id="close-icon-container">
+          <img
+            id="close-icon"
+            src="/close-icon-white.png"
+            alt="close icon"
+            @click="closeCameraModal"
+          />
+        </div>
       </div>
     </div>
   </transition>
@@ -73,6 +74,7 @@ export default {
       backCameraStream: null,
       isFrontCamera: true,
       caption: null,
+      // isAutofocus: false,
       frontCameraOptions: {
         video: {
           width: 600,
@@ -117,7 +119,7 @@ export default {
         caption: this.caption,
       }
       this.$store.commit('saveMessage', this.message)
-      this.closeCameraModal()
+      this.closeCameraModal()    
 
       this.caption = ''
       // this.$store.commit('clearCameraIcon', false)
@@ -166,7 +168,10 @@ export default {
 
       this.$store.commit('savePhoto', this.photo)
       this.$store.commit('clearCameraIcon', true)
-      this.$refs.caption.focus()
+      // this.isAutofocus = true
+      // setTimeout(() => {
+        this.$refs.caption.focus()
+      // })
       console.log(`autofocus: ${this.isAutofocus}`)
     },
     turnOffCamera() {
@@ -180,24 +185,14 @@ export default {
   },
   mounted() {
     console.log(`autofocus: ${this.isAutofocus}`)
-
-    const orientation = screen.orientation
-    console.log(`orientation: ${orientation.type}`)
-  },
+  }
 }
 </script>
 
 <style scoped>
-#modal-container {
-  position: relative;
-  height: 100%;
-}
 #caption-input-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #paperplane-icon {
   width: 1.25rem;
@@ -205,7 +200,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 1.25rem;
+  right: 3.125rem;
 }
 #caption::placeholder {
   color: white;
@@ -214,18 +209,24 @@ export default {
   resize: none;
   border: none;
   color: white;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  width: 18.125rem;
+}
+#caption-input-container {
+  margin-top: -0.4375rem;
+  position: relative;
 }
 #close-icon-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border: 1px solid red; */
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; */
+  /* margin-top: 2rem; */
   padding: 3rem 0 1rem 0;
+  /* height: 3.125em; */
 }
 .withphoto {
   color: transparent !important;
@@ -233,7 +234,6 @@ export default {
   background-position: center;
 }
 #camera {
-  /* position: relative; */
   outline: none;
   border-radius: 0.25rem;
   border: none;
@@ -263,11 +263,6 @@ export default {
 }
 #icon-group {
   /* border: 1px solid yellow; */
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -278,25 +273,25 @@ export default {
   top: 1rem;
 }
 #player {
-  height: 100vh;
+  width: 100%;
+  /* width: 22.5rem; */
+  height: 18rem;
+}
+#modal-container {
+  width: 100vw;
+  /* width: 22.5rem; */
 }
 #mymodal {
   position: fixed;
-  max-width: 800px;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 1000;
-  overflow-y: scroll;
   display: flex;
-  justify-content: center;
+  /* flex-direction: column; */
   align-items: center;
   background: #000;
-}
-@media (max-width: 360px) {
-  #icon-group, 
-  #caption-input-container {
-    width: 22.5rem;
-  }
 }
 @keyframes fadeInLeft {
   0% {

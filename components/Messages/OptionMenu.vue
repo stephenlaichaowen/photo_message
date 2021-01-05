@@ -8,6 +8,11 @@
             @click="deleteMessage"
             src="/trashcan-icon-white.png" alt="trash icon">
         </div>
+        <!-- <img 
+          class="close"
+          @click="closeOptionMenu"
+          src="/close-icon.jpg" alt="close icon"
+        > -->
       </div>
     </div>
   </transition>
@@ -57,10 +62,8 @@ export default {
 #option-container {
   height: 3.125rem;
   width: 100%;  
-  max-width: 800px;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   bottom: 0;
   z-index: 250;
 }

@@ -69,7 +69,7 @@ export default {
       name: 'Photo Message',
       short_name: 'Photo Message',
       display: 'fullscreen',
-      // orientation: 'portrait'
+      orientation: 'portrait'
     }
   },
 
