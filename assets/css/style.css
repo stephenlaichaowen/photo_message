@@ -9,6 +9,10 @@
     font-family: 'Roboto Condensed', serif;
     font-weight: 300;
 }
+/* body {
+    max-width: 800px;
+    width: 100%;
+} */
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s;
 }

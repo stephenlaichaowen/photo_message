@@ -73,9 +73,6 @@ export default {
 </script>
 
 <style scoped>
-#option {
-  /* border: 1px solid red; */
-}
 #option img {
   width: 1.25rem;
   height: 1.875rem;
@@ -85,16 +82,16 @@ export default {
   position: relative;
 }
 #messages {
-  position: absolute;
+  position: fixed;
   top: 3.125rem;
-  /* bottom: 3.125rem; */
-  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: calc(100vh - 3.125rem);
   z-index: 200;
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 100vw;
-  /* padding: 0.5rem 0.25rem 0 0.25rem; */
+  max-width: 800px;
+  width: 100%;
   padding: 0.25rem;
   z-index: 200;
   backdrop-filter: blur(12px);

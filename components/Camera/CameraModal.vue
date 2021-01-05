@@ -19,7 +19,7 @@
             v-model="caption"
             placeholder="Image Caption..."
             maxlength="120"
-            class="p-3 align-middle pr-5"
+            class="pl-3 pt-3 align-middle pr-5"
           ></textarea>
           <img
             id="paperplane-icon"
@@ -183,8 +183,13 @@ export default {
 
     const orientation = screen.orientation
     console.log(`orientation: ${orientation.type}`)
-    // if (orientation.type === "landscape-primary") {
-    //   this.$refs.captionContainer.style.top = '0'
+    // if (orientation.type === 'landscape-primary') {
+    //   this.$refs.camera.style.height = 'auto'
+    //   this.$refs.camera.style.width = '100vw'
+    // }
+    // if (orientation.type === 'portrait-primary') {
+    //   this.$refs.camera.style.height = '100vh'
+    //   this.$refs.camera.style.width = 'auto'
     // }
   },
 }
